@@ -1,4 +1,4 @@
-# AmberCrest
+# KodaKodra
 
 Senior Full Stack PHP & Laravel Developer — available for remote work and collaboration.
 
@@ -16,8 +16,7 @@ Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no build t
 
 ## Contact
 
-- **GitHub**: [@ambercrest](https://github.com/ambercrest)
-- **Email**: laraveldev2026@gmail.com
+- **GitHub**: [@kodakodra](https://github.com/kodakodra)
 
 ---
 
