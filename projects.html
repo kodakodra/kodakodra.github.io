@@ -130,6 +130,108 @@
         </div>
     </section>
     
+    <!-- eCommerce Build — MVP progression -->
+    <section class="projects-section">
+        <div class="container">
+            <h2>eCommerce Progression — KodaKodra eCommerce Project</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 16px; line-height: 1.7;">
+                An iterative public eCommerce project built from the ground up — static HTML first, then PHP includes, then a MySQL database, a session cart, Stripe payments, order management, and finally transactional email via PHPMailer. Each step is saved separately as a standalone demonstrable snapshot. Every step uses the same consistent base: Bootstrap, Font Awesome, custom CSS, and a clean file structure. Each one answers the question: what can this do that the previous one couldn't?
+            </p>
+            <div class="projects-grid">
+    
+                <div class="project-card">
+                    <span class="project-type">Step 1 — Complete</span>
+                    <h3>Static Product Catalogue</h3>
+                    <p>Static storefront shell with a homepage, full product listing, and individual product pages. Establishes the warm dark theme, product card layout, and physical vs digital product differentiation.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">Bootstrap</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">Font Awesome</span>
+                    </div>
+                    <a href="https://github.com/kodakodra/KodaKodra-eCommerce-Project/tree/main/Step%201/KodaKodra%20eCommerce" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
+                </div>
+    
+                <div class="project-card">
+                    <span class="project-type">Step 2 — Complete</span>
+                    <h3>PHP Includes & Product Array</h3>
+                    <p>Static HTML converted to PHP. Reusable header, footer, and config includes replace duplicated code. Product data driven from a PHP array — one source of truth, no database yet.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">Bootstrap</span>
+                        <span class="project-tag">CSS</span>
+                    </div>
+                    <a href="https://github.com/kodakodra/KodaKodra-eCommerce-Project/tree/main/Step%202/KodaKodra%20eCommerce" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
+                </div>
+    
+                <div class="project-card">
+                    <span class="project-type">Step 3 — Complete</span>
+                    <h3>SQL Database & Admin Panel</h3>
+                    <p>Products moved from a PHP array into a MySQL database. Admin panel introduced with full product CRUD — add, edit, delete, and toggle visibility. User auth added to support admin access.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">PDO</span>
+                        <span class="project-tag">Auth</span>
+                    </div>
+                    <a href="https://github.com/kodakodra/KodaKodra-eCommerce-Project/tree/main/Step%203/KodaKodra%20eCommerce" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
+                </div>
+    
+                <div class="project-card">
+                    <span class="project-type">Step 4 — Complete</span>
+                    <h3>Session Cart</h3>
+                    <p>Fully functional session-based shopping cart. Add to cart via fetch() with live navbar count update. Quantity controls, line totals, order summary, and clear cart. Digital products capped at quantity 1. Product filter buttons wired up via JavaScript.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">Sessions</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">fetch()</span>
+                    </div>
+                    <a href="https://github.com/kodakodra/KodaKodra-eCommerce-Project/tree/main/Step%204/KodaKodra%20eCommerce" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
+                </div>
+    
+                <div class="project-card">
+                    <span class="project-type">Step 5 — Complete</span>
+                    <h3>Stripe Checkout</h3>
+                    <p>Full Stripe card payment integration. PaymentIntent created server side, card details handled entirely by Stripe.js. Delivery address collected for physical orders. Payment verified before order is written to the database.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Stripe</span>
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">MySQL</span>
+                    </div>
+                    <a href="https://github.com/kodakodra/KodaKodra-eCommerce-Project/tree/main/Step%205/KodaKodra%20eCommerce" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
+                </div>
+    
+                <div class="project-card">
+                    <span class="project-type">Step 6 — Complete</span>
+                    <h3>Order Management & Digital Downloads</h3>
+                    <p>Full order management for customers and admins. Customers view order history and re-download digital products at any time. Admins view all orders and update status inline. Physical and digital orders handled differently throughout.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Roles</span>
+                        <span class="project-tag">Downloads</span>
+                    </div>
+                    <a href="https://github.com/kodakodra/KodaKodra-eCommerce-Project/tree/main/Step%206/KodaKodra%20eCommerce" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
+                </div>
+    
+                <div class="project-card">
+                    <span class="project-type">Step 7 — Complete</span>
+                    <h3>Order Confirmation Emails via PHPMailer</h3>
+                    <p>Transactional order confirmation email sent automatically after every successful payment. Includes full order summary, download links for digital products, and delivery details for physical orders. Email failure handled gracefully without affecting the order.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHPMailer</span>
+                        <span class="project-tag">SMTP</span>
+                        <span class="project-tag">PHP</span>
+                    </div>
+                    <a href="https://github.com/kodakodra/KodaKodra-eCommerce-Project/tree/main/Step%207/KodaKodra%20eCommerce" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
     <!-- Previous Work by Type -->
     <section class="projects-section alt">
         <div class="container">
