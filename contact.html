@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact KodaKodra — open to freelance projects, bug fixes, and remote collaboration.">
-    <title>Contact — KodaKodra</title>
+    <meta name="description" content="Contact KodaKodra — Get a quote for PHP/Laravel bug fixes, small jobs, or project takeovers. Response within 24 hours.">
+    <title>Contact — Get a Quote | KodaKodra</title>
     <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <div class="urgency-banner">
+        <div class="container">
+            <div class="urgency-content">
+                <span class="urgency-icon">⚡</span>
+                <span class="urgency-text"><strong>AVAILABLE NOW:</strong> Bug fixes from $50 • Small Laravel jobs • 48-hour turnaround</span>
+                <a href="contact.html" class="urgency-btn">Hire Me →</a>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
@@ -27,140 +36,109 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Get in Touch</h1>
-            <p>Open to freelance projects, bug fixes, and remote collaboration</p>
+            <h1>Get a Quote</h1>
+            <p>Tell me what you need. I'll respond within 24 hours with a flat-rate price.</p>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact-section">
         <div class="container">
-            <div class="contact-content">
-
-                <h2>How to Reach Me</h2>
-
-                <!-- Primary contact methods -->
-                <div class="contact-cards">
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fab fa-github"></i></div>
-                        <div class="contact-card-content">
-                            <h3>GitHub</h3>
-                            <p>Check out my work, open an issue, or start a discussion on any repo.</p>
-                            <a href="https://github.com/kodakodra" target="_blank" rel="noopener" class="contact-link">github.com/kodakodra</a>
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-box">
+                    <h2>Tell Me About Your Project</h2>
+                    <form id="contactForm" action="https://formspree.io/f/xqapvwrv" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fab fa-twitter"></i></div>
-                        <div class="contact-card-content">
-                            <h3>Twitter / X</h3>
-                            <p>DMs open. Good for quick questions or just saying hello.</p>
-                            <a href="https://twitter.com/kodakodra" target="_blank" rel="noopener" class="contact-link">@kodakodra</a>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fab fa-instagram"></i></div>
-                        <div class="contact-card-content">
-                            <h3>Instagram</h3>
-                            <p>Visual progress updates, project screenshots, and proof of work.</p>
-                            <a href="https://www.instagram.com/kodakodra" target="_blank" rel="noopener" class="contact-link">@kodakodra</a>
+                        <div class="form-group">
+                            <label for="project-type">What do you need? *</label>
+                            <select id="project-type" name="project-type" required>
+                                <option value="">Select one...</option>
+                                <option value="bug-fix">🐛 Bug Fix ($50 flat)</option>
+                                <option value="small-feature">⚙️ Small Feature ($150 flat)</option>
+                                <option value="takeover">📁 Project Takeover ($300+)</option>
+                                <option value="custom">💬 Custom Quote</option>
+                            </select>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="message">Describe the problem or what you need built *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Example: 'My Laravel contact form stopped working. It was working last week. No error message, just doesn't send emails.'"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="url">Link to your site (if applicable)</label>
+                            <input type="url" id="url" name="url" placeholder="https://...">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send → Get Quote Within 24hrs</button>
+                    </form>
+                    <p class="form-note"><i class="fas fa-lock"></i> Your info is safe. No spam. Just a quote.</p>
                 </div>
 
-                <!-- All social links -->
-                <h3 style="font-family: 'Clash Display', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 20px; color: var(--text-primary);">Find Me Everywhere</h3>
-                <div class="social-grid">
-                    <a href="https://github.com/kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://twitter.com/kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fab fa-twitter"></i>
-                        <span>Twitter/X</span>
-                    </a>
-                    <a href="https://www.instagram.com/kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fab fa-instagram"></i>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://www.threads.net/@kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fas fa-hashtag"></i>
-                        <span>Threads</span>
-                    </a>
-                    <a href="https://www.youtube.com/@kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fab fa-youtube"></i>
-                        <span>YouTube</span>
-                    </a>
-                    <a href="https://www.twitch.tv/kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fab fa-twitch"></i>
-                        <span>Twitch</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fab fa-tiktok"></i>
-                        <span>TikTok</span>
-                    </a>
-                    <a href="https://www.patreon.com/kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fab fa-patreon"></i>
-                        <span>Patreon</span>
-                    </a>
-                    <a href="https://about.me/kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fas fa-user-circle"></i>
-                        <span>About.me</span>
-                    </a>
-                    <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener" class="social-card">
-                        <i class="fas fa-link"></i>
-                        <span>Linktree</span>
-                    </a>
-                </div>
+                <!-- Quick Contact Options -->
+                <div class="quick-contact">
+                    <h2>Or reach out directly</h2>
+                    <div class="quick-links">
+                        <a href="https://twitter.com/kodakodra" target="_blank" class="quick-card">
+                            <i class="fab fa-twitter"></i>
+                            <div>
+                                <strong>Twitter/X</strong>
+                                <span>DM me @kodakodra</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/kodakodra" target="_blank" class="quick-card">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <strong>GitHub</strong>
+                                <span>Open an issue or discussion</span>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/kodakodra" target="_blank" class="quick-card">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <strong>Instagram</strong>
+                                <span>DM for quick questions</span>
+                            </div>
+                        </a>
+                    </div>
 
-                <!-- What to include -->
-                <div class="info-box">
-                    <h3>What to Include</h3>
-                    <p>To help me give you the best response, it helps to know:</p>
-                    <ul class="info-list">
-                        <li>What you need — new build, bug fix, takeover, ongoing support</li>
-                        <li>Your tech stack or any existing project details</li>
-                        <li>Your rough timeline</li>
-                        <li>Budget expectations if applicable</li>
-                    </ul>
-                    <p style="margin-top: 16px; font-size: 14px; color: var(--text-secondary);">That said — even just "I've got a project, interested?" is enough to start a conversation.</p>
-                </div>
+                    <div class="response-guarantee">
+                        <i class="fas fa-clock"></i>
+                        <h3>Response Guarantee</h3>
+                        <p>Every message gets a reply within <strong>24 hours</strong>. Even if it's just to say I'm not the right fit.</p>
+                    </div>
 
-                <!-- Response time -->
-                <div class="expectations-box">
-                    <h3>Response Time</h3>
-                    <p><strong>24 hours max.</strong> I respond to every message, even if it's just to say it's not the right fit.</p>
+                    <div class="emergency-note">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Urgent? Need it today?</h3>
+                        <p>DM me on Twitter/X with "URGENT" in the message. I'll prioritize your request.</p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Let's build something</h2>
-                <p>No pressure, no commitment. Just a conversation.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>KodaKodra</h4>
-                    <p>Full-Stack PHP & Laravel Developer</p>
-                    <p>Clean code. Simple solutions.</p>
+                    <p>PHP & Laravel Developer</p>
+                    <p>Available now. Flat rates.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Pages</h4>
@@ -168,31 +146,29 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="projects.html">Projects</a></li>
+                        <li><a href="testimonials.html">Reviews</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Code & Work</h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="https://github.com/kodakodra" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
-                        <li><a href="https://www.patreon.com/kodakodra" target="_blank" rel="noopener"><i class="fab fa-patreon"></i> Patreon</a></li>
+                        <li><a href="contact.html">Emergency Fix →</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="https://github.com/kodakodra" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Social</h4>
+                    <h4>Contact</h4>
                     <ul>
-                        <li><a href="https://twitter.com/kodakodra" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter/X</a></li>
-                        <li><a href="https://www.instagram.com/kodakodra" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://www.threads.net/@kodakodra" target="_blank" rel="noopener"><i class="fas fa-hashtag"></i> Threads</a></li>
-                        <li><a href="https://www.tiktok.com/@kodakodra" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a></li>
-                        <li><a href="https://www.youtube.com/@kodakodra" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> YouTube</a></li>
-                        <li><a href="https://www.twitch.tv/kodakodra" target="_blank" rel="noopener"><i class="fab fa-twitch"></i> Twitch</a></li>
-                        <li><a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener"><i class="fab fa-tree"></i> All My Links</a></li>
+                        <li><a href="https://twitter.com/kodakodra" target="_blank"><i class="fab fa-twitter"></i> Twitter/X</a></li>
+                        <li><a href="https://www.instagram.com/kodakodra" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://github.com/kodakodra" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 KodaKodra. Built with clean code and zero nonsense.</p>
+                <p>&copy; 2026 KodaKodra. Available for hire — starting today.</p>
             </div>
         </div>
     </footer>
