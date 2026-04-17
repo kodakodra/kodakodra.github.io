@@ -1193,3 +1193,93 @@ body {
     top: 80px;
   }
 }
+
+/* Contact Simple - No forms, just social */
+.contact-simple {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-method-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s;
+}
+
+.contact-method-card:hover {
+    border-color: var(--primary);
+    transform: translateX(8px);
+    box-shadow: 0 10px 25px rgba(255, 77, 77, 0.1);
+}
+
+.contact-method-card i {
+    font-size: 48px;
+    color: var(--primary);
+}
+
+.contact-method-card h3 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.contact-method-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.contact-method-card span {
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.response-guarantee,
+.emergency-note {
+    background: var(--light);
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.response-guarantee i,
+.emergency-note i {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.response-guarantee h3,
+.emergency-note h3 {
+    font-family: 'Clash Display', sans-serif;
+    margin-bottom: 8px;
+}
+
+.response-guarantee p,
+.emergency-note p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .contact-method-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
