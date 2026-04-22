@@ -6,7 +6,6 @@
 /* ============================================================
    Mobile Navigation Toggle
    ============================================================ */
-
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu   = document.querySelector('.nav-menu');
 const navLinks  = document.querySelectorAll('.nav-menu a');
@@ -39,10 +38,8 @@ document.addEventListener('click', (e) => {
    Active Nav Link
    Highlights the correct nav item based on the current page.
    ============================================================ */
-
 function setActiveNav() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (href === currentPage || (currentPage === '' && href === 'index.html')) {
@@ -52,14 +49,12 @@ function setActiveNav() {
         }
     });
 }
-
 setActiveNav();
 
 /* ============================================================
    Smooth Scroll
    Handles anchor links that start with # for smooth in-page scrolling.
    ============================================================ */
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -73,9 +68,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* ============================================================
    Scroll Animations
    Uses IntersectionObserver to fade elements in as they scroll into view.
-   Elements targeted: cards, focus items, value cards, project cards.
    ============================================================ */
-
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -91,8 +84,8 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Apply the fade-in starting state and observe each card/item
-document.querySelectorAll('.do-card, .focus-item, .value-card, .project-card').forEach(el => {
+// Apply fade-in starting state and observe each animated element
+document.querySelectorAll('.why-card, .project-card, .service-card, .focus-card, .testimonial-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
@@ -103,10 +96,10 @@ document.querySelectorAll('.do-card, .focus-item, .value-card, .project-card').f
    Navbar Shadow on Scroll
    Adds a subtle shadow to the navbar once the user scrolls down.
    ============================================================ */
-
 const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    navbar.style.boxShadow = scrollTop > 50 ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none';
-});
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        navbar.style.boxShadow = scrollTop > 50 ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none';
+    });
+}
