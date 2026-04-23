@@ -35,7 +35,6 @@ Portfolio site built with plain HTML, CSS, and vanilla JavaScript — no framewo
 - **GitHub**: [@kodakodra](https://github.com/kodakodra)
 - **Twitter/X**: [@kodakodra](https://twitter.com/kodakodra)
 - **Instagram**: [@kodakodra](https://www.instagram.com/kodakodra)
-- **YouTube**: [@kodakodra](https://www.youtube.com/@kodakodra)
 - **Linktree**: [linktr.ee/kodakodra](https://linktr.ee/kodakodra)
 
 ---
