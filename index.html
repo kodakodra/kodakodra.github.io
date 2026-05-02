@@ -14,10 +14,9 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding: 4rem 2.5rem;
+            padding: 3rem var(--px) 4rem;
         }
 
-        /* Grid background */
         .hero::before {
             content: '';
             position: absolute;
@@ -25,19 +24,17 @@
             background-image:
                 linear-gradient(rgba(74,158,255,0.04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(74,158,255,0.04) 1px, transparent 1px);
-            background-size: 60px 60px;
-            mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
         }
 
-        /* Glow orb */
         .hero::after {
             content: '';
             position: absolute;
-            top: -10%;
-            right: -5%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(27,58,92,0.5) 0%, transparent 70%);
+            top: -10%; right: -5%;
+            width: min(600px, 90vw);
+            height: min(600px, 90vw);
+            background: radial-gradient(circle, rgba(27,58,92,0.4) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -51,11 +48,11 @@
 
         .hero__eyebrow {
             font-family: var(--font-mono);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--accent);
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             display: flex;
             align-items: center;
             gap: 0.75rem;
@@ -66,58 +63,77 @@
         .hero__eyebrow::before {
             content: '';
             display: inline-block;
-            width: 32px;
-            height: 1px;
+            width: 24px; height: 1px;
             background: var(--accent);
+            flex-shrink: 0;
         }
 
         .hero__name {
-            font-size: clamp(3.5rem, 9vw, 7rem);
+            font-size: clamp(2.8rem, 12vw, 7rem);
             font-weight: 800;
             letter-spacing: -0.05em;
             line-height: 0.95;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.75rem;
             opacity: 0;
             animation: fadeUp 0.7s 0.2s both;
+            /* Prevent overflow on very small screens */
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
 
         .hero__name .accent { color: var(--accent); }
 
         .hero__title {
             font-family: var(--font-mono);
-            font-size: clamp(0.9rem, 2vw, 1.15rem);
+            font-size: clamp(0.72rem, 2.5vw, 1rem);
             color: var(--text-muted);
             font-weight: 300;
             letter-spacing: 0.04em;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             opacity: 0;
             animation: fadeUp 0.7s 0.3s both;
+            /* Stack on mobile, inline on desktop */
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.25rem 0;
+            row-gap: 0.25rem;
         }
 
-        .hero__title .pipe { color: var(--text-dim); margin: 0 0.6rem; }
+        .hero__title-line {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0;
+        }
+
+        .pipe {
+            color: var(--text-dim);
+            margin: 0 0.5rem;
+            display: none; /* hidden on mobile */
+        }
 
         .hero__desc {
-            max-width: 600px;
-            font-size: 1.05rem;
+            max-width: 560px;
+            font-size: clamp(0.9rem, 2.5vw, 1.05rem);
             color: var(--text-muted);
             line-height: 1.8;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             opacity: 0;
             animation: fadeUp 0.7s 0.4s both;
         }
 
         .hero__cta {
             display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
             flex-wrap: wrap;
             opacity: 0;
             animation: fadeUp 0.7s 0.5s both;
         }
 
-        /* Scroll indicator */
         .hero__scroll {
             position: absolute;
-            bottom: 2.5rem;
+            bottom: 2rem;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -130,67 +146,70 @@
 
         .hero__scroll span {
             font-family: var(--font-mono);
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             color: var(--text-dim);
             letter-spacing: 0.15em;
             text-transform: uppercase;
         }
 
         .hero__scroll-line {
-            width: 1px;
-            height: 48px;
+            width: 1px; height: 40px;
             background: linear-gradient(to bottom, var(--accent), transparent);
             animation: pulse 2s infinite;
         }
 
-        /* ── Stats row ──────────────────────────────────────── */
+        /* ── Stats ──────────────────────────────────────────── */
         .stats {
             background: var(--bg-2);
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
+            overflow: hidden;
         }
 
         .stats__inner {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
+            padding: 0 var(--px);
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 0;
+            /* Auto-fill: on mobile ~2 cols, desktop fits all */
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         }
 
         .stat {
-            padding: 1rem 1.25rem;
-            border-right: 1px solid var(--border);
+            padding: 1.25rem 0.75rem;
             text-align: center;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
 
+        /* Remove double-borders cleanly */
         .stat:last-child { border-right: none; }
 
         .stat__number {
             font-family: var(--font-display);
-            font-size: 2rem;
+            font-size: clamp(1.4rem, 4vw, 2.2rem);
             font-weight: 800;
             color: var(--accent);
             letter-spacing: -0.04em;
             line-height: 1;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.35rem;
         }
 
         .stat__label {
             font-family: var(--font-mono);
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             color: var(--text-dim);
             letter-spacing: 0.08em;
             text-transform: uppercase;
+            line-height: 1.4;
         }
 
-        /* ── Skills snapshot ────────────────────────────────── */
+        /* ── Skills ─────────────────────────────────────────── */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
-            gap: 1.25rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr; /* mobile: single column */
+            gap: 1rem;
+            margin-top: 2.5rem;
         }
 
         .skill-card {
@@ -206,31 +225,28 @@
             background: var(--bg-card-hover);
         }
 
-        .skill-card__icon {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
+        .skill-card__icon { font-size: 1.4rem; margin-bottom: 0.75rem; }
 
         .skill-card__title {
             font-family: var(--font-display);
             font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             color: var(--text);
         }
 
         .skill-card__tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.4rem;
+            gap: 0.35rem;
             margin-top: 0.75rem;
         }
 
-        /* ── Values strip ───────────────────────────────────── */
+        /* ── Values ─────────────────────────────────────────── */
         .values {
             background: var(--bg-2);
             border-top: 1px solid var(--border);
-            padding: 4rem 2.5rem;
+            padding: 3rem var(--px);
         }
 
         .values__inner {
@@ -240,23 +256,22 @@
 
         .values__list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2.5rem;
+            grid-template-columns: 1fr; /* mobile: single column */
+            gap: 1.25rem;
+            margin-top: 2rem;
         }
 
         .value-item {
             display: flex;
-            gap: 1rem;
+            gap: 0.875rem;
             align-items: flex-start;
         }
 
         .value-item__dot {
-            width: 6px;
-            height: 6px;
+            width: 6px; height: 6px;
             border-radius: 50%;
             background: var(--accent);
-            margin-top: 0.6rem;
+            margin-top: 0.55rem;
             flex-shrink: 0;
         }
 
@@ -265,7 +280,7 @@
             font-size: 0.9rem;
             font-weight: 700;
             color: var(--text);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.2rem;
         }
 
         .value-item__desc {
@@ -274,47 +289,33 @@
             line-height: 1.6;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            /* Hero */
-            .hero { padding: 2.5rem 1.25rem 4rem; min-height: auto; }
-            .hero__name { font-size: clamp(2.4rem, 13vw, 3.2rem); }
-            .hero__title {
-                font-size: 0.75rem;
-                display: flex;
-                flex-direction: column;
-                gap: 0.2rem;
-                line-height: 1.6;
-            }
-            .hero__title .pipe { display: none; }
+        /* ── Responsive upgrades ────────────────────────────── */
+        @media (min-width: 480px) {
+            .hero__title { flex-direction: row; flex-wrap: wrap; }
+            .pipe { display: inline; }
+        }
+
+        @media (min-width: 640px) {
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+            .values__list { grid-template-columns: repeat(2, 1fr); }
+            .values { padding: 4rem var(--px); }
+        }
+
+        @media (min-width: 1024px) {
+            .hero { padding: 4rem var(--px); }
+            .skills-grid { grid-template-columns: repeat(3, 1fr); }
+            .values__list { grid-template-columns: repeat(3, 1fr); }
+            .values { padding: 5rem var(--px); }
+            .hero__scroll { display: flex; }
+        }
+
+        @media (max-width: 1023px) {
             .hero__scroll { display: none; }
-
-            /* Stats — 2 column grid */
-            .stats__inner {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 1rem;
-            }
-            .stat {
-                border-right: none;
-                border-bottom: 1px solid var(--border);
-                padding: 0.85rem 0.75rem;
-            }
-            .stat:nth-child(odd)  { border-right: 1px solid var(--border); }
-            .stat:last-child      { border-bottom: none; border-right: none; }
-            .stat:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: none; }
-
-            /* Skills */
-            .skills-grid { grid-template-columns: 1fr; }
-
-            /* Values */
-            .values { padding: 2.5rem 1.25rem; }
-            .values__list { grid-template-columns: 1fr; gap: 1rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ── Navigation ─────────────────────────────────────── -->
     <nav class="nav" role="navigation" aria-label="Main navigation">
         <a href="index.html" class="nav__logo">Koda<span>Kodra</span></a>
         <ul class="nav__links" role="list">
@@ -327,8 +328,6 @@
             <span></span><span></span><span></span>
         </button>
     </nav>
-
-    <!-- Mobile nav -->
     <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
@@ -396,7 +395,7 @@
         <section class="section" aria-labelledby="skills-heading">
             <p class="section-label">Expertise</p>
             <h2 class="section-heading" id="skills-heading">What I Work With</h2>
-            <p style="color:var(--text-muted); max-width:560px;">
+            <p style="color:var(--text-muted);max-width:560px;font-size:0.9rem;">
                 A focused stack built over years of deep daily use — not a laundry list, but the tools I know inside out.
             </p>
 
@@ -404,7 +403,7 @@
                 <div class="skill-card" data-reveal>
                     <div class="skill-card__icon">⚙️</div>
                     <div class="skill-card__title">Back-End</div>
-                    <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6;">
+                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
                         Laravel is my primary framework — full MVC, Eloquent ORM, Artisan, middleware, policies, form requests, and the complete ecosystem.
                     </p>
                     <div class="skill-card__tags">
@@ -414,11 +413,10 @@
                         <span class="tag">REST APIs</span>
                     </div>
                 </div>
-
                 <div class="skill-card" data-reveal>
                     <div class="skill-card__icon">🎨</div>
                     <div class="skill-card__title">Front-End</div>
-                    <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6;">
+                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
                         Mobile-first responsive interfaces using Bootstrap and semantic HTML. Clean, accessible, keyboard-navigable — by default.
                     </p>
                     <div class="skill-card__tags">
@@ -428,11 +426,10 @@
                         <span class="tag">HTML5</span>
                     </div>
                 </div>
-
                 <div class="skill-card" data-reveal>
                     <div class="skill-card__icon">🗄️</div>
                     <div class="skill-card__title">Database</div>
-                    <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6;">
+                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
                         Normalised schema design, full migration history, indexed queries, transactions, and HeidiSQL for visual management.
                     </p>
                     <div class="skill-card__tags">
@@ -441,11 +438,10 @@
                         <span class="tag">Query Optimisation</span>
                     </div>
                 </div>
-
                 <div class="skill-card" data-reveal>
                     <div class="skill-card__icon">🔐</div>
                     <div class="skill-card__title">Security</div>
-                    <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6;">
+                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
                         Security isn't a phase — it's baked into every feature. CSRF, XSS prevention, mass-assignment protection, and parameterised queries as a baseline.
                     </p>
                     <div class="skill-card__tags">
@@ -455,11 +451,10 @@
                         <span class="tag">Policies</span>
                     </div>
                 </div>
-
                 <div class="skill-card" data-reveal>
                     <div class="skill-card__icon">📐</div>
                     <div class="skill-card__title">Architecture</div>
-                    <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6;">
+                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
                         DRY, KISS, SOLID. Thin controllers, service logic, route model binding, meaningful naming, and documentation as standard.
                     </p>
                     <div class="skill-card__tags">
@@ -469,11 +464,10 @@
                         <span class="tag">MVC</span>
                     </div>
                 </div>
-
                 <div class="skill-card" data-reveal>
                     <div class="skill-card__icon">🚀</div>
                     <div class="skill-card__title">Tooling & Workflow</div>
-                    <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6;">
+                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
                         Git, Composer, npm, Font Awesome, and a disciplined Artisan-driven development workflow from migration to deployment.
                     </p>
                     <div class="skill-card__tags">
@@ -540,7 +534,6 @@
 
     </main>
 
-    <!-- ── Footer ───────────────────────────────────────────── -->
     <footer class="footer">
         <span class="footer__copy">&copy; 2026 KodaKodra. All rights reserved.</span>
         <div class="footer__links">
