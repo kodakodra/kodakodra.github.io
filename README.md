@@ -36,4 +36,4 @@ A community social network in Laravel — featuring posts, communities, comments
 
 ### Contact
 
-wtmzxdvoy@mozmail.com · kodakodra.github.io · https://bsky.app/profile/kodakodra.bsky.social · https://linktr.ee/kodakodra
+wtmzxdvoy@mozmail.com · https://bsky.app/profile/kodakodra.bsky.social · https://linktr.ee/kodakodra
