@@ -3,246 +3,467 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KodaKodra Projects — web applications, data dashboards, e-commerce and admin tools built since 2019.">
+    <meta name="description" content="KodaKodra Projects — Laravel social network, eCommerce with Stripe, booking system, and open-source teaching series.">
     <title>Projects — KodaKodra</title>
-    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Page hero ──────────────────────────────────────── */
+        .page-hero {
+            padding: 5rem 2.5rem 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ── Featured project ───────────────────────────────── */
+        .project-featured {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 1.5rem;
+            transition: border-color var(--transition);
+        }
+
+        .project-featured:hover {
+            border-color: var(--border-hover);
+        }
+
+        .project-featured__content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-featured__visual {
+            background: linear-gradient(135deg, #0d1f38 0%, #1b3a5c 50%, #0d1f38 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 340px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Animated grid overlay */
+        .project-featured__visual::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(74,158,255,0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74,158,255,0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .project-featured__visual-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .project-featured__visual-icon {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 24px rgba(74,158,255,0.5));
+        }
+
+        .project-featured__visual-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: rgba(74,158,255,0.6);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .project-featured__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: var(--gold);
+            background: rgba(240,192,96,0.1);
+            border: 1px solid rgba(240,192,96,0.25);
+            padding: 0.25rem 0.65rem;
+            border-radius: 3px;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-featured__badge::before {
+            content: '';
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            animation: pulse 2s infinite;
+        }
+
+        .project-featured__title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.03em;
+        }
+
+        .project-featured__desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .project-featured__features {
+            margin-bottom: 1.75rem;
+        }
+
+        .project-featured__features li {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            padding: 0.35rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .project-featured__features li::before {
+            content: '→';
+            color: var(--accent);
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .project-featured__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .project-featured__footer {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        /* ── Project grid ───────────────────────────────────── */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.25rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: border-color var(--transition), background var(--transition), transform var(--transition);
+        }
+
+        .project-card:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-card-hover);
+            transform: translateY(-3px);
+        }
+
+        .project-card__header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-card__icon {
+            font-size: 1.75rem;
+            line-height: 1;
+        }
+
+        .project-card__link {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color var(--transition);
+        }
+
+        .project-card__link:hover { color: var(--accent); }
+
+        .project-card__title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .project-card__desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            flex: 1;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-card__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-card__footer {
+            margin-top: auto;
+        }
+
+        /* ── Teaching series ────────────────────────────────── */
+        .teaching-strip {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-top: 1.25rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .teaching-strip__icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .teaching-strip__title {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .teaching-strip__desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .teaching-strip__steps {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 900px) {
+            .project-featured {
+                grid-template-columns: 1fr;
+            }
+            .project-featured__visual {
+                min-height: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero { padding: 3rem 1.5rem 2rem; }
+            .project-featured__content { padding: 2rem 1.5rem; }
+            .teaching-strip { flex-direction: column; gap: 1rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <div class="urgency-banner">
-        <div class="container">
-            <div class="urgency-content">
-                <span class="urgency-icon">⚡</span>
-                <span class="urgency-text"><strong>AVAILABLE NOW:</strong> Web apps & data solutions • Laravel specialist • Flat-rate pricing</span>
-                <a href="contact.html" class="urgency-btn">Hire Me →</a>
-            </div>
-        </div>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav__logo">Koda<span>Kodra</span></a>
+        <ul class="nav__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav__burger" aria-label="Open mobile menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav__mobile">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </div>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <span class="logo-symbol">⚡</span>
-                <span class="logo-text">KodaKodra</span>
-            </a>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="testimonials.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <main class="page">
+
+        <div class="page-hero">
+            <p class="section-label anim-fade-up">Work</p>
+            <h1 class="section-heading anim-fade-up delay-1">Projects</h1>
+            <p class="anim-fade-up delay-2" style="color:var(--text-muted);max-width:520px;font-size:0.95rem;">
+                A mix of production-grade applications, real integrations, and open-source teaching material — all built to the same uncompromising standard.
+            </p>
         </div>
-    </nav>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Projects</h1>
-            <p>Web applications and data solutions built since 2019</p>
-        </div>
-    </section>
+        <div class="section" style="padding-top:0;">
 
-    <!-- Public builds -->
-    <section class="projects-section">
-        <div class="container">
-            <h2>Public Builds — Progression Projects</h2>
-            <p class="section-intro">Each project below is built iteratively — HTML first, then PHP, then SQL — with every stage saved as a standalone snapshot. They demonstrate not just the final result, but how I think and structure a build from scratch.</p>
+            <!-- ── Featured: Social Network ─────────────────── -->
+            <p class="section-label" style="margin-bottom:1.25rem;">Featured</p>
+            <div class="project-featured anim-fade-up">
+                <div class="project-featured__content">
+                    <div>
+                        <div class="project-featured__badge">In Development — 95% Complete</div>
+                        <h2 class="project-featured__title">Community Social Network</h2>
+                        <p class="project-featured__desc">
+                            A fully custom Laravel social platform built around community, positive behaviour, and gamification.
+                            Designed from the ground up with UX, privacy, and security as the primary constraints — not afterthoughts.
+                        </p>
+                        <ul class="project-featured__features">
+                            <li>Posts, communities, comments & threaded discussions</li>
+                            <li>Granular user privacy & account control settings</li>
+                            <li>Points economy — earn by contributing, spend in the perks shop</li>
+                            <li>Leaderboard system to surface top community members</li>
+                            <li>Full RBAC — admin, moderator, and user permission tiers</li>
+                            <li>Complex relational schema with full Eloquent relationships</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="project-featured__tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">PHP 8.x</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Bootstrap 5</span>
+                            <span class="tag">JavaScript ES6+</span>
+                            <span class="tag">RBAC</span>
+                            <span class="tag">Gamification</span>
+                        </div>
+                        <div class="project-featured__footer">
+                            <span class="btn btn--outline" style="cursor:default;opacity:0.6;">Private — Demo on Request</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-featured__visual" aria-hidden="true">
+                    <div class="project-featured__visual-inner">
+                        <span class="project-featured__visual-icon">🌐</span>
+                        <div class="project-featured__visual-label">Community Platform</div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- ── Other Projects ────────────────────────────── -->
+            <p class="section-label" style="margin:2.5rem 0 0;">Other Projects</p>
             <div class="projects-grid">
 
-                <div class="project-card">
-                    <span class="project-type">Brochure Site — 6 Stages</span>
-                    <h3>Portfolio Brochure Project</h3>
-                    <p>Static single page through to a full multi-page site with PHP includes, contact form, PHPMailer, MySQL auth, user dashboard, admin panel, and a support ticket system with threaded replies. Every stage answers: what can this do that the previous one couldn't?</p>
-                    <div class="project-tags">
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">MySQL</span>
-                        <span class="project-tag">PHPMailer</span>
-                        <span class="project-tag">Auth</span>
-                        <span class="project-tag">CRUD</span>
-                        <span class="project-tag">Bootstrap</span>
+                <!-- eCommerce -->
+                <div class="project-card" data-reveal>
+                    <div class="project-card__header">
+                        <div class="project-card__icon">🛒</div>
+                        <a href="https://github.com/kodakodra/KodaKodra_eCommerce_Project"
+                           target="_blank" rel="noopener"
+                           class="project-card__link" aria-label="View eCommerce project on GitHub">
+                            GitHub ↗
+                        </a>
                     </div>
-                    <a href="https://github.com/kodakodra" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-type">E-Commerce — 7 Stages</span>
-                    <h3>eCommerce Store</h3>
-                    <p>Static HTML catalogue through to a fully operational store. Session cart with stock enforcement, Stripe checkout, order and download management, and PHPMailer transactional emails. Physical and digital product support throughout.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">MySQL</span>
-                        <span class="project-tag">Stripe</span>
-                        <span class="project-tag">PHPMailer</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">Bootstrap</span>
+                    <h2 class="project-card__title">eCommerce Platform</h2>
+                    <p class="project-card__desc">
+                        A custom-built PHP eCommerce application covering product browsing, cart management,
+                        checkout, and order handling — with Stripe payment processing and PHPMailer for
+                        transactional emails. Real integrations, real error handling.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag">Stripe</span>
+                        <span class="tag">PHPMailer</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">JavaScript</span>
                     </div>
-                    <a href="https://github.com/kodakodra/KodaKodra_eCommerce_Project" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-type">Booking System — Full Build</span>
-                    <h3>Salon Booking System</h3>
-                    <p>Static HTML through to a fully operational booking system. PHP, MySQL with PDO, admin CRUD, session timeout on inactivity, booking management with reschedule and cancellation. Built as a reusable template.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">MySQL</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">Bootstrap</span>
-                    </div>
-                    <a href="https://github.com/kodakodra/KodaKodra_Booking_System_Project" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Work by type -->
-    <section class="projects-section alt">
-        <div class="container">
-            <h2>Previous Work by Type</h2>
-            <p class="section-intro">50+ projects since 2019. Most are private client work — not suitable for public repos — but available to discuss or demo on request.</p>
-
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <span class="project-type">Laravel / PHP</span>
-                    <h3>Custom Web Applications</h3>
-                    <p>Full-stack Laravel builds — social platforms, community tools, management systems, booking platforms. User profiles, feeds, notifications, RBAC roles, policies, and middleware. Comfortable with the full complexity.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Laravel</span>
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">MySQL</span>
-                        <span class="project-tag">Blade</span>
-                        <span class="project-tag">Auth</span>
+                    <div class="project-card__footer">
+                        <a href="https://github.com/kodakodra/KodaKodra_eCommerce_Project"
+                           target="_blank" rel="noopener" class="btn btn--outline">
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <span class="project-type">MySQL / Laravel</span>
-                    <h3>Data Dashboards &amp; Reporting</h3>
-                    <p>Custom reporting dashboards, KPI tracking systems, and admin-facing analytics panels. MySQL schema design built for query performance. Data that surfaces the right information to the right people.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">MySQL</span>
-                        <span class="project-tag">Laravel</span>
-                        <span class="project-tag">Dashboards</span>
-                        <span class="project-tag">Reporting</span>
-                        <span class="project-tag">SQL</span>
+                <!-- Booking System -->
+                <div class="project-card" data-reveal>
+                    <div class="project-card__header">
+                        <div class="project-card__icon">📅</div>
+                        <a href="https://github.com/kodakodra/KodaKodra_Booking_System_Project"
+                           target="_blank" rel="noopener"
+                           class="project-card__link" aria-label="View Booking System on GitHub">
+                            GitHub ↗
+                        </a>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-type">Laravel / MySQL</span>
-                    <h3>Admin Panels &amp; Back-Office Tools</h3>
-                    <p>Internal tools, user management dashboards, content editors, and submission tracking systems. Built so non-technical people can actually use them without needing a manual.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Laravel</span>
-                        <span class="project-tag">MySQL</span>
-                        <span class="project-tag">CRUD</span>
-                        <span class="project-tag">Blade</span>
+                    <h2 class="project-card__title">Booking System</h2>
+                    <p class="project-card__desc">
+                        A custom appointment and booking system with a responsive Bootstrap interface.
+                        Handles availability logic, scheduling, and booking management — demonstrating
+                        clean PHP/MySQL architecture with a focus on usable UI flows.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS3</span>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-type">PHP / MySQL</span>
-                    <h3>E-Commerce Builds</h3>
-                    <p>Small business e-commerce from static product pages to dynamic sites with Stripe payment integration. Sandbox tested, clean, and maintainable. Digital and physical product support.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">Stripe</span>
-                        <span class="project-tag">MySQL</span>
-                        <span class="project-tag">Bootstrap</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-type">Various</span>
-                    <h3>Bug Fixes &amp; Project Rescues</h3>
-                    <p>Taking over half-finished or broken projects left by previous developers. Digging in, understanding what's there, fixing what's broken, finishing what wasn't — without unnecessary rewrites.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Laravel</span>
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">MySQL</span>
-                        <span class="project-tag">Debugging</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-type">HTML / PHP</span>
-                    <h3>Brochure &amp; Portfolio Sites</h3>
-                    <p>Fast, clean, responsive sites for small businesses and individuals. No unnecessary weight. Built to be handed over and maintained without drama.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">Bootstrap</span>
-                        <span class="project-tag">JavaScript</span>
+                    <div class="project-card__footer">
+                        <a href="https://github.com/kodakodra/KodaKodra_Booking_System_Project"
+                           target="_blank" rel="noopener" class="btn btn--outline">
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
 
             </div>
 
-            <div class="private-note">
-                <strong>A note on private work:</strong> Most client projects can't be shared publicly — full Laravel applications with hundreds of files aren't suited to public repos. Screenshots, walkthroughs, and screen recordings are available on request.
+            <!-- ── Teaching Series ───────────────────────────── -->
+            <p class="section-label" style="margin:2.5rem 0 1rem;">Open Source & Teaching</p>
+            <div class="teaching-strip" data-reveal>
+                <div class="teaching-strip__icon" aria-hidden="true">📖</div>
+                <div>
+                    <div class="teaching-strip__title">KodaKodra Brochure Project Series</div>
+                    <p class="teaching-strip__desc">
+                        A public 6-step build series walking through the complete creation of a professional brochure website —
+                        from bare HTML through to a fully styled, PHP-driven Bootstrap site. Built as a structured learning
+                        resource, it reflects the same documentation and knowledge-sharing instincts applied to real project work.
+                    </p>
+                    <div class="teaching-strip__steps">
+                        <span class="tag">Step 1</span>
+                        <span class="tag">Step 2</span>
+                        <span class="tag">Step 3</span>
+                        <span class="tag">Step 4</span>
+                        <span class="tag">Step 5</span>
+                        <span class="tag">Step 6</span>
+                    </div>
+                    <div style="margin-top:1rem;">
+                        <a href="https://github.com/kodakodra" target="_blank" rel="noopener" class="btn btn--outline">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Got a project in mind?</h2>
-                <p>Tell me what you need and I'll tell you if I'm the right fit.</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Get in Touch →</a>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>KodaKodra</h4>
-                    <p>PHP, Laravel &amp; Data Analytics</p>
-                    <p>Available now. Flat rates.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Pages</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="testimonials.html">Reviews</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Code</h4>
-                    <ul>
-                        <li><a href="https://github.com/kodakodra" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Social</h4>
-                    <ul>
-                        <li><a href="https://twitter.com/kodakodra" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter/X</a></li>
-                        <li><a href="https://www.instagram.com/kodakodra" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 KodaKodra. Built with clean code and zero nonsense.</p>
-            </div>
+        <span class="footer__copy">&copy; 2025 KodaKodra. All rights reserved.</span>
+        <div class="footer__links">
+            <a href="https://github.com/kodakodra" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:[your@email.com]">Email</a>
+            <a href="https://linkedin.com/in/[yourprofile]" target="_blank" rel="noopener">LinkedIn</a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
