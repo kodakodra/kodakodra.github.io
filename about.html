@@ -7,73 +7,65 @@
     <title>About — KodaKodra</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* ── Page hero ──────────────────────────────────────── */
         .page-hero {
-            padding: 5rem 2.5rem 3rem;
+            padding: 3rem var(--px) 2rem;
             max-width: 1100px;
             margin: 0 auto;
         }
 
-        /* ── About layout ───────────────────────────────────── */
+        /* ── About layout: mobile stacked, desktop side-by-side */
         .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 380px;
-            gap: 3rem;
-            align-items: start;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
         .about-body p {
-            font-size: 0.95rem;
+            font-size: 0.93rem;
             color: var(--text-muted);
             line-height: 1.85;
             margin-bottom: 1.25rem;
         }
 
-        .about-body p strong {
-            color: var(--text);
-            font-weight: 500;
-        }
-
+        .about-body p strong { color: var(--text); font-weight: 500; }
         .about-body p .highlight {
             color: var(--accent);
             font-family: var(--font-mono);
             font-size: 0.88em;
         }
 
-        /* ── Sidebar card ───────────────────────────────────── */
-        .about-sidebar {
-            position: sticky;
-            top: 84px;
-        }
+        /* ── Sidebar ────────────────────────────────────────── */
+        .about-sidebar { width: 100%; }
 
         .info-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius);
             overflow: hidden;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
 
         .info-card__header {
             background: var(--navy);
-            padding: 1rem 1.5rem;
+            padding: 0.75rem 1.25rem;
             font-family: var(--font-mono);
-            font-size: 0.72rem;
+            font-size: 0.68rem;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: rgba(255,255,255,0.6);
         }
 
-        .info-card__body {
-            padding: 1.25rem 1.5rem;
-        }
+        .info-card__body { padding: 1rem 1.25rem; }
 
         .info-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.6rem 0;
+            padding: 0.55rem 0;
             border-bottom: 1px solid var(--border);
             font-size: 0.82rem;
+            gap: 0.5rem;
         }
 
         .info-row:last-child { border-bottom: none; }
@@ -81,53 +73,54 @@
         .info-row__label {
             color: var(--text-dim);
             font-family: var(--font-mono);
-            font-size: 0.72rem;
-            letter-spacing: 0.05em;
+            font-size: 0.7rem;
+            letter-spacing: 0.04em;
+            flex-shrink: 0;
         }
 
         .info-row__value {
             color: var(--text);
             text-align: right;
+            word-break: break-all;
+            font-size: 0.8rem;
         }
 
-        /* ── Philosophy section ─────────────────────────────── */
+        /* ── Philosophy ─────────────────────────────────────── */
         .philosophy-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr;
+            gap: 0.875rem;
+            margin-top: 1.75rem;
         }
 
         .philosophy-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem;
             border-left: 3px solid var(--accent);
+            border-radius: var(--radius);
+            padding: 1.25rem;
             transition: background var(--transition);
         }
 
-        .philosophy-card:hover {
-            background: var(--bg-card-hover);
-        }
+        .philosophy-card:hover { background: var(--bg-card-hover); }
 
         .philosophy-card__title {
             font-family: var(--font-display);
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             color: var(--text);
         }
 
         .philosophy-card__body {
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            line-height: 1.7;
+            line-height: 1.65;
         }
 
-        /* ── Qualifications timeline ────────────────────────── */
+        /* ── Timeline ───────────────────────────────────────── */
         .timeline {
-            margin-top: 2rem;
+            margin-top: 1.75rem;
             position: relative;
             padding-left: 1.5rem;
         }
@@ -135,14 +128,14 @@
         .timeline::before {
             content: '';
             position: absolute;
-            left: 0; top: 6px; bottom: 6px;
+            left: 0; top: 8px; bottom: 8px;
             width: 1px;
             background: var(--border);
         }
 
         .timeline-item {
             position: relative;
-            padding-bottom: 2rem;
+            padding-bottom: 1.75rem;
         }
 
         .timeline-item:last-child { padding-bottom: 0; }
@@ -152,8 +145,7 @@
             position: absolute;
             left: -1.5rem;
             top: 6px;
-            width: 7px;
-            height: 7px;
+            width: 7px; height: 7px;
             border-radius: 50%;
             background: var(--accent);
             border: 2px solid var(--bg);
@@ -162,37 +154,48 @@
 
         .timeline-item__year {
             font-family: var(--font-mono);
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             color: var(--accent);
             letter-spacing: 0.08em;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.2rem;
         }
 
         .timeline-item__title {
             font-family: var(--font-display);
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 700;
             color: var(--text);
-            margin-bottom: 0.15rem;
+            margin-bottom: 0.1rem;
         }
 
         .timeline-item__sub {
-            font-size: 0.78rem;
+            font-size: 0.76rem;
             color: var(--text-muted);
         }
 
-        @media (max-width: 900px) {
+        /* ── Responsive upgrades ────────────────────────────── */
+        @media (min-width: 640px) {
+            .philosophy-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 900px) {
             .about-grid {
-                grid-template-columns: 1fr;
+                display: grid;
+                grid-template-columns: 1fr 340px;
+                gap: 3rem;
+                align-items: start;
             }
             .about-sidebar {
-                position: static;
-                order: -1;
+                position: sticky;
+                top: 84px;
+                width: auto;
+                order: 0;
             }
         }
 
-        @media (max-width: 768px) {
-            .page-hero { padding: 3rem 1.5rem 2rem; }
+        @media (min-width: 1024px) {
+            .page-hero { padding: 5rem var(--px) 3rem; }
+            .about-grid { grid-template-columns: 1fr 380px; }
         }
     </style>
 </head>
@@ -257,27 +260,27 @@
                     </p>
                     <p class="anim-fade-up delay-4">
                         Outside of code, I hold a <strong>Level 3 qualification in Team Leading & Management</strong>,
-                        which isn't something I use to pad a CV — it reflects a genuine interest in how people
-                        and teams work well together. I'm as comfortable thinking about user motivation and
-                        community dynamics as I am about database indexes.
+                        which reflects a genuine interest in how people and teams work well together. I'm as
+                        comfortable thinking about user motivation and community dynamics as I am about
+                        database indexes.
                     </p>
 
                     <!-- Philosophy -->
-                    <div style="margin-top:3rem;" data-reveal>
+                    <div style="margin-top:2.5rem;" data-reveal>
                         <p class="section-label">Philosophy</p>
-                        <h2 class="section-heading" style="font-size:1.5rem;margin-bottom:1rem;">How I think about code</h2>
+                        <h2 class="section-heading" style="font-size:clamp(1.2rem,3vw,1.5rem);margin-bottom:0.75rem;">How I think about code</h2>
                         <div class="philosophy-grid">
                             <div class="philosophy-card">
                                 <div class="philosophy-card__title">Code is communication</div>
-                                <div class="philosophy-card__body">The next person to read your code knows nothing about what you were thinking. Write for them. Names, comments, structure — all of it is communication.</div>
+                                <div class="philosophy-card__body">The next person to read your code knows nothing about what you were thinking. Write for them.</div>
                             </div>
                             <div class="philosophy-card">
                                 <div class="philosophy-card__title">Simple beats clever</div>
-                                <div class="philosophy-card__body">KISS isn't a beginner's principle. It's what experienced developers land on after trying to be too clever too many times. Readable, simple code is harder to write than complex code.</div>
+                                <div class="philosophy-card__body">KISS isn't a beginner's principle — it's what experienced developers land on after trying to be too clever too many times.</div>
                             </div>
                             <div class="philosophy-card">
                                 <div class="philosophy-card__title">Security is design</div>
-                                <div class="philosophy-card__body">If security is an afterthought, it's already too late. It needs to be part of the initial architecture decision, not bolted on at the end of a sprint.</div>
+                                <div class="philosophy-card__body">If security is an afterthought, it's already too late. It needs to be part of the initial architecture decision.</div>
                             </div>
                             <div class="philosophy-card">
                                 <div class="philosophy-card__title">UX is a technical concern</div>
@@ -287,27 +290,27 @@
                     </div>
 
                     <!-- Qualifications -->
-                    <div style="margin-top:3rem;" data-reveal>
+                    <div style="margin-top:2.5rem;" data-reveal>
                         <p class="section-label">Education</p>
-                        <h2 class="section-heading" style="font-size:1.5rem;margin-bottom:1.5rem;">Qualifications</h2>
+                        <h2 class="section-heading" style="font-size:clamp(1.2rem,3vw,1.5rem);margin-bottom:1.25rem;">Qualifications</h2>
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-item__year">2022</div>
-                                <div class="timeline-item__title">NCFE Level 3 — Principles of Team Leading & Management</div>
+                                <div class="timeline-item__title">NCFE Level 3 — Principles of Team Leading &amp; Management</div>
                                 <div class="timeline-item__sub">Leadership, team dynamics, management principles</div>
                             </div>
                             <div class="timeline-item">
-                                <div class="timeline-item__year">2004</div>
-                                <div class="timeline-item__title">AVCE Level 3 — Information & Communication Technology</div>
+                                <div class="timeline-item__year">[Year]</div>
+                                <div class="timeline-item__title">AVCE Level 3 — Information &amp; Communication Technology</div>
                                 <div class="timeline-item__sub">Advanced ICT — formal foundation in computing and systems</div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-item__year">2004</div>
-                                <div class="timeline-item__title">BTEC Level 2 — PC Maintenance & Repair</div>
+                                <div class="timeline-item__title">BTEC Level 2 — PC Maintenance &amp; Repair</div>
                                 <div class="timeline-item__sub">Hardware, systems, and technical fundamentals</div>
                             </div>
                             <div class="timeline-item">
-                                <div class="timeline-item__year">2003</div>
+                                <div class="timeline-item__year">[Year]</div>
                                 <div class="timeline-item__title">GCSEs — Grades A–C</div>
                                 <div class="timeline-item__sub">English, Mathematics, IT, Sciences, Art</div>
                             </div>
@@ -325,7 +328,7 @@
                                 <span class="info-row__value">Full-Stack Developer</span>
                             </div>
                             <div class="info-row">
-                                <span class="info-row__label">Primary Stack</span>
+                                <span class="info-row__label">Stack</span>
                                 <span class="info-row__value">Laravel / PHP</span>
                             </div>
                             <div class="info-row">
@@ -349,7 +352,7 @@
                                 <span class="info-row__value">United Kingdom</span>
                             </div>
                             <div class="info-row">
-                                <span class="info-row__label">Availability</span>
+                                <span class="info-row__label">Status</span>
                                 <span class="info-row__value" style="color:var(--accent);">Open to work</span>
                             </div>
                         </div>
@@ -361,22 +364,27 @@
                             <div class="info-row">
                                 <span class="info-row__label">GitHub</span>
                                 <a href="https://github.com/kodakodra" target="_blank" rel="noopener"
-                                   style="color:var(--accent);font-size:0.82rem;">kodakodra ↗</a>
+                                   style="color:var(--accent);font-size:0.8rem;">kodakodra ↗</a>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-row__label">Bluesky</span>
+                                <a href="https://bsky.app/profile/kodakodra.bsky.social" target="_blank" rel="noopener"
+                                   style="color:var(--accent);font-size:0.8rem;">@kodakodra ↗</a>
                             </div>
                             <div class="info-row">
                                 <span class="info-row__label">Linktree</span>
                                 <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener"
-                                   style="color:var(--accent);font-size:0.82rem;">Linktree ↗</a>
+                                   style="color:var(--accent);font-size:0.8rem;">linktr.ee ↗</a>
                             </div>
                             <div class="info-row">
                                 <span class="info-row__label">Email</span>
                                 <a href="mailto:kodakodradev@gmail.com"
-                                   style="color:var(--accent);font-size:0.82rem;">kodakodradev@gmail.com</a>
+                                   style="color:var(--accent);font-size:0.75rem;">kodakodradev@gmail.com</a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="contact.html" class="btn btn--primary" style="width:100%;justify-content:center;margin-top:0.5rem;">
+                    <a href="contact.html" class="btn btn--primary" style="width:100%;margin-top:0.25rem;">
                         Get In Touch
                     </a>
                 </aside>
@@ -385,7 +393,6 @@
         </div>
     </main>
 
-    <!-- ── Footer ───────────────────────────────────────────── -->
     <footer class="footer">
         <span class="footer__copy">&copy; 2026 KodaKodra. All rights reserved.</span>
         <div class="footer__links">
