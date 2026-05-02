@@ -9,7 +9,7 @@
     <style>
         /* ── Page hero ──────────────────────────────────────── */
         .page-hero {
-            padding: 5rem 2.5rem 3rem;
+            padding: 3rem var(--px) 2rem;
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -20,38 +20,36 @@
             border: 1px solid var(--border);
             border-radius: var(--radius);
             overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-bottom: 1.5rem;
+            /* Mobile: single column, stacks content above visual */
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.25rem;
             transition: border-color var(--transition);
         }
 
-        .project-featured:hover {
-            border-color: var(--border-hover);
-        }
+        .project-featured:hover { border-color: var(--border-hover); }
 
         .project-featured__content {
-            padding: 3rem;
+            padding: 1.75rem var(--px);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 0;
         }
 
         .project-featured__visual {
             background: linear-gradient(135deg, #0d1f38 0%, #1b3a5c 50%, #0d1f38 100%);
             position: relative;
             overflow: hidden;
-            min-height: 340px;
+            min-height: 160px;
             display: flex;
             align-items: center;
             justify-content: center;
+            order: -1; /* visual on top on mobile */
         }
 
-        /* Animated grid overlay */
         .project-featured__visual::before {
             content: '';
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background-image:
                 linear-gradient(rgba(74,158,255,0.08) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(74,158,255,0.08) 1px, transparent 1px);
@@ -65,15 +63,15 @@
         }
 
         .project-featured__visual-icon {
-            font-size: 4rem;
+            font-size: 3rem;
             display: block;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 24px rgba(74,158,255,0.5));
+            margin-bottom: 0.75rem;
+            filter: drop-shadow(0 0 20px rgba(74,158,255,0.5));
         }
 
         .project-featured__visual-label {
             font-family: var(--font-mono);
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: rgba(74,158,255,0.6);
             letter-spacing: 0.15em;
             text-transform: uppercase;
@@ -84,14 +82,14 @@
             align-items: center;
             gap: 0.4rem;
             font-family: var(--font-mono);
-            font-size: 0.68rem;
+            font-size: 0.65rem;
             color: var(--gold);
             background: rgba(240,192,96,0.1);
             border: 1px solid rgba(240,192,96,0.25);
-            padding: 0.25rem 0.65rem;
+            padding: 0.2rem 0.6rem;
             border-radius: 3px;
             letter-spacing: 0.08em;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
 
         .project-featured__badge::before {
@@ -100,50 +98,51 @@
             border-radius: 50%;
             background: var(--gold);
             animation: pulse 2s infinite;
+            flex-shrink: 0;
         }
 
         .project-featured__title {
             font-family: var(--font-display);
-            font-size: 1.8rem;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
             font-weight: 800;
             margin-bottom: 0.75rem;
             letter-spacing: -0.03em;
         }
 
         .project-featured__desc {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             line-height: 1.75;
-            margin-bottom: 1.5rem;
-            flex: 1;
+            margin-bottom: 1.25rem;
         }
 
         .project-featured__features {
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.5rem;
         }
 
         .project-featured__features li {
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            padding: 0.35rem 0;
+            padding: 0.3rem 0;
             border-bottom: 1px solid var(--border);
             display: flex;
-            align-items: center;
-            gap: 0.6rem;
+            align-items: flex-start;
+            gap: 0.5rem;
         }
 
         .project-featured__features li::before {
             content: '→';
             color: var(--accent);
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             flex-shrink: 0;
+            margin-top: 0.05rem;
         }
 
         .project-featured__tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-bottom: 1.75rem;
+            gap: 0.35rem;
+            margin-bottom: 1.5rem;
         }
 
         .project-featured__footer {
@@ -152,19 +151,19 @@
             flex-wrap: wrap;
         }
 
-        /* ── Project grid ───────────────────────────────────── */
+        /* ── Projects grid ──────────────────────────────────── */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.25rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr; /* mobile: single col */
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
         .project-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 2rem;
+            padding: 1.5rem;
             display: flex;
             flex-direction: column;
             transition: border-color var(--transition), background var(--transition), transform var(--transition);
@@ -173,36 +172,34 @@
         .project-card:hover {
             border-color: var(--border-hover);
             background: var(--bg-card-hover);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
         .project-card__header {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
 
-        .project-card__icon {
-            font-size: 1.75rem;
-            line-height: 1;
-        }
+        .project-card__icon { font-size: 1.6rem; line-height: 1; }
 
         .project-card__link {
             font-family: var(--font-mono);
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             color: var(--text-dim);
             display: flex;
             align-items: center;
             gap: 0.3rem;
             transition: color var(--transition);
+            white-space: nowrap;
         }
 
         .project-card__link:hover { color: var(--accent); }
 
         .project-card__title {
             font-family: var(--font-display);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             letter-spacing: -0.02em;
@@ -219,28 +216,26 @@
         .project-card__tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.4rem;
+            gap: 0.35rem;
             margin-bottom: 1.25rem;
         }
 
-        .project-card__footer {
-            margin-top: auto;
-        }
+        .project-card__footer { margin-top: auto; }
 
-        /* ── Teaching series ────────────────────────────────── */
+        /* ── Teaching strip ─────────────────────────────────── */
         .teaching-strip {
             background: var(--bg-2);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 2rem;
-            margin-top: 1.25rem;
+            padding: 1.5rem;
+            margin-top: 1rem;
             display: flex;
-            align-items: flex-start;
-            gap: 2rem;
+            flex-direction: column; /* mobile: stacked */
+            gap: 1rem;
         }
 
         .teaching-strip__icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             flex-shrink: 0;
         }
 
@@ -260,23 +255,34 @@
 
         .teaching-strip__steps {
             display: flex;
-            gap: 0.4rem;
+            gap: 0.35rem;
             flex-wrap: wrap;
         }
 
-        @media (max-width: 900px) {
+        /* ── Responsive upgrades ────────────────────────────── */
+        @media (min-width: 640px) {
+            .projects-grid { grid-template-columns: repeat(2, 1fr); }
+            .teaching-strip { flex-direction: row; align-items: flex-start; gap: 1.5rem; }
+        }
+
+        @media (min-width: 900px) {
             .project-featured {
-                grid-template-columns: 1fr;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                flex-direction: unset;
             }
             .project-featured__visual {
-                min-height: 200px;
+                order: 0;
+                min-height: 340px;
+            }
+            .project-featured__content {
+                padding: 2.5rem;
             }
         }
 
-        @media (max-width: 768px) {
-            .page-hero { padding: 3rem 1.5rem 2rem; }
-            .project-featured__content { padding: 2rem 1.5rem; }
-            .teaching-strip { flex-direction: column; gap: 1rem; }
+        @media (min-width: 1024px) {
+            .page-hero { padding: 5rem var(--px) 3rem; }
+            .project-featured__content { padding: 3rem; }
         }
     </style>
 </head>
@@ -306,15 +312,16 @@
         <div class="page-hero">
             <p class="section-label anim-fade-up">Work</p>
             <h1 class="section-heading anim-fade-up delay-1">Projects</h1>
-            <p class="anim-fade-up delay-2" style="color:var(--text-muted);max-width:520px;font-size:0.95rem;">
+            <p class="anim-fade-up delay-2" style="color:var(--text-muted);max-width:520px;font-size:0.9rem;">
                 A mix of production-grade applications, real integrations, and open-source teaching material — all built to the same uncompromising standard.
             </p>
         </div>
 
         <div class="section" style="padding-top:0;">
 
+            <p class="section-label" style="margin-bottom:1rem;">Featured</p>
+
             <!-- ── Featured: Social Network ─────────────────── -->
-            <p class="section-label" style="margin-bottom:1.25rem;">Featured</p>
             <div class="project-featured anim-fade-up">
                 <div class="project-featured__content">
                     <div>
@@ -325,8 +332,8 @@
                             Designed from the ground up with UX, privacy, and security as the primary constraints — not afterthoughts.
                         </p>
                         <ul class="project-featured__features">
-                            <li>Posts, communities, comments & threaded discussions</li>
-                            <li>Granular user privacy & account control settings</li>
+                            <li>Posts, communities, comments &amp; threaded discussions</li>
+                            <li>Granular user privacy &amp; account control settings</li>
                             <li>Points economy — earn by contributing, spend in the perks shop</li>
                             <li>Leaderboard system to surface top community members</li>
                             <li>Full RBAC — admin, moderator, and user permission tiers</li>
@@ -344,7 +351,7 @@
                             <span class="tag">Gamification</span>
                         </div>
                         <div class="project-featured__footer">
-                            <span class="btn btn--outline" style="cursor:default;opacity:0.6;">Private</span>
+                            <span class="btn btn--outline" style="cursor:default;opacity:0.6;">Private — Demo on Request</span>
                         </div>
                     </div>
                 </div>
@@ -357,24 +364,20 @@
             </div>
 
             <!-- ── Other Projects ────────────────────────────── -->
-            <p class="section-label" style="margin:2.5rem 0 0;">Other Projects</p>
+            <p class="section-label" style="margin:2rem 0 0;">Other Projects</p>
             <div class="projects-grid">
 
-                <!-- eCommerce -->
                 <div class="project-card" data-reveal>
                     <div class="project-card__header">
                         <div class="project-card__icon">🛒</div>
                         <a href="https://github.com/kodakodra/KodaKodra_eCommerce_Project"
-                           target="_blank" rel="noopener"
-                           class="project-card__link" aria-label="View eCommerce project on GitHub">
-                            GitHub ↗
-                        </a>
+                           target="_blank" rel="noopener" class="project-card__link"
+                           aria-label="View eCommerce project on GitHub">GitHub ↗</a>
                     </div>
                     <h2 class="project-card__title">eCommerce Platform</h2>
                     <p class="project-card__desc">
-                        A custom-built PHP eCommerce application covering product browsing, cart management,
-                        checkout, and order handling — with Stripe payment processing and PHPMailer for
-                        transactional emails. Real integrations, real error handling.
+                        Custom-built PHP eCommerce with Stripe payment processing and PHPMailer for transactional emails.
+                        Real integrations, real error handling — covering cart, checkout, and order management.
                     </p>
                     <div class="project-card__tags">
                         <span class="tag">PHP</span>
@@ -382,59 +385,48 @@
                         <span class="tag">Stripe</span>
                         <span class="tag">PHPMailer</span>
                         <span class="tag">MySQL</span>
-                        <span class="tag">JavaScript</span>
                     </div>
                     <div class="project-card__footer">
                         <a href="https://github.com/kodakodra/KodaKodra_eCommerce_Project"
-                           target="_blank" rel="noopener" class="btn btn--outline">
-                            View on GitHub
-                        </a>
+                           target="_blank" rel="noopener" class="btn btn--outline">View on GitHub</a>
                     </div>
                 </div>
 
-                <!-- Booking System -->
                 <div class="project-card" data-reveal>
                     <div class="project-card__header">
                         <div class="project-card__icon">📅</div>
                         <a href="https://github.com/kodakodra/KodaKodra_Booking_System_Project"
-                           target="_blank" rel="noopener"
-                           class="project-card__link" aria-label="View Booking System on GitHub">
-                            GitHub ↗
-                        </a>
+                           target="_blank" rel="noopener" class="project-card__link"
+                           aria-label="View Booking System on GitHub">GitHub ↗</a>
                     </div>
                     <h2 class="project-card__title">Booking System</h2>
                     <p class="project-card__desc">
-                        A custom appointment and booking system with a responsive Bootstrap interface.
-                        Handles availability logic, scheduling, and booking management — demonstrating
-                        clean PHP/MySQL architecture with a focus on usable UI flows.
+                        Custom appointment and booking system with a responsive Bootstrap interface.
+                        Handles availability logic, scheduling, and booking management with clean user flows.
                     </p>
                     <div class="project-card__tags">
                         <span class="tag">PHP</span>
                         <span class="tag">MySQL</span>
                         <span class="tag">Bootstrap</span>
                         <span class="tag">JavaScript</span>
-                        <span class="tag">CSS3</span>
                     </div>
                     <div class="project-card__footer">
                         <a href="https://github.com/kodakodra/KodaKodra_Booking_System_Project"
-                           target="_blank" rel="noopener" class="btn btn--outline">
-                            View on GitHub
-                        </a>
+                           target="_blank" rel="noopener" class="btn btn--outline">View on GitHub</a>
                     </div>
                 </div>
 
             </div>
 
             <!-- ── Teaching Series ───────────────────────────── -->
-            <p class="section-label" style="margin:2.5rem 0 1rem;">Open Source & Teaching</p>
+            <p class="section-label" style="margin:2rem 0 0.75rem;">Open Source &amp; Teaching</p>
             <div class="teaching-strip" data-reveal>
                 <div class="teaching-strip__icon" aria-hidden="true">📖</div>
                 <div>
                     <div class="teaching-strip__title">KodaKodra Brochure Project Series</div>
                     <p class="teaching-strip__desc">
                         A public 6-step build series walking through the complete creation of a professional brochure website —
-                        from bare HTML through to a fully styled, PHP-driven Bootstrap site. Built as a structured learning
-                        resource, it reflects the same documentation and knowledge-sharing instincts applied to real project work.
+                        from bare HTML through to a fully styled, PHP-driven Bootstrap site.
                     </p>
                     <div class="teaching-strip__steps">
                         <span class="tag">Step 1</span>
@@ -455,7 +447,6 @@
         </div>
     </main>
 
-    <!-- ── Footer ───────────────────────────────────────────── -->
     <footer class="footer">
         <span class="footer__copy">&copy; 2026 KodaKodra. All rights reserved.</span>
         <div class="footer__links">
