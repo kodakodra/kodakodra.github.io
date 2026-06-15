@@ -3,184 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact KodaKodra — get in touch via GitHub, email, or LinkedIn.">
+    <meta name="description" content="Contact KodaKodra — get in touch for Laravel development, data analytics, or full-stack projects.">
     <title>Contact — KodaKodra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ── Contact layout ─────────────────────────────────── */
-        .contact-wrapper {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 5rem 2.5rem;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-            align-items: start;
-        }
-
-        /* ── Left — intro ───────────────────────────────────── */
-        .contact-intro p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.85;
-            margin-bottom: 1.25rem;
-        }
-
-        .contact-intro strong { color: var(--text); font-weight: 500; }
-
-        /* ── Contact link cards ─────────────────────────────── */
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .contact-link-card {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem 2rem;
-            transition: border-color var(--transition), background var(--transition), transform var(--transition);
-            cursor: pointer;
-        }
-
-        .contact-link-card:hover {
-            border-color: var(--border-hover);
-            background: var(--bg-card-hover);
-            transform: translateX(4px);
-        }
-
-        .contact-link-card__icon {
-            width: 48px;
-            height: 48px;
-            border-radius: var(--radius);
-            background: var(--accent-glow);
-            border: 1px solid rgba(74,158,255,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
-
-        .contact-link-card__content {
-            flex: 1;
-        }
-
-        .contact-link-card__title {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 0.2rem;
-        }
-
-        .contact-link-card__value {
-            font-family: var(--font-mono);
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            letter-spacing: 0.03em;
-        }
-
-        .contact-link-card__arrow {
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            transition: color var(--transition), transform var(--transition);
-        }
-
-        .contact-link-card:hover .contact-link-card__arrow {
-            color: var(--accent);
-            transform: translateX(3px);
-        }
-
-        /* ── Availability banner ────────────────────────────── */
-        .availability-banner {
-            margin-top: 3rem;
-            background: linear-gradient(135deg, rgba(27,58,92,0.6) 0%, rgba(74,158,255,0.08) 100%);
-            border: 1px solid rgba(74,158,255,0.25);
-            border-radius: var(--radius);
-            padding: 2rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 1.25rem;
-        }
-
-        .availability-banner__dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #4cff91;
-            box-shadow: 0 0 10px #4cff91;
-            animation: pulse 2s infinite;
-            flex-shrink: 0;
-            margin-top: 0.4rem;
-        }
-
-        .availability-banner__title {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.4rem;
-            color: var(--text);
-        }
-
-        .availability-banner__body {
-            font-size: 0.83rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        /* ── FAQ / What to expect ───────────────────────────── */
-        .expect-list {
-            margin-top: 2.5rem;
-        }
-
-        .expect-list__title {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 1.25rem;
-            color: var(--text);
-        }
-
-        .expect-item {
-            display: flex;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .expect-item:last-child { border-bottom: none; }
-
-        .expect-item__num {
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            color: var(--accent);
-            width: 1.5rem;
-            flex-shrink: 0;
-            padding-top: 0.1rem;
-        }
-
-        .expect-item__text {
-            font-size: 0.83rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        .expect-item__text strong { color: var(--text); font-weight: 500; }
-
-        @media (max-width: 768px) {
-            .contact-wrapper { padding: 3rem 1.5rem; }
-            .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-        }
-    </style>
 </head>
 <body>
 
@@ -204,104 +31,62 @@
     </div>
 
     <main class="page">
-        <div class="contact-wrapper">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <p class="section-label anim-fade-up">Get In Touch</p>
+                    <h1 class="section-heading anim-fade-up delay-1">Contact</h1>
+                </div>
+            </div>
 
-            <p class="section-label anim-fade-up">Get In Touch</p>
-            <h1 class="section-heading anim-fade-up delay-1">Contact</h1>
-
-            <div class="contact-grid">
-
-                <!-- ── Left ──────────────────────────────────── -->
-                <div>
-                    <div class="contact-intro anim-fade-up delay-2">
-                        <p>
-                            I'm currently <strong>open to new opportunities</strong> — whether that's a full-time
-                            role, contract work, or a project collaboration. If you're building something
-                            with Laravel and need someone who takes code quality seriously, let's talk.
-                        </p>
-                        <p>
-                            I prefer direct communication — no fluff, no corporate back-and-forth. Tell me
-                            what you're building, what you need, and we'll figure out quickly if there's a fit.
-                        </p>
+            <div class="row g-5 mt-3">
+                <div class="col-lg-6">
+                    <div class="contact-intro">
+                        <p class="anim-fade-up">I'm currently <strong>open to new opportunities</strong> — full-time, contract, or collaboration. If you need a Laravel expert who also brings <strong>data analytics and SQL optimisation</strong> to the table, let's talk.</p>
+                        <p class="anim-fade-up delay-1">Direct communication, no fluff. Tell me what you're building, and we'll figure out if there's a fit.</p>
                     </div>
-
-                    <!-- What to expect -->
-                    <div class="expect-list anim-fade-up delay-3">
-                        <div class="expect-list__title">What to expect</div>
-                        <div class="expect-item">
-                            <div class="expect-item__num">01</div>
-                            <div class="expect-item__text"><strong>Quick response.</strong> I check messages regularly and won't leave you waiting days for a reply.</div>
-                        </div>
-                        <div class="expect-item">
-                            <div class="expect-item__num">02</div>
-                            <div class="expect-item__text"><strong>Honest conversation.</strong> If your project isn't a good fit, I'll say so — no wasted time on either side.</div>
-                        </div>
+                    <div class="expect-list mt-4 anim-fade-up delay-2">
+                        <h4 class="fw-bold" style="font-family: var(--font-display);">What to expect</h4>
+                        <div class="d-flex gap-3 mt-3"><span class="text-accent fw-bold">01</span><p><strong>Quick response.</strong> I check messages regularly and won't leave you waiting days.</p></div>
+                        <div class="d-flex gap-3 mt-2"><span class="text-accent fw-bold">02</span><p><strong>Honest conversation.</strong> If your project isn't a good fit, I'll say so — no wasted time.</p></div>
                     </div>
                 </div>
 
-                <!-- ── Right — links ──────────────────────────── -->
-                <div>
-                    <div class="contact-links anim-fade-up delay-2">
-                        <a href="mailto:wtmzxdvoy@mozmail.com" class="contact-link-card" aria-label="Send an email">
-                            <div class="contact-link-card__icon" aria-hidden="true">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-link-card__content">
-                                <div class="contact-link-card__title">Email</div>
-                                <div class="contact-link-card__value">wtmzxdvoy@mozmail.com</div>
-                            </div>
-                            <span class="contact-link-card__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                <div class="col-lg-6">
+                    <div class="contact-links">
+                        <a href="mailto:wtmzxdvoy@mozmail.com" class="contact-link-card">
+                            <div class="contact-link-card__icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-link-card__content"><div class="contact-link-card__title">Email</div><div class="contact-link-card__value">wtmzxdvoy@mozmail.com</div></div>
+                            <span class="contact-link-card__arrow"><i class="fas fa-arrow-right"></i></span>
                         </a>
-                        
-                        <a href="https://x.com/KodaKodra" class="contact-link-card" aria-label="DM on Twitter">
-                            <div class="contact-link-card__icon" aria-hidden="true">
-                                <i class="fab fa-x-twitter"></i>
-                            </div>
-                            <div class="contact-link-card__content">
-                                <div class="contact-link-card__title">Twitter DM</div>
-                                <div class="contact-link-card__value">https://x.com/KodaKodra</div>
-                            </div>
-                            <span class="contact-link-card__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                        <a href="https://x.com/KodaKodra" class="contact-link-card">
+                            <div class="contact-link-card__icon"><i class="fab fa-x-twitter"></i></div>
+                            <div class="contact-link-card__content"><div class="contact-link-card__title">Twitter DM</div><div class="contact-link-card__value">https://x.com/KodaKodra</div></div>
+                            <span class="contact-link-card__arrow"><i class="fas fa-arrow-right"></i></span>
                         </a>
-                        
-                        <a href="https://www.instagram.com/kodakodra" class="contact-link-card" aria-label="DM on Instagram">
-                            <div class="contact-link-card__icon" aria-hidden="true">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                            <div class="contact-link-card__content">
-                                <div class="contact-link-card__title">Instagram DM</div>
-                                <div class="contact-link-card__value">https://www.instagram.com/kodakodra</div>
-                            </div>
-                            <span class="contact-link-card__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                        <a href="https://www.instagram.com/kodakodra" class="contact-link-card">
+                            <div class="contact-link-card__icon"><i class="fab fa-instagram"></i></div>
+                            <div class="contact-link-card__content"><div class="contact-link-card__title">Instagram DM</div><div class="contact-link-card__value">@kodakodra</div></div>
+                            <span class="contact-link-card__arrow"><i class="fas fa-arrow-right"></i></span>
                         </a>
                     </div>
-
-                    <!-- Availability banner -->
-                    <div class="availability-banner anim-fade-up delay-3">
-                        <div class="availability-banner__dot" aria-hidden="true"></div>
+                    <div class="availability-banner mt-4">
+                        <div class="availability-banner__dot"></div>
                         <div>
                             <div class="availability-banner__title">Currently available</div>
-                            <div class="availability-banner__body">
-                                Open to full-time roles, contract work, and project collaborations.
-                                Based in United Kingdom — remote-friendly.
-                            </div>
+                            <div class="availability-banner__body">Open to full-time roles, contract work, and data-focused Laravel projects. Based in UK — remote-friendly.</div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </main>
 
-    <!-- ── Footer ───────────────────────────────────────────── -->
     <footer class="footer">
         <span class="footer__copy">&copy; 2026 KodaKodra. All rights reserved.</span>
-        <div class="footer__links">
-            <a href="https://github.com/kodakodra" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener">Linktree</a>
-        </div>
+        <div class="footer__links"><a href="https://github.com/kodakodra">GitHub</a><a href="https://linktr.ee/kodakodra">Linktree</a></div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
