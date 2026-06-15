@@ -7,380 +7,6 @@
     <title>KodaKodra · Laravel Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* ── Dark Theme: Black/Gold ─────────────────────────── */
-        :root {
-            --bg: #0a0a0a;
-            --bg-2: #0f0f0f;
-            --bg-card: #141414;
-            --bg-card-hover: #1a1a1a;
-            --accent: #d4af37;
-            --accent-dim: #b8960c;
-            --accent-glow: rgba(212, 175, 55, 0.12);
-            --text: #ffffff;
-            --text-muted: #a0a0a0;
-            --text-dim: #6b6b6b;
-            --border: rgba(212, 175, 55, 0.15);
-            --border-hover: rgba(212, 175, 55, 0.35);
-            --font-display: 'Syne', sans-serif;
-            --font-body: 'DM Sans', sans-serif;
-            --font-mono: 'DM Mono', monospace;
-            --radius: 8px;
-            --transition: 0.2s ease;
-            --px: 1.25rem;
-        }
-
-        /* ── Hero Section ───────────────────────────────────── */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            padding: 5rem var(--px) 4rem;
-            position: relative;
-        }
-
-        .hero__inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .hero__badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--accent-glow);
-            border: 1px solid var(--border);
-            border-radius: 100px;
-            padding: 0.3rem 1rem;
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero__badge::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: var(--accent);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        .hero__name {
-            font-size: clamp(2.5rem, 10vw, 5rem);
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-        }
-
-        .hero__name .accent {
-            color: var(--accent);
-        }
-
-        .hero__title {
-            font-size: clamp(0.9rem, 3vw, 1.1rem);
-            font-family: var(--font-mono);
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .hero__desc {
-            max-width: 600px;
-            font-size: clamp(1rem, 3vw, 1.15rem);
-            line-height: 1.7;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .hero__desc strong {
-            color: var(--text);
-        }
-
-        .hero__cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-
-        /* ── Workflow Strip ─────────────────────────────────── */
-        .workflow-strip {
-            background: var(--bg-2);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem var(--px);
-            overflow-x: auto;
-        }
-
-        .workflow-strip__inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .workflow-step {
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            padding: 0.3rem 0.7rem;
-            background: rgba(255,255,255,0.03);
-            border-radius: 4px;
-            white-space: nowrap;
-        }
-
-        .workflow-step .arrow {
-            color: var(--accent);
-            margin-left: 0.5rem;
-        }
-
-        .workflow-step:last-child .arrow {
-            display: none;
-        }
-
-        /* ── Discipline Cards ───────────────────────────────── */
-        .discipline-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.25rem;
-            margin: 2rem 0;
-        }
-
-        @media (min-width: 640px) {
-            .discipline-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .discipline-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        .discipline-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            transition: all var(--transition);
-        }
-
-        .discipline-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        .discipline-card__icon {
-            font-size: 1.8rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .discipline-card__title {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .discipline-card__desc {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            line-height: 1.65;
-        }
-
-        /* ── Workflow Deep Dive ─────────────────────────────── */
-        .workflow-deep {
-            background: var(--bg-2);
-            border-radius: var(--radius);
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        .workflow-deep__title {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .workflow-steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 0.75rem;
-        }
-
-        .workflow-step-item {
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            padding: 0.5rem 0.75rem;
-            background: var(--bg-card);
-            border-left: 2px solid var(--accent);
-            color: var(--text-muted);
-        }
-
-        /* ── Standards Section ──────────────────────────────── */
-        .standards-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        @media (min-width: 640px) {
-            .standards-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .standard-item {
-            display: flex;
-            gap: 1rem;
-            padding: 1rem;
-            background: var(--bg-card);
-            border-radius: var(--radius);
-        }
-
-        .standard-item__check {
-            color: var(--accent);
-            font-size: 1.1rem;
-            flex-shrink: 0;
-        }
-
-        .standard-item__title {
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .standard-item__desc {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        /* ── Current Focus ──────────────────────────────────── */
-        .focus-card {
-            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(212,175,55,0.05) 100%);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        .focus-card__badge {
-            display: inline-block;
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            color: var(--accent);
-            background: var(--accent-glow);
-            padding: 0.2rem 0.7rem;
-            border-radius: 100px;
-            margin-bottom: 1rem;
-        }
-
-        .focus-card__title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-
-        .focus-card__desc {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        .focus-card__tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        /* ── Project List (Compact) ─────────────────────────── */
-        .project-compact-list {
-            margin: 1.5rem 0;
-        }
-
-        .project-compact-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .project-compact-item:last-child {
-            border-bottom: none;
-        }
-
-        .project-compact__name {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .project-compact__stack {
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            color: var(--text-muted);
-        }
-
-        .project-compact__link {
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            color: var(--accent);
-        }
-
-        /* ── CTA Banner ─────────────────────────────────────── */
-        .cta-banner {
-            background: linear-gradient(135deg, var(--accent-dim) 0%, #1a1a1a 100%);
-            border-radius: var(--radius);
-            padding: 2.5rem;
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .cta-banner__title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .cta-banner__desc {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.85rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-banner .btn--primary {
-            background: var(--bg);
-            color: var(--accent);
-        }
-
-        /* ── Animations ─────────────────────────────────────── */
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-
-        @media (min-width: 768px) {
-            .section { padding-top: 4rem; padding-bottom: 4rem; }
-        }
-    </style>
 </head>
 <body>
 
@@ -389,6 +15,8 @@
         <ul class="nav__links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="workflow.html">Workflow</a></li>
+            <li><a href="standards.html">Standards</a></li>
+            <li><a href="projects.html">Work</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -399,12 +27,13 @@
     <div class="nav__mobile">
         <a href="index.html">Home</a>
         <a href="workflow.html">Workflow</a>
+        <a href="standards.html">Standards</a>
+        <a href="projects.html">Work</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </div>
 
     <main>
-        <!-- Hero -->
         <section class="hero">
             <div class="hero__inner">
                 <div class="hero__badge">Available for work</div>
@@ -424,13 +53,12 @@
                     migration to deployment. <strong>PSR-12 compliant.</strong> Security by design, not afterthought.
                 </p>
                 <div class="hero__cta">
-                    <a href="#workflow" class="btn btn--primary">See My Workflow →</a>
+                    <a href="workflow.html" class="btn btn--primary">View My Workflow →</a>
                     <a href="contact.html" class="btn btn--outline">Hire Me</a>
                 </div>
             </div>
         </section>
 
-        <!-- Workflow Strip -->
         <div class="workflow-strip">
             <div class="workflow-strip__inner">
                 <span class="workflow-step">Migration <span class="arrow">→</span></span>
@@ -445,8 +73,7 @@
             </div>
         </div>
 
-        <!-- What I Bring -->
-        <div class="section" id="workflow">
+        <div class="section">
             <p class="section-label">Engineering Discipline</p>
             <h2 class="section-heading">What I bring to <br>every project</h2>
 
@@ -474,79 +101,7 @@
             </div>
         </div>
 
-        <!-- Deep Workflow -->
-        <div class="section">
-            <div class="workflow-deep">
-                <div class="workflow-deep__title">
-                    <i class="fas fa-diagram-project"></i> My Development Workflow
-                </div>
-                <div class="workflow-steps-grid">
-                    <span class="workflow-step-item">1. Migration (create_{table}_table)</span>
-                    <span class="workflow-step-item">2. Model ($fillable, $casts, SoftDeletes)</span>
-                    <span class="workflow-step-item">3. Factory (definition + state methods)</span>
-                    <span class="workflow-step-item">4. Seeder (idempotent, FK order)</span>
-                    <span class="workflow-step-item">5. Policies (index→forceDelete)</span>
-                    <span class="workflow-step-item">6. Middleware (IsAdmin, IsStaff)</span>
-                    <span class="workflow-step-item">7. Controller (thin, validation, 403)</span>
-                    <span class="workflow-step-item">8. Routes (named, no resource() shortcuts)</span>
-                    <span class="workflow-step-item">9. Blade Views (@can, @include partials)</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Standards I Follow -->
-        <div class="section">
-            <p class="section-label">Rigor</p>
-            <h2 class="section-heading">Standards I never compromise on</h2>
-
-            <div class="standards-grid">
-                <div class="standard-item">
-                    <span class="standard-item__check"><i class="fas fa-check-circle"></i></span>
-                    <div>
-                        <div class="standard-item__title">Semantic HTML5</div>
-                        <div class="standard-item__desc">header, nav, main, footer — 4 spaces, double quotes, descriptive kebab-case classes.</div>
-                    </div>
-                </div>
-                <div class="standard-item">
-                    <span class="standard-item__check"><i class="fas fa-check-circle"></i></span>
-                    <div>
-                        <div class="standard-item__title">Modern JavaScript (ES6+)</div>
-                        <div class="standard-item__desc">const/let, arrow functions, async/await with try/catch, event delegation, debounced events.</div>
-                    </div>
-                </div>
-                <div class="standard-item">
-                    <span class="standard-item__check"><i class="fas fa-check-circle"></i></span>
-                    <div>
-                        <div class="standard-item__title">CSS Architecture</div>
-                        <div class="standard-item__desc">Dark theme (black/gold), CSS custom properties, no inline styles, Bootstrap + custom organised CSS.</div>
-                    </div>
-                </div>
-                <div class="standard-item">
-                    <span class="standard-item__check"><i class="fas fa-check-circle"></i></span>
-                    <div>
-                        <div class="standard-item__title">Accessibility</div>
-                        <div class="standard-item__desc">Every input has a label, every img has alt text, keyboard-navigable, semantic structure.</div>
-                    </div>
-                </div>
-                <div class="standard-item">
-                    <span class="standard-item__check"><i class="fas fa-check-circle"></i></span>
-                    <div>
-                        <div class="standard-item__title">Validation & Security</div>
-                        <div class="standard-item__desc">$request->validate(), @csrf, X-CSRF-TOKEN for AJAX, Eloquent parameter binding only.</div>
-                    </div>
-                </div>
-                <div class="standard-item">
-                    <span class="standard-item__check"><i class="fas fa-check-circle"></i></span>
-                    <div>
-                        <div class="standard-item__title">Error Handling</div>
-                        <div class="standard-item__desc">try/catch for transactions, Log::error() with context, user-friendly messages.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Current Focus -->
-        <div class="section">
+        <div class="section bg-2">
             <div class="focus-card">
                 <div class="focus-card__badge">Current Focus — 95% Complete</div>
                 <div class="focus-card__title">Community Social Network</div>
@@ -566,37 +121,34 @@
             </div>
         </div>
 
-        <!-- Select Work (Compact) -->
         <div class="section">
-            <p class="section-label">Select Work</p>
-            <h2 class="section-heading">Recent projects</h2>
+            <p class="section-label">Core Strengths</p>
+            <h2 class="section-heading">How I solve problems</h2>
 
-            <div class="project-compact-list">
-                <div class="project-compact-item">
-                    <div>
-                        <div class="project-compact__name">eCommerce Platform</div>
-                        <div class="project-compact__stack">PHP · Stripe · PHPMailer · Bootstrap</div>
-                    </div>
-                    <a href="https://github.com/kodakodra/KodaKodra_eCommerce_Project" target="_blank" class="project-compact__link">GitHub <i class="fas fa-arrow-right"></i></a>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <div class="strength-item__num">01</div>
+                    <div class="strength-item__title">Back-End Development</div>
+                    <div class="strength-item__desc">Laravel, PHP 8.5+, Eloquent ORM, RESTful APIs — with PSR-12 compliance throughout.</div>
                 </div>
-                <div class="project-compact-item">
-                    <div>
-                        <div class="project-compact__name">Booking System</div>
-                        <div class="project-compact__stack">PHP · MySQL · Bootstrap · JavaScript</div>
-                    </div>
-                    <a href="https://github.com/kodakodra/KodaKodra_Booking_System_Project" target="_blank" class="project-compact__link">GitHub <i class="fas fa-arrow-right"></i></a>
+                <div class="strength-item">
+                    <div class="strength-item__num">02</div>
+                    <div class="strength-item__title">Data Analysis & Architecture</div>
+                    <div class="strength-item__desc">Normalised schemas, query optimisation, scalable database design from day one.</div>
                 </div>
-                <div class="project-compact-item">
-                    <div>
-                        <div class="project-compact__name">Brochure Series (6-step)</div>
-                        <div class="project-compact__stack">HTML → PHP-driven Bootstrap — open source teaching</div>
-                    </div>
-                    <a href="https://github.com/kodakodra" target="_blank" class="project-compact__link">View Series <i class="fas fa-arrow-right"></i></a>
+                <div class="strength-item">
+                    <div class="strength-item__num">03</div>
+                    <div class="strength-item__title">Systematic Planning</div>
+                    <div class="strength-item__desc">Breaking work into measurable stages, identifying blockers early, delivering on time.</div>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-item__num">04</div>
+                    <div class="strength-item__title">Full-Stack Delivery</div>
+                    <div class="strength-item__desc">HTML5, CSS3, Bootstrap, JavaScript ES6+ — responsive, accessible interfaces.</div>
                 </div>
             </div>
         </div>
 
-        <!-- CTA -->
         <div class="section">
             <div class="cta-banner">
                 <div class="cta-banner__title">Need a Laravel engineer who follows standards?</div>
