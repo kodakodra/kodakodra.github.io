@@ -8,6 +8,65 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Extra homepage tweaks */
+        .hero-section {
+            position: relative;
+            min-height: calc(100vh - 68px);
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+        }
+        .hero__scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0;
+            animation: fadeIn 1s 1.2s both;
+        }
+        @media (max-width: 768px) {
+            .hero__scroll { display: none; }
+        }
+        .hero__scroll span {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+        .hero__scroll-line {
+            width: 1px;
+            height: 32px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+            animation: pulse 2s infinite;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .stat {
+            padding: 0.75rem 0.5rem;
+        }
+        .stat__number {
+            font-size: 1.6rem;
+            word-break: keep-all;
+        }
+        .stat__label {
+            font-size: 0.6rem;
+            white-space: normal;
+            line-height: 1.3;
+        }
+        @media (min-width: 768px) {
+            .stat__number { font-size: 1.8rem; }
+            .stat__label { font-size: 0.7rem; }
+        }
+    </style>
 </head>
 <body>
 
@@ -33,6 +92,7 @@
     </div>
 
     <main class="page">
+        <!-- Hero Section -->
         <section class="hero-section">
             <div class="container">
                 <div class="row justify-content-center text-center text-lg-start">
@@ -42,7 +102,7 @@
                         <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start my-3 anim-fade-up delay-2">
                             <span class="badge-custom">Laravel 13+</span>
                             <span class="badge-custom">PHP 8.5+</span>
-                            <span class="badge-custom">MySQL · Data Analytics</span>
+                            <span class="badge-custom">MySQL · Analytics</span>
                             <span class="badge-custom">Bootstrap · JS</span>
                         </div>
                         <p class="lead text-muted-custom anim-fade-up delay-3" style="max-width: 700px; margin: 0 auto;">
@@ -62,17 +122,59 @@
             </div>
         </section>
 
-        <!-- Quick stats row -->
+        <!-- Stats Row (fixed overflow) -->
         <div class="stats">
             <div class="container">
-                <div class="row g-0">
-                    <div class="col-6 col-md-3 col-lg-2 stat-col"><div class="stat p-3"><div class="stat__number">7+</div><div class="stat__label">Years</div></div></div>
-                    <div class="col-6 col-md-3 col-lg-2 stat-col"><div class="stat p-3"><div class="stat__number">50+</div><div class="stat__label">Projects</div></div></div>
-                    <div class="col-6 col-md-3 col-lg-2 stat-col"><div class="stat p-3"><div class="stat__number">Laravel</div><div class="stat__label">Primary</div></div></div>
-                    <div class="col-6 col-md-3 col-lg-2 stat-col"><div class="stat p-3"><div class="stat__number">PSR-12</div><div class="stat__label">Strict</div></div></div>
-                    <div class="col-6 col-md-3 col-lg-2 stat-col"><div class="stat p-3"><div class="stat__number">Data</div><div class="stat__label">Analytics</div></div></div>
-                    <div class="col-6 col-md-3 col-lg-2 stat-col"><div class="stat p-3"><div class="stat__number">UK</div><div class="stat__label">Remote</div></div></div>
+                <div class="row g-0 text-center">
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">7+</div><div class="stat__label">Years</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">50+</div><div class="stat__label">Projects</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">Laravel</div><div class="stat__label">Primary</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">PSR-12</div><div class="stat__label">Strict</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">Data</div><div class="stat__label">Analytics</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">UK</div><div class="stat__label">Remote</div></div></div>
                 </div>
+            </div>
+        </div>
+
+        <!-- What I Do Section (adds appeal) -->
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <p class="section-label justify-content-center">Approach</p>
+                    <h2 class="section-heading">What I Deliver</h2>
+                    <p class="text-muted-custom" style="max-width: 600px; margin: 0 auto;">Every project follows the same disciplined workflow. No shortcuts.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-reveal>
+                    <div class="text-center p-4 card h-100 bg-transparent border-0">
+                        <div class="feature-icon"><i class="fas fa-database"></i></div>
+                        <h3 class="h5 fw-bold">Data-First Architecture</h3>
+                        <p class="small text-muted-custom">Normalised schemas, query optimisation, and analytics-ready design — not afterthoughts.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-reveal>
+                    <div class="text-center p-4 card h-100 bg-transparent border-0">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="h5 fw-bold">Security by Default</h3>
+                        <p class="small text-muted-custom">CSRF, XSS, mass-assignment protection, and policies baked into every feature.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-reveal>
+                    <div class="text-center p-4 card h-100 bg-transparent border-0">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="h5 fw-bold">Data Analytics Dashboards</h3>
+                        <p class="small text-muted-custom">Real-time KPIs, sales funnels, user behaviour — turn data into decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to action strip -->
+        <div class="bg-card-glow py-4 text-center" style="background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div class="container">
+                <p class="mb-2">Have a project in mind? Let's talk.</p>
+                <a href="contact.html" class="btn btn--primary">Start a conversation →</a>
             </div>
         </div>
     </main>
