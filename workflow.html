@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My complete Laravel development workflow: Migration → Model → Factory → Seeder → Policies & AppServiceProvider → Middleware & bootstrap/app → Controller → Routes → Blade Views.">
+    <title>Workflow · KodaKodra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .workflow-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem var(--px);
+        }
+
+        .workflow-phase {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .workflow-phase__header {
+            background: var(--bg-2);
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .workflow-phase__number {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--accent);
+            background: var(--accent-glow);
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+        }
+
+        .workflow-phase__title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .workflow-phase__badge {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+
+        .workflow-phase__body {
+            padding: 1.5rem;
+        }
+
+        .workflow-detail {
+            margin-bottom: 1.25rem;
+        }
+
+        .workflow-detail:last-child {
+            margin-bottom: 0;
+        }
+
+        .workflow-detail__title {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .workflow-detail__code {
+            background: var(--bg);
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .workflow-detail__list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .workflow-detail__list li {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding: 0.3rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .workflow-detail__list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.7rem;
+        }
+
+        .note-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 3px solid var(--accent);
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        
+        .workflow-summary {
+            background: var(--bg-2);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .workflow-summary__steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+        }
+        
+        .workflow-summary__steps .step {
+            color: var(--accent);
+        }
+        
+        .workflow-summary__steps .arrow {
+            color: var(--text-dim);
+        }
+        
+        .workflow-summary__steps .muted {
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="index.html" class="nav__logo">Koda<span>Kodra</span></a>
+        <ul class="nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="workflow.html" class="active">Workflow</a></li>
+            <li><a href="standards.html">Standards</a></li>
+            <li><a href="projects.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav__burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav__mobile">
+        <a href="index.html">Home</a>
+        <a href="workflow.html">Workflow</a>
+        <a href="standards.html">Standards</a>
+        <a href="projects.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <main>
+        <div class="page-hero">
+            <p class="section-label">Process</p>
+            <h1 class="section-heading">Development Workflow</h1>
+            <p class="hero-sub">A disciplined, repeatable workflow I follow on every Laravel project — no shortcuts, no skipped steps.</p>
+        </div>
+
+        <div class="workflow-container">
+            
+            <!-- Workflow Summary -->
+            <div class="workflow-summary">
+                <div class="workflow-summary__steps">
+                    <span class="step">Migration</span> <span class="arrow">→</span>
+                    <span class="step">Model</span> <span class="arrow">→</span>
+                    <span class="step">Factory</span> <span class="arrow">→</span>
+                    <span class="step">Seeder</span> <span class="arrow">→</span>
+                    <span class="step">Policies &amp; AppServiceProvider</span> <span class="arrow">→</span>
+                    <span class="step">Middleware &amp; bootstrap/app</span> <span class="arrow">→</span>
+                    <span class="step">Controller</span> <span class="arrow">→</span>
+                    <span class="step">Routes</span> <span class="arrow">→</span>
+                    <span class="step">Blade Views</span>
+                </div>
+            </div>
+            
+            <!-- Phase 1: Migration -->
+            <div class="workflow-phase">
+                <div class="workflow-phase__header">
+                    <div>
+                        <span class="workflow-phase__number">Step 1</span>
+                        <span class="workflow-phase__title">Migration</span>
+                    </div>
+                    <span class="workflow-phase__badge">database/migrations/</span>
+                </div>
+                <div class="workflow-phase__body">
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">Naming Convention</div>
+                        <div class="workflow-detail__code">2025_01_01_000000_create_{table}_table.php</div>
+                    </div>
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">What I Define</div>
+                        <ul class="workflow-detail__list">
+                            <li>up() — creates the table with columns, foreign keys, indexes</li>
+                            <li>down() — drops the table (reversible migrations)</li>
+                            <li>Appropriate column types with string lengths</li>
+                            <li>Foreign key constraints with onDelete behaviour</li>
+                            <li>softDeletes() on every table</li>
+                            <li>Status fields default to 'pending' with options: pending, approved, rejected</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 2: Model -->
+            <div class="workflow-phase">
+                <div class="workflow-phase__header">
+                    <div>
+                        <span class="workflow-phase__number">Step 2</span>
+                        <span class="workflow-phase__title">Model</span>
+                    </div>
+                    <span class="workflow-phase__badge">app/Models/</span>
+                </div>
+                <div class="workflow-phase__body">
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">Required Elements</div>
+                        <ul class="workflow-detail__list">
+                            <li><strong>$fillable</strong> — defined on every model (mass assignment protection)</li>
+                            <li><strong>$casts</strong> — attribute casting where possible</li>
+                            <li><strong>getXxxOptions()</strong> — method for every enum-like field (returns plain English options array)</li>
+                            <li><strong>SoftDeletes trait</strong> — on every model</li>
+                            <li><strong>Relationships</strong> — all used relationships defined (belongsTo, hasMany, etc.)</li>
+                            <li><strong>$timestamps = true</strong> — unless the table truly lacks them</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3: Factory -->
+            <div class="workflow-phase">
+                <div class="workflow-phase__header">
+                    <div>
+                        <span class="workflow-phase__number">Step 3</span>
+                        <span class="workflow-phase__title">Factory</span>
+                    </div>
+                    <span class="workflow-phase__badge">database/factories/{Model}Factory.php</span>
+                </div>
+                <div class="workflow-phase__body">
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">What I Define</div>
+                        <ul class="workflow-detail__list">
+                            <li><strong>definition()</strong> — default fake data using Faker</li>
+                            <li><strong>state()</strong> methods — for variations (e.g., approved(), rejected())</li>
+                            <li><strong>has() and for()</strong> — for related models</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 4: Seeder -->
+            <div class="workflow-phase">
+                <div class="workflow-phase__header">
+                    <div>
+                        <span class="workflow-phase__number">Step 4</span>
+                        <span class="workflow-phase__title">Seeder</span>
+                    </div>
+                    <span class="workflow-phase__badge">database/seeders/</span>
+                </div>
+                <div class="workflow-phase__body">
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">Rules I Follow</div>
+                        <ul class="workflow-detail__list">
+                            <li><strong>Idempotent</strong> — use truncate(), upsert(), or firstOrCreate() (no duplicates on re-run)</li>
+                            <li><strong>Foreign key order</strong> — call seeders respecting dependencies (users before posts)</li>
+                            <li><strong>Development only</strong> — seeded data never runs in production</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 5: Policies & AppServiceProvider -->
+            <div class="workflow-phase">
+                <div class="workflow-phase__header">
+                    <div>
+                        <span class="workflow-phase__number">Step 5</span>
+                        <span class="workflow-phase__title">Policies & AppServiceProvider</span>
+                    </div>
+                    <span class="workflow-phase__badge">app/Policies/ · app/Providers/AppServiceProvider.php</span>
+                </div>
+                <div class="workflow-phase__body">
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">Policy Methods (every model)</div>
+                        <div class="workflow-detail__code">index, show, create, store, edit, update, destroy, restore, forceDelete</div>
+                    </div>
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">What I Check in Policies</div>
+                        <ul class="workflow-detail__list">
+                            <li>Ownership — user.id matches model.user_id</li>
+                            <li>Role-based access — isAdmin(), isStaff()</li>
+                            <li>Custom business rules</li>
+                        </ul>
+                    </div>
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">AppServiceProvider Registration</div>
+                        <ul class="workflow-detail__list">
+                            <li>Register all policy mappings</li>
+                            <li>Set up Gate::guessPolicyNamesFor() for automatic resolution</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 6: Middleware & bootstrap/app -->
+            <div class="workflow-phase">
+                <div class="workflow-phase__header">
+                    <div>
+                        <span class="workflow-phase__number">Step 6</span>
+                        <span class="workflow-phase__title">Middleware & bootstrap/app</span>
+                    </div>
+                    <span class="workflow-phase__badge">app/Http/Middleware/ · bootstrap/app.php</span>
+                </div>
+                <div class="workflow-phase__body">
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">Required Middleware (PascalCase + Middleware suffix)</div>
+                        <ul class="workflow-detail__list">
+                            <li><strong>IsAdminMiddleware</strong> — role:isAdmin access</li>
+                            <li><strong>IsStaffMiddleware</strong> — role:isStaff access</li>
+                            <li><strong>IsUserAccessAllowed</strong> — foreign key matches auth()->user()->id</li>
+                        </ul>
+                    </div>
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">Registered in bootstrap/app.php</div>
+                        <ul class="workflow-detail__list">
+                            <li>Alias 'role:isAdmin' → IsAdminMiddleware::class</li>
+                            <li>Alias 'role:isStaff' → IsStaffMiddleware::class</li>
+                            <li>Alias 'user.access' → IsUserAccessAllowed::class</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 7: Controller -->
+            <div class="workflow-phase">
+                <div class="workflow-phase__header">
+                    <div>
+                        <span class="workflow-phase__number">Step 7</span>
+                        <span class="workflow-phase__title">Controller</span>
+                    </div>
+                    <span class="workflow-phase__badge">app/Http/Controllers/</span>
+                </div>
+                <div class="workflow-phase__body">
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">Standard Methods (every controller)</div>
+                        <div class="workflow-detail__code">index, create, store, show, edit, update, destroy, restore, forceDelete</div>
+                    </div>
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">My Controller Pattern (Thin Controllers)</div>
+                        <ul class="workflow-detail__list">
+                            <li><strong>Authorize</strong> — $this->authorize() using Policies</li>
+                            <li><strong>Validate</strong> — $request->validate() at the start of each method</li>
+                            <li><strong>Execute</strong> — perform the action (delegate complex logic to Services)</li>
+                            <li><strong>Redirect</strong> — with flash message</li>
+                            <li><strong>Implicit route model binding</strong> — used always</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 8: Routes -->
+            <div class="workflow-phase">
+                <div class="workflow-phase__header">
+                    <div>
+                        <span class="workflow-phase__number">Step 8</span>
+                        <span class="workflow-phase__title">Routes</span>
+                    </div>
+                    <span class="workflow-phase__badge">routes/web.php</span>
+                </div>
+                <div class="workflow-phase__body">
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">Rules I Follow</div>
+                        <ul class="workflow-detail__list">
+                            <li><strong>Always use named routes</strong> — ->name() on every route</li>
+                            <li><strong>Never use Route::resource()</strong> — individual routes only (explicit > implicit)</li>
+                            <li>Group related routes with Route::group() or Route::prefix()</li>
+                            <li>Apply 'auth' and 'verified' middleware to protected routes</li>
+                            <li>Apply 'role:isStaff' or 'role:isAdmin' as needed</li>
+                            <li>Add restore (staff) and forceDelete (admin) routes for soft-deleted models</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 9: Blade Views -->
+            <div class="workflow-phase">
+                <div class="workflow-phase__header">
+                    <div>
+                        <span class="workflow-phase__number">Step 9</span>
+                        <span class="workflow-phase__title">Blade Views</span>
+                    </div>
+                    <span class="workflow-phase__badge">resources/views/</span>
+                </div>
+                <div class="workflow-phase__body">
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">View Structure (per feature)</div>
+                        <div class="workflow-detail__code">
+posts/
+├── index.blade.php      # List all posts
+├── show.blade.php       # Single post
+├── form.blade.php       # Handles BOTH create AND edit in one file
+└── partials/
+    └── post-card.blade.php
+
+partials/
+├── modals/
+│   ├── modal-delete.blade.php
+│   ├── modal-restore.blade.php
+│   └── modal-force-delete.blade.php
+├── alerts/
+│   ├── success.blade.php
+│   └── error.blade.php
+└── form-group.blade.php  # Reusable form elements
+                        </div>
+                    </div>
+                    <div class="workflow-detail">
+                        <div class="workflow-detail__title">Blade Rules I Follow</div>
+                        <ul class="workflow-detail__list">
+                            <li>Use <strong>@directives</strong> throughout (@if, @foreach, @can, etc.)</li>
+                            <li><strong>{{ }}</strong> for output (auto-escaped)</li>
+                            <li><strong>{!! !!}</strong> only for trusted HTML — never raw user input</li>
+                            <li><strong>Authorization: @can / @cannot directives only</strong> — no @php auth checks in views</li>
+                            <li><strong>Avoid @php directives</strong> — move logic to controller</li>
+                            <li>Hardcode English strings directly in Blade (no translation files)</li>
+                            <li><strong>Never use text-muted, small, or bg-* classes in Blade</strong> — all styling in CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span class="footer__copy">© 2026 KodaKodra. All rights reserved.</span>
+        <div class="footer__links">
+            <a href="https://github.com/kodakodra" target="_blank">GitHub</a>
+            <a href="https://linktr.ee/kodakodra" target="_blank">Linktree</a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
