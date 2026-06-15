@@ -3,458 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KodaKodra Projects — Laravel social network, eCommerce with Stripe, booking system, and open-source teaching series.">
     <title>Projects — KodaKodra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ── Page hero ──────────────────────────────────────── */
-        .page-hero {
-            padding: 3rem var(--px) 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* ── Featured project ───────────────────────────────── */
-        .project-featured {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            overflow: hidden;
-            /* Mobile: single column, stacks content above visual */
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1.25rem;
-            transition: border-color var(--transition);
-        }
-
-        .project-featured:hover { border-color: var(--border-hover); }
-
-        .project-featured__content {
-            padding: 1.75rem var(--px);
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .project-featured__visual {
-            background: linear-gradient(135deg, #0d1f38 0%, #1b3a5c 50%, #0d1f38 100%);
-            position: relative;
-            overflow: hidden;
-            min-height: 160px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            order: -1; /* visual on top on mobile */
-        }
-
-        .project-featured__visual::before {
-            content: '';
-            position: absolute; inset: 0;
-            background-image:
-                linear-gradient(rgba(74,158,255,0.08) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(74,158,255,0.08) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-
-        .project-featured__visual-inner {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .project-featured__visual-icon {
-            font-size: 3rem;
-            display: block;
-            margin-bottom: 0.75rem;
-            filter: drop-shadow(0 0 20px rgba(74,158,255,0.5));
-        }
-
-        .project-featured__visual-label {
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            color: rgba(74,158,255,0.6);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
-
-        .project-featured__badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            color: var(--gold);
-            background: rgba(240,192,96,0.1);
-            border: 1px solid rgba(240,192,96,0.25);
-            padding: 0.2rem 0.6rem;
-            border-radius: 3px;
-            letter-spacing: 0.08em;
-            margin-bottom: 1rem;
-        }
-
-        .project-featured__badge::before {
-            content: '';
-            width: 6px; height: 6px;
-            border-radius: 50%;
-            background: var(--gold);
-            animation: pulse 2s infinite;
-            flex-shrink: 0;
-        }
-
-        .project-featured__title {
-            font-family: var(--font-display);
-            font-size: clamp(1.3rem, 4vw, 1.8rem);
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.03em;
-        }
-
-        .project-featured__desc {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.75;
-            margin-bottom: 1.25rem;
-        }
-
-        .project-featured__features {
-            margin-bottom: 1.5rem;
-        }
-
-        .project-featured__features li {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            padding: 0.3rem 0;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-        }
-
-        .project-featured__features li::before {
-            content: '→';
-            color: var(--accent);
-            font-size: 0.72rem;
-            flex-shrink: 0;
-            margin-top: 0.05rem;
-        }
-
-        .project-featured__tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.35rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-featured__footer {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        /* ── Projects grid ──────────────────────────────────── */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* mobile: single col */
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            transition: border-color var(--transition), background var(--transition), transform var(--transition);
-        }
-
-        .project-card:hover {
-            border-color: var(--border-hover);
-            background: var(--bg-card-hover);
-            transform: translateY(-2px);
-        }
-
-        .project-card__header {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-
-        .project-card__icon { font-size: 1.6rem; line-height: 1; }
-
-        .project-card__link {
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            transition: color var(--transition);
-            white-space: nowrap;
-        }
-
-        .project-card__link:hover { color: var(--accent); }
-
-        .project-card__title {
-            font-family: var(--font-display);
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .project-card__desc {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            flex: 1;
-            margin-bottom: 1.25rem;
-        }
-
-        .project-card__tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.35rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .project-card__footer { margin-top: auto; }
-
-        /* ── Teaching strip ─────────────────────────────────── */
-        .teaching-strip {
-            background: var(--bg-2);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: column; /* mobile: stacked */
-            gap: 1rem;
-        }
-
-        .teaching-strip__icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .teaching-strip__title {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.4rem;
-        }
-
-        .teaching-strip__desc {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-        }
-
-        .teaching-strip__steps {
-            display: flex;
-            gap: 0.35rem;
-            flex-wrap: wrap;
-        }
-
-        /* ── Responsive upgrades ────────────────────────────── */
-        @media (min-width: 640px) {
-            .projects-grid { grid-template-columns: repeat(2, 1fr); }
-            .teaching-strip { flex-direction: row; align-items: flex-start; gap: 1.5rem; }
-        }
-
-        @media (min-width: 900px) {
-            .project-featured {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                flex-direction: unset;
-            }
-            .project-featured__visual {
-                order: 0;
-                min-height: 340px;
-            }
-            .project-featured__content {
-                padding: 2.5rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .page-hero { padding: 5rem var(--px) 3rem; }
-            .project-featured__content { padding: 3rem; }
-        }
-    </style>
 </head>
 <body>
 
-    <nav class="nav" role="navigation" aria-label="Main navigation">
+    <nav class="nav" role="navigation">
         <a href="index.html" class="nav__logo">Koda<span>Kodra</span></a>
-        <ul class="nav__links" role="list">
+        <ul class="nav__links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <button class="nav__burger" aria-label="Open mobile menu">
-            <span></span><span></span><span></span>
-        </button>
+        <button class="nav__burger"><span></span><span></span><span></span></button>
     </nav>
     <div class="nav__mobile">
         <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
     </div>
 
     <main class="page">
-
-        <div class="page-hero">
-            <p class="section-label anim-fade-up">Work</p>
-            <h1 class="section-heading anim-fade-up delay-1">Projects</h1>
-            <p class="anim-fade-up delay-2" style="color:var(--text-muted);max-width:520px;font-size:0.9rem;">
-                A mix of production-grade applications, real integrations, and open-source teaching material — all built to the same uncompromising standard.
-            </p>
-        </div>
-
-        <div class="section" style="padding-top:0;">
-
-            <p class="section-label" style="margin-bottom:1rem;">Featured</p>
-
-            <!-- ── Featured: Social Network ─────────────────── -->
-            <div class="project-featured anim-fade-up">
-                <div class="project-featured__content">
-                    <div>
-                        <div class="project-featured__badge">In Development — 95% Complete</div>
-                        <h2 class="project-featured__title">Community Social Network</h2>
-                        <p class="project-featured__desc">
-                            A fully custom Laravel social platform built around community, positive behaviour, and gamification.
-                            Designed from the ground up with UX, privacy, and security as the primary constraints — not afterthoughts.
-                        </p>
-                        <ul class="project-featured__features">
-                            <li>Posts, communities, comments &amp; threaded discussions</li>
-                            <li>Granular user privacy &amp; account control settings</li>
-                            <li>Points economy — earn by contributing, spend in the perks shop</li>
-                            <li>Leaderboard system to surface top community members</li>
-                            <li>Full RBAC — admin, moderator, and user permission tiers</li>
-                            <li>Complex relational schema with full Eloquent relationships</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="project-featured__tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">PHP 8.x</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Bootstrap 5</span>
-                            <span class="tag">JavaScript ES6+</span>
-                            <span class="tag">RBAC</span>
-                            <span class="tag">Gamification</span>
-                        </div>
-                        <div class="project-featured__footer">
-                            <span class="btn btn--outline" style="cursor:default;opacity:0.6;">Private</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-featured__visual" aria-hidden="true">
-                    <div class="project-featured__visual-inner">
-                        <span class="project-featured__visual-icon">🌐</span>
-                        <div class="project-featured__visual-label">Community Platform</div>
-                    </div>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <p class="section-label anim-fade-up">Portfolio</p>
+                    <h1 class="section-heading anim-fade-up delay-1">Projects & Solutions</h1>
+                    <p class="lead text-muted-custom anim-fade-up delay-2" style="max-width: 700px;">A selection of 15 applications I've built — each solving a real problem. Text-only showcase, because the work speaks for itself.</p>
                 </div>
             </div>
 
-            <!-- ── Other Projects ────────────────────────────── -->
-            <p class="section-label" style="margin:2rem 0 0;">Other Projects</p>
-            <div class="projects-grid">
-
-                <div class="project-card" data-reveal>
-                    <div class="project-card__header">
-                        <div class="project-card__icon">🛒</div>
-                        <a href="https://github.com/kodakodra/KodaKodra_eCommerce_Project"
-                           target="_blank" rel="noopener" class="project-card__link"
-                           aria-label="View eCommerce project on GitHub">GitHub ↗</a>
-                    </div>
-                    <h2 class="project-card__title">eCommerce Platform</h2>
-                    <p class="project-card__desc">
-                        Custom-built PHP eCommerce with Stripe payment processing and PHPMailer for transactional emails.
-                        Real integrations, real error handling — covering cart, checkout, and order management.
-                    </p>
-                    <div class="project-card__tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">Bootstrap</span>
-                        <span class="tag">Stripe</span>
-                        <span class="tag">PHPMailer</span>
-                        <span class="tag">MySQL</span>
-                    </div>
-                    <div class="project-card__footer">
-                        <a href="https://github.com/kodakodra/KodaKodra_eCommerce_Project"
-                           target="_blank" rel="noopener" class="btn btn--outline">View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-reveal>
-                    <div class="project-card__header">
-                        <div class="project-card__icon">📅</div>
-                        <a href="https://github.com/kodakodra/KodaKodra_Booking_System_Project"
-                           target="_blank" rel="noopener" class="project-card__link"
-                           aria-label="View Booking System on GitHub">GitHub ↗</a>
-                    </div>
-                    <h2 class="project-card__title">Booking System</h2>
-                    <p class="project-card__desc">
-                        Custom appointment and booking system with a responsive Bootstrap interface.
-                        Handles availability logic, scheduling, and booking management with clean user flows.
-                    </p>
-                    <div class="project-card__tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Bootstrap</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <div class="project-card__footer">
-                        <a href="https://github.com/kodakodra/KodaKodra_Booking_System_Project"
-                           target="_blank" rel="noopener" class="btn btn--outline">View on GitHub</a>
-                    </div>
-                </div>
-
+            <div class="row g-4 mt-4">
+                <!-- 15 project cards, no images, no external links -->
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-chart-line fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Analytics</span></div><h3 class="project-card__title">Sales Intelligence Dashboard</h3><p class="project-card__desc">Real-time KPI dashboard for a retail client: revenue, top products, daily trends, and exportable reports. Built with Laravel + MySQL aggregate queries and Chart.js.</p><div class="project-card__tags"><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">Charts</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-building fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Admin</span></div><h3 class="project-card__title">Admin Portal for Staff Management</h3><p class="project-card__desc">Complete role-based admin panel: user management, permission assignment, activity logs, and audit trails. Middleware + policies for fine-grained access.</p><div class="project-card__tags"><span class="tag">RBAC</span><span class="tag">Policies</span><span class="tag">Logging</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-credit-card fa-fw" style="color: var(--accent);"></i><span class="badge-custom">eCommerce</span></div><h3 class="project-card__title">Full eCommerce Platform</h3><p class="project-card__desc">Product catalogue, shopping cart, Stripe payment integration, order invoices, and email notifications via PHPMailer. Custom PHP/MySQL core.</p><div class="project-card__tags"><span class="tag">PHP</span><span class="tag">Stripe</span><span class="tag">Cart</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-calendar-check fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Booking</span></div><h3 class="project-card__title">Appointment Booking System</h3><p class="project-card__desc">Service-based scheduling with availability windows, conflict prevention, and automated reminders. Used by a local clinic.</p><div class="project-card__tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Time slots</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-file-alt fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Brochure</span></div><h3 class="project-card__title">Brochure Site Series (6 steps)</h3><p class="project-card__desc">Educational series walking from static HTML to a PHP-driven Bootstrap site. Used by junior developers to learn professional workflows.</p><div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">Bootstrap</span><span class="tag">PHP</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-chart-pie fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Reporting</span></div><h3 class="project-card__title">Financial Reporting Engine</h3><p class="project-card__desc">Custom SQL reports for monthly P&L, expense tracking, and budget variance analysis. Exports to CSV/PDF with Laravel Excel.</p><div class="project-card__tags"><span class="tag">SQL</span><span class="tag">Reports</span><span class="tag">Export</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-users fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Social</span></div><h3 class="project-card__title">Community Social Network</h3><p class="project-card__desc">Posts, communities, threaded comments, privacy controls, points economy, leaderboard, and a perks shop. 95% complete.</p><div class="project-card__tags"><span class="tag">Laravel</span><span class="tag">Gamification</span><span class="tag">RBAC</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-tasks fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Office</span></div><h3 class="project-card__title">Task & Project Manager</h3><p class="project-card__desc">Internal tool for team task assignment, deadlines, comments, and status tracking. Used by a small marketing agency.</p><div class="project-card__tags"><span class="tag">Laravel</span><span class="tag">Auth</span><span class="tag">Real-time</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-chart-bar fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Analytics</span></div><h3 class="project-card__title">User Behaviour Funnel</h3><p class="project-card__desc">Track user actions (signups, purchases, engagement) and build conversion funnels with SQL window functions and Laravel collections.</p><div class="project-card__tags"><span class="tag">Funnels</span><span class="tag">Metrics</span><span class="tag">SQL</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-store fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Sales</span></div><h3 class="project-card__title">Point of Sale (POS) Dashboard</h3><p class="project-card__desc">Lightweight POS for a small retail shop: inventory, sales entry, daily closing reports, and low-stock alerts.</p><div class="project-card__tags"><span class="tag">PHP</span><span class="tag">Bootstrap</span><span class="tag">Inventory</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-envelope fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Communication</span></div><h3 class="project-card__title">Email Campaign Manager</h3><p class="project-card__desc">Simple newsletter system: subscribe/unsubscribe, templated emails, send via PHPMailer, and open-rate tracking.</p><div class="project-card__tags"><span class="tag">PHPMailer</span><span class="tag">Queue</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-database fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Database</span></div><h3 class="project-card__title">EAV Attribute System</h3><p class="project-card__desc">Custom Entity-Attribute-Value implementation for a product configurator. Dynamic schema for thousands of product variants.</p><div class="project-card__tags"><span class="tag">EAV</span><span class="tag">MySQL</span><span class="tag">Performance</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-chart-line fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Analytics</span></div><h3 class="project-card__title">Server Log Analyzer</h3><p class="project-card__desc">Parse access logs into a MySQL database, generate traffic reports, top IPs, request patterns, and error frequency.</p><div class="project-card__tags"><span class="tag">Log parsing</span><span class="tag">Charts</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-portrait fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Portfolio</span></div><h3 class="project-card__title">Agency Portfolio Builder</h3><p class="project-card__desc">Custom CMS for a creative agency to manage case studies, team bios, and client testimonials (Blade + Bootstrap).</p><div class="project-card__tags"><span class="tag">CMS</span><span class="tag">CRUD</span></div></div></div>
+                <div class="col-md-6 col-lg-4" data-reveal><div class="project-card"><div class="d-flex align-items-center gap-2 mb-2"><i class="fas fa-chart-simple fa-fw" style="color: var(--accent);"></i><span class="badge-custom">Charts</span></div><h3 class="project-card__title">Survey Results Visualiser</h3><p class="project-card__desc">Interactive dashboard for survey data: multiple-choice breakdowns, Likert scales, and trend lines over time.</p><div class="project-card__tags"><span class="tag">Chart.js</span><span class="tag">JSON</span></div></div></div>
             </div>
-
-            <!-- ── Teaching Series ───────────────────────────── -->
-            <p class="section-label" style="margin:2rem 0 0.75rem;">Open Source &amp; Teaching</p>
-            <div class="teaching-strip" data-reveal>
-                <div class="teaching-strip__icon" aria-hidden="true">📖</div>
-                <div>
-                    <div class="teaching-strip__title">KodaKodra Brochure Project Series</div>
-                    <p class="teaching-strip__desc">
-                        A public 6-step build series walking through the complete creation of a professional brochure website —
-                        from bare HTML through to a fully styled, PHP-driven Bootstrap site.
-                    </p>
-                    <div class="teaching-strip__steps">
-                        <span class="tag">Step 1</span>
-                        <span class="tag">Step 2</span>
-                        <span class="tag">Step 3</span>
-                        <span class="tag">Step 4</span>
-                        <span class="tag">Step 5</span>
-                        <span class="tag">Step 6</span>
-                    </div>
-                    <div style="margin-top:1rem;">
-                        <a href="https://github.com/kodakodra" target="_blank" rel="noopener" class="btn btn--outline">
-                            View on GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </main>
 
     <footer class="footer">
         <span class="footer__copy">&copy; 2026 KodaKodra. All rights reserved.</span>
-        <div class="footer__links">
-            <a href="https://github.com/kodakodra" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener">Linktree</a>
-        </div>
+        <div class="footer__links"><a href="https://github.com/kodakodra">GitHub</a><a href="https://linktr.ee/kodakodra">Linktree</a></div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
