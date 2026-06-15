@@ -1,316 +1,343 @@
+<!-- index.html - Modernized Hero-First Version -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KodaKodra — Senior Full-Stack Laravel Developer. Building secure, scalable web applications with a standards-first approach.">
-    <title>KodaKodra — Full-Stack Laravel Developer</title>
+    <meta name="description" content="KodaKodra — Senior Full-Stack Laravel Developer. I build secure, scalable web applications with obsessive attention to code quality.">
+    <title>KodaKodra — Laravel Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* ── Hero ───────────────────────────────────────────── */
+        /* ── Modernized Hero Section ───────────────────────── */
         .hero {
-            min-height: calc(100vh - 64px);
+            min-height: 90vh;
             display: flex;
             align-items: center;
             position: relative;
-            overflow: hidden;
-            padding: 3rem var(--px) 4rem;
+            padding: 5rem var(--px) 6rem;
+            isolation: isolate;
         }
-
+        
+        /* Ambient background glow */
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background-image:
-                linear-gradient(rgba(74,158,255,0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(74,158,255,0.04) 1px, transparent 1px);
-            background-size: 50px 50px;
-            mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: -10%; right: -5%;
-            width: min(600px, 90vw);
-            height: min(600px, 90vw);
-            background: radial-gradient(circle, rgba(27,58,92,0.4) 0%, transparent 70%);
+            background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(74,158,255,0.08), transparent 70%);
             pointer-events: none;
+            z-index: -1;
         }
-
+        
         .hero__inner {
-            position: relative;
-            z-index: 1;
             max-width: 1100px;
             margin: 0 auto;
             width: 100%;
         }
-
-        .hero__eyebrow {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: var(--accent);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 1.25rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            opacity: 0;
-            animation: fadeUp 0.6s 0.1s both;
-        }
-
-        .hero__eyebrow::before {
-            content: '';
-            display: inline-block;
-            width: 24px; height: 1px;
-            background: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .hero__name {
-            font-size: 32px;
-            font-weight: 800;
-            letter-spacing: -0.05em;
-            line-height: 0.95;
-            margin-bottom: 0.75rem;
-            opacity: 0;
-            animation: fadeUp 0.7s 0.2s both;
-            /* Prevent overflow on very small screens */
-            overflow-wrap: break-word;
-            word-break: break-word;
-        }
-
-        .hero__name .accent { color: var(--accent); }
-
-        .hero__title {
-            font-family: var(--font-mono);
-            font-size: clamp(0.72rem, 2.5vw, 1rem);
-            color: var(--text-muted);
-            font-weight: 300;
-            letter-spacing: 0.04em;
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeUp 0.7s 0.3s both;
-            /* Stack on mobile, inline on desktop */
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 0.25rem 0;
-            row-gap: 0.25rem;
-        }
-
-        .hero__title-line {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 0;
-        }
-
-        .pipe {
-            color: var(--text-dim);
-            margin: 0 0.5rem;
-            display: none; /* hidden on mobile */
-        }
-
-        .hero__desc {
-            max-width: 560px;
-            font-size: clamp(0.9rem, 2.5vw, 1.05rem);
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 2.5rem;
-            opacity: 0;
-            animation: fadeUp 0.7s 0.4s both;
-        }
-
-        .hero__cta {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeUp 0.7s 0.5s both;
-        }
-
-        .hero__scroll {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
+        
+        .hero__badge {
+            display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            opacity: 0;
-            animation: fadeIn 1s 1.2s both;
-        }
-
-        .hero__scroll span {
+            background: rgba(74,158,255,0.12);
+            border: 1px solid rgba(74,158,255,0.2);
+            border-radius: 100px;
+            padding: 0.3rem 0.9rem;
             font-family: var(--font-mono);
-            font-size: 0.62rem;
-            color: var(--text-dim);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
+            font-size: 0.7rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
         }
-
-        .hero__scroll-line {
-            width: 1px; height: 40px;
-            background: linear-gradient(to bottom, var(--accent), transparent);
+        
+        .hero__badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #4cff91;
+            border-radius: 50%;
             animation: pulse 2s infinite;
         }
-
-        /* ── Stats ──────────────────────────────────────────── */
-        .stats {
-            background: var(--bg-2);
+        
+        .hero__name {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        
+        .hero__name .accent {
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero__name .accent::after {
+            content: '';
+            position: absolute;
+            bottom: 0.1em;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent);
+            opacity: 0.3;
+            border-radius: 2px;
+        }
+        
+        .hero__title {
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: baseline;
+        }
+        
+        .hero__title-separator {
+            color: var(--accent);
+            opacity: 0.5;
+        }
+        
+        .hero__desc {
+            max-width: 580px;
+            font-size: clamp(1rem, 3vw, 1.15rem);
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        
+        .hero__desc strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+        
+        .hero__cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        /* ── Trust Bar ──────────────────────────────────────── */
+        .trust-bar {
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
-            overflow: hidden;
+            background: rgba(18, 27, 46, 0.5);
+            backdrop-filter: blur(8px);
         }
-
-        .stats__inner {
+        
+        .trust-bar__inner {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 var(--px);
-            display: grid;
-            /* Auto-fill: on mobile ~2 cols, desktop fits all */
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        }
-
-        .stat {
-            padding: 1.25rem 0.75rem;
-            text-align: center;
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        /* Remove double-borders cleanly */
-        .stat:last-child { border-right: none; }
-
-        .stat__number {
-            font-family: var(--font-display);
-            font-size: clamp(1.4rem, 4vw, 2.2rem);
-            font-weight: 800;
-            color: var(--accent);
-            letter-spacing: -0.04em;
-            line-height: 1;
-            margin-bottom: 0.35rem;
-        }
-
-        .stat__label {
-            font-family: var(--font-mono);
-            font-size: 0.62rem;
-            color: var(--text-dim);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            line-height: 1.4;
-        }
-
-        /* ── Skills ─────────────────────────────────────────── */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* mobile: single column */
+            padding: 1.25rem var(--px);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
             gap: 1rem;
-            margin-top: 2.5rem;
         }
-
-        .skill-card {
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+        
+        .trust-item__dot {
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        /* ── How I Think (new section) ──────────────────────── */
+        .thinking-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0 3rem;
+        }
+        
+        @media (min-width: 640px) {
+            .thinking-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .thinking-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .thinking-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 1.5rem;
-            transition: border-color var(--transition), background var(--transition);
+            transition: all var(--transition);
         }
-
-        .skill-card:hover {
+        
+        .thinking-card:hover {
             border-color: var(--border-hover);
-            background: var(--bg-card-hover);
+            transform: translateY(-3px);
         }
-
-        .skill-card__icon { font-size: 1.4rem; margin-bottom: 0.75rem; }
-
-        .skill-card__title {
+        
+        .thinking-card__icon {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .thinking-card__title {
             font-family: var(--font-display);
             font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 0.4rem;
-            color: var(--text);
+            margin-bottom: 0.5rem;
         }
-
-        .skill-card__tags {
+        
+        .thinking-card__desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+        
+        /* ── Problem Solver Section ─────────────────────────── */
+        .problem-solver {
+            background: linear-gradient(135deg, rgba(27,58,92,0.3) 0%, rgba(10,15,26,0) 100%);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .problem-solver__title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.35rem;
-            margin-top: 0.75rem;
+            align-items: center;
+            gap: 0.5rem;
         }
-
-        /* ── Values ─────────────────────────────────────────── */
-        .values {
-            background: var(--bg-2);
-            border-top: 1px solid var(--border);
-            padding: 3rem var(--px);
-        }
-
-        .values__inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .values__list {
+        
+        .problem-solver__grid {
             display: grid;
-            grid-template-columns: 1fr; /* mobile: single column */
-            gap: 1.25rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
-
-        .value-item {
+        
+        @media (min-width: 640px) {
+            .problem-solver__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .problem-item {
             display: flex;
-            gap: 0.875rem;
+            gap: 0.75rem;
             align-items: flex-start;
+            padding: 0.75rem;
+            border-left: 2px solid var(--accent);
+            background: rgba(74,158,255,0.03);
         }
-
-        .value-item__dot {
-            width: 6px; height: 6px;
-            border-radius: 50%;
-            background: var(--accent);
-            margin-top: 0.55rem;
+        
+        .problem-item__check {
+            color: var(--accent);
+            font-size: 1rem;
             flex-shrink: 0;
         }
-
-        .value-item__title {
-            font-family: var(--font-display);
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 0.2rem;
-        }
-
-        .value-item__desc {
-            font-size: 0.82rem;
+        
+        .problem-item__text {
+            font-size: 0.85rem;
             color: var(--text-muted);
             line-height: 1.6;
         }
-
-        /* ── Responsive upgrades ────────────────────────────── */
-        @media (min-width: 480px) {
-            .hero__title { flex-direction: row; flex-wrap: wrap; }
-            .pipe { display: inline; }
+        
+        .problem-item__text strong {
+            color: var(--text);
         }
-
-        @media (min-width: 640px) {
-            .skills-grid { grid-template-columns: repeat(2, 1fr); }
-            .values__list { grid-template-columns: repeat(2, 1fr); }
-            .values { padding: 4rem var(--px); }
+        
+        /* ── Projects (de-emphasized, compact) ──────────────── */
+        .project-showcase {
+            background: var(--bg-2);
+            border-radius: var(--radius);
+            padding: 1rem 0;
         }
-
-        @media (min-width: 1024px) {
-            .hero { padding: 4rem var(--px); }
-            .skills-grid { grid-template-columns: repeat(3, 1fr); }
-            .values__list { grid-template-columns: repeat(3, 1fr); }
-            .values { padding: 5rem var(--px); }
-            .hero__scroll { display: flex; }
+        
+        .project-preview {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
         }
-
-        @media (max-width: 1023px) {
-            .hero__scroll { display: none; }
+        
+        .project-preview:last-child {
+            border-bottom: none;
+        }
+        
+        .project-preview__info {
+            flex: 1;
+        }
+        
+        .project-preview__title {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+        
+        .project-preview__desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        
+        .project-preview__link {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--accent);
+            transition: opacity var(--transition);
+        }
+        
+        .project-preview__link:hover {
+            opacity: 0.7;
+        }
+        
+        /* ── CTA Banner ─────────────────────────────────────── */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--accent-dim) 0%, var(--navy) 100%);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-banner__title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .cta-banner__desc {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-banner .btn--primary {
+            background: white;
+            color: var(--navy);
+        }
+        
+        .cta-banner .btn--primary:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-1px);
         }
     </style>
 </head>
@@ -319,223 +346,228 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
         <a href="index.html" class="nav__logo">Koda<span>Kodra</span></a>
         <ul class="nav__links" role="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="projects.html">Work</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <button class="nav__burger" aria-label="Open mobile menu" aria-expanded="false">
+        <button class="nav__burger" aria-label="Open mobile menu">
             <span></span><span></span><span></span>
         </button>
     </nav>
-    <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+    <div class="nav__mobile">
         <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html">Work</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </div>
 
-    <main class="page">
-
-        <!-- ── Hero ─────────────────────────────────────────── -->
+    <main>
+        <!-- ── Hero Section ── -->
         <section class="hero" aria-label="Introduction">
             <div class="hero__inner">
-                <p class="hero__eyebrow">Available for work</p>
-                <h2 class="hero__name">Koda<span class="accent">Kodra</span></h1>
-                <p class="hero__title">
-                    Senior Full-Stack Laravel Developer
-                    &middot;
-                    PHP
-                    &middot;
-                    MySQL 
-                    &middot;
-                    Bootstrap
-                    &middot;
-                    United Kingdom
-                </p>
-                <p class="hero__desc">
-                    I build secure, scalable web applications with an obsessive focus on code quality,
-                    architecture, and user experience. Standards-first. Security by default.
-                    Every line of code intentional.
-                </p>
-                <div class="hero__cta">
-                    <a href="projects.html" class="btn btn--primary">View Projects</a>
-                    <a href="about.html" class="btn btn--outline">About Me</a>
+                <div class="hero__badge anim-fade-up">
+                    Available for new opportunities
                 </div>
-            </div>
-            <div class="hero__scroll" aria-hidden="true">
-                <span>Scroll</span>
-                <div class="hero__scroll-line"></div>
+                <h1 class="hero__name anim-fade-up delay-1">
+                    I'm <span class="accent">KodaKodra</span>
+                </h1>
+                <div class="hero__title anim-fade-up delay-2">
+                    <span>Senior Full-Stack Laravel Developer</span>
+                    <span class="hero__title-separator">//</span>
+                    <span>United Kingdom</span>
+                </div>
+                <p class="hero__desc anim-fade-up delay-3">
+                    I build <strong>secure, scalable web applications</strong> with obsessive attention to 
+                    code quality and architecture. <strong>Security by default. Standards-first.</strong>
+                    Every line of code has a purpose.
+                </p>
+                <div class="hero__cta anim-fade-up delay-4">
+                    <a href="#work-with-me" class="btn btn--primary">Work With Me →</a>
+                    <a href="about.html" class="btn btn--outline">How I Think</a>
+                </div>
             </div>
         </section>
 
-        <!-- ── Stats ────────────────────────────────────────── -->
-        <div class="stats" aria-label="Key stats">
-            <div class="stats__inner">
-                <div class="stat" data-reveal>
-                    <div class="stat__number">7+</div>
-                    <div class="stat__label">Years Experience</div>
+        <!-- ── Trust Bar ── -->
+        <div class="trust-bar">
+            <div class="trust-bar__inner">
+                <span class="trust-item"><span class="trust-item__dot"></span> 7+ years experience</span>
+                <span class="trust-item"><span class="trust-item__dot"></span> 50+ projects delivered</span>
+                <span class="trust-item"><span class="trust-item__dot"></span> PSR-12 standard</span>
+                <span class="trust-item"><span class="trust-item__dot"></span> Security-first design</span>
+            </div>
+        </div>
+
+        <!-- ── How I Think Section ── -->
+        <div class="section">
+            <p class="section-label" data-reveal>Philosophy</p>
+            <h2 class="section-heading" data-reveal>How I think about <br>code &amp; problems</h2>
+            
+            <div class="thinking-grid" data-reveal>
+                <div class="thinking-card">
+                    <div class="thinking-card__icon">📝</div>
+                    <div class="thinking-card__title">Code is communication</div>
+                    <div class="thinking-card__desc">The person reading your code next knows nothing about what you were thinking. Write for them.</div>
                 </div>
-                <div class="stat" data-reveal>
-                    <div class="stat__number">4</div>
-                    <div class="stat__label">Public Projects</div>
+                <div class="thinking-card">
+                    <div class="thinking-card__icon">✨</div>
+                    <div class="thinking-card__title">Simple beats clever</div>
+                    <div class="thinking-card__desc">KISS isn't a beginner's principle — it's what experienced developers land on after trying to be clever.</div>
                 </div>
-                <div class="stat" data-reveal>
-                    <div class="stat__number">50+</div>
-                    <div class="stat__label">Total Projects</div>
+                <div class="thinking-card">
+                    <div class="thinking-card__icon">🔒</div>
+                    <div class="thinking-card__title">Security is design</div>
+                    <div class="thinking-card__desc">If security is an afterthought, it's already too late. It's part of the initial architecture.</div>
                 </div>
-                <div class="stat" data-reveal>
-                    <div class="stat__number">1</div>
-                    <div class="stat__label">Major App in Dev</div>
-                </div>
-                <div class="stat" data-reveal>
-                    <div class="stat__number">PSR-12</div>
-                    <div class="stat__label">Coding Standard</div>
+                <div class="thinking-card">
+                    <div class="thinking-card__icon">🎯</div>
+                    <div class="thinking-card__title">UX is technical</div>
+                    <div class="thinking-card__desc">Good code that confuses users isn't good enough. The mental model matters as much as the data model.</div>
                 </div>
             </div>
         </div>
 
-        <!-- ── Skills ───────────────────────────────────────── -->
-        <section class="section" aria-labelledby="skills-heading">
-            <p class="section-label">Expertise</p>
-            <h2 class="section-heading" id="skills-heading">What I Work With</h2>
-            <p style="color:var(--text-muted);max-width:560px;font-size:0.9rem;">
-                A focused stack built over years of deep daily use — not a laundry list, but the tools I know inside out.
-            </p>
+        <!-- ── Problems I Solve ── -->
+        <div class="section">
+            <p class="section-label" data-reveal>What I deliver</p>
+            <h2 class="section-heading" data-reveal>Problems I solve<br>for my clients</h2>
+            
+            <div class="problem-solver" data-reveal>
+                <div class="problem-solver__title">
+                    <span>→</span> You get more than just code
+                </div>
+                <div class="problem-solver__grid">
+                    <div class="problem-item">
+                        <span class="problem-item__check">✓</span>
+                        <div class="problem-item__text">
+                            <strong>Security vulnerabilities?</strong> — I build with CSRF, XSS prevention, and parameterised queries as baseline.
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-item__check">✓</span>
+                        <div class="problem-item__text">
+                            <strong>Unmaintainable spaghetti code?</strong> — DRY, SOLID, PSR-12. Code that other developers can actually read.
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-item__check">✓</span>
+                        <div class="problem-item__text">
+                            <strong>Slow, unoptimised queries?</strong> — Normalised schemas, indexed queries, and transaction management.
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-item__check">✓</span>
+                        <div class="problem-item__text">
+                            <strong>Poor user experience?</strong> — Mobile-first, keyboard-navigable, accessible interfaces that actually work.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div class="skills-grid">
-                <div class="skill-card" data-reveal>
-                    <div class="skill-card__icon">⚙️</div>
+        <!-- ── My Stack (compact) ── -->
+        <div class="section" style="padding-top:0;">
+            <p class="section-label" data-reveal>Toolkit</p>
+            <h2 class="section-heading" data-reveal>The stack I know deeply</h2>
+            
+            <div class="skills-grid" style="margin-top:1.5rem;" data-reveal>
+                <div class="skill-card">
                     <div class="skill-card__title">Back-End</div>
-                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
-                        Laravel is my primary framework — full MVC, Eloquent ORM, Artisan, middleware, policies, form requests, and the complete ecosystem.
-                    </p>
                     <div class="skill-card__tags">
-                        <span class="tag">PHP 8.x</span>
                         <span class="tag">Laravel</span>
+                        <span class="tag">PHP 8.x</span>
                         <span class="tag">Eloquent</span>
                         <span class="tag">REST APIs</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal>
-                    <div class="skill-card__icon">🎨</div>
+                <div class="skill-card">
                     <div class="skill-card__title">Front-End</div>
-                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
-                        Mobile-first responsive interfaces using Bootstrap and semantic HTML. Clean, accessible, keyboard-navigable — by default.
-                    </p>
                     <div class="skill-card__tags">
                         <span class="tag">Bootstrap 5</span>
                         <span class="tag">JavaScript ES6+</span>
                         <span class="tag">Blade</span>
-                        <span class="tag">HTML5</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal>
-                    <div class="skill-card__icon">🗄️</div>
+                <div class="skill-card">
                     <div class="skill-card__title">Database</div>
-                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
-                        Normalised schema design, full migration history, indexed queries, transactions, and HeidiSQL for visual management.
-                    </p>
                     <div class="skill-card__tags">
                         <span class="tag">MySQL</span>
                         <span class="tag">HeidiSQL</span>
-                        <span class="tag">Query Optimisation</span>
+                        <span class="tag">Optimisation</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal>
-                    <div class="skill-card__icon">🔐</div>
-                    <div class="skill-card__title">Security</div>
-                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
-                        Security isn't a phase — it's baked into every feature. CSRF, XSS prevention, mass-assignment protection, and parameterised queries as a baseline.
-                    </p>
+                <div class="skill-card">
+                    <div class="skill-card__title">Practices</div>
                     <div class="skill-card__tags">
-                        <span class="tag">CSRF</span>
-                        <span class="tag">XSS Prevention</span>
-                        <span class="tag">RBAC</span>
-                        <span class="tag">Policies</span>
-                    </div>
-                </div>
-                <div class="skill-card" data-reveal>
-                    <div class="skill-card__icon">📐</div>
-                    <div class="skill-card__title">Architecture</div>
-                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
-                        DRY, KISS, SOLID. Thin controllers, service logic, route model binding, meaningful naming, and documentation as standard.
-                    </p>
-                    <div class="skill-card__tags">
-                        <span class="tag">DRY / KISS</span>
-                        <span class="tag">SOLID</span>
                         <span class="tag">PSR-12</span>
-                        <span class="tag">MVC</span>
-                    </div>
-                </div>
-                <div class="skill-card" data-reveal>
-                    <div class="skill-card__icon">🚀</div>
-                    <div class="skill-card__title">Tooling & Workflow</div>
-                    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
-                        Git, Composer, npm, Font Awesome, and a disciplined Artisan-driven development workflow from migration to deployment.
-                    </p>
-                    <div class="skill-card__tags">
+                        <span class="tag">SOLID</span>
                         <span class="tag">Git</span>
-                        <span class="tag">Composer</span>
-                        <span class="tag">Artisan</span>
-                        <span class="tag">npm</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- ── Values ───────────────────────────────────────── -->
-        <div class="values">
-            <div class="values__inner">
-                <p class="section-label">How I Work</p>
-                <h2 class="section-heading">Working Style</h2>
-                <div class="values__list">
-                    <div class="value-item" data-reveal>
-                        <div class="value-item__dot"></div>
-                        <div>
-                            <div class="value-item__title">Standards-First</div>
-                            <div class="value-item__desc">PSR-12, meaningful naming, and inline documentation aren't optional — they're the floor, not the ceiling.</div>
-                        </div>
-                    </div>
-                    <div class="value-item" data-reveal>
-                        <div class="value-item__dot"></div>
-                        <div>
-                            <div class="value-item__title">Security by Default</div>
-                            <div class="value-item__desc">Security considerations happen at design time, not as a post-launch patch cycle.</div>
-                        </div>
-                    </div>
-                    <div class="value-item" data-reveal>
-                        <div class="value-item__dot"></div>
-                        <div>
-                            <div class="value-item__title">Deep Ownership</div>
-                            <div class="value-item__desc">I own projects end-to-end — from schema design to deployment — with no hand-holding required.</div>
-                        </div>
-                    </div>
-                    <div class="value-item" data-reveal>
-                        <div class="value-item__dot"></div>
-                        <div>
-                            <div class="value-item__title">UX as a Constraint</div>
-                            <div class="value-item__desc">Every technical decision is weighed against the end-user experience. Good code that confuses users isn't good enough.</div>
-                        </div>
-                    </div>
-                    <div class="value-item" data-reveal>
-                        <div class="value-item__dot"></div>
-                        <div>
-                            <div class="value-item__title">Relentless Depth</div>
-                            <div class="value-item__desc">I don't skim surfaces. When I work on something, I understand it fully — not just enough to ship it.</div>
-                        </div>
-                    </div>
-                    <div class="value-item" data-reveal>
-                        <div class="value-item__dot"></div>
-                        <div>
-                            <div class="value-item__title">Continuous Learning</div>
-                            <div class="value-item__desc">Significant personal time goes into staying ahead — new Laravel features, PHP internals, front-end patterns.</div>
+        <!-- ── What I'm Working On Now (featured project, but framed as current focus) ── -->
+        <div class="section" style="background: var(--bg-2); margin: 1rem 0; border-radius: var(--radius);" id="work-with-me">
+            <div class="project-featured" data-reveal style="background: transparent;">
+                <div class="project-featured__content">
+                    <div>
+                        <div class="project-featured__badge">Current Focus — 95% Complete</div>
+                        <h2 class="project-featured__title">Community Social Network</h2>
+                        <p class="project-featured__desc">
+                            A fully custom Laravel social platform built around positive behaviour and gamification.
+                            This demonstrates my approach to complex systems: thoughtful architecture, security-first design, and genuine user psychology.
+                        </p>
+                        <div class="project-featured__tags" style="margin-bottom:0;">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">RBAC</span>
+                            <span class="tag">Gamification</span>
+                            <span class="tag">Privacy by Design</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- ── Other Work (de-emphasized, just links) ── -->
+        <div class="section">
+            <p class="section-label" data-reveal>Select Work</p>
+            <h2 class="section-heading" data-reveal>Recent projects</h2>
+            
+            <div class="project-showcase" data-reveal>
+                <div class="project-preview">
+                    <div class="project-preview__info">
+                        <div class="project-preview__title">eCommerce Platform</div>
+                        <div class="project-preview__desc">Stripe integration · PHPMailer · Full cart & checkout</div>
+                    </div>
+                    <a href="https://github.com/kodakodra/KodaKodra_eCommerce_Project" target="_blank" class="project-preview__link">GitHub →</a>
+                </div>
+                <div class="project-preview">
+                    <div class="project-preview__info">
+                        <div class="project-preview__title">Booking System</div>
+                        <div class="project-preview__desc">Availability logic · Scheduling · Responsive UI</div>
+                    </div>
+                    <a href="https://github.com/kodakodra/KodaKodra_Booking_System_Project" target="_blank" class="project-preview__link">GitHub →</a>
+                </div>
+                <div class="project-preview">
+                    <div class="project-preview__info">
+                        <div class="project-preview__title">Brochure Series (6 steps)</div>
+                        <div class="project-preview__desc">Open-source teaching — HTML to PHP-driven Bootstrap</div>
+                    </div>
+                    <a href="https://github.com/kodakodra" target="_blank" class="project-preview__link">View Series →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── CTA Banner ── -->
+        <div class="section">
+            <div class="cta-banner" data-reveal>
+                <div class="cta-banner__title">Let's build something together</div>
+                <div class="cta-banner__desc">Available for full-time roles, contract work, or project collaborations</div>
+                <a href="contact.html" class="btn btn--primary">Get In Touch →</a>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -543,6 +575,7 @@
         <div class="footer__links">
             <a href="https://github.com/kodakodra" target="_blank" rel="noopener">GitHub</a>
             <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener">Linktree</a>
+            <a href="https://bsky.app/profile/kodakodra.bsky.social" target="_blank" rel="noopener">Bluesky</a>
         </div>
     </footer>
 
