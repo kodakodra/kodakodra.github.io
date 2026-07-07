@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact KodaKodra — Senior Full-Stack Laravel Developer, open to full-time, contract, and collaboration work.">
     <title>Contact — KodaKodra</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <nav class="nav" role="navigation">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
         <a href="index.html" class="nav__logo">Koda<span>Kodra</span></a>
-        <ul class="nav__links">
+        <ul class="nav__links" role="list">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="skills.html">Skills</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <button class="nav__burger"><span></span><span></span><span></span></button>
+        <button class="nav__burger" aria-label="Open mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
     <div class="nav__mobile">
         <a href="index.html">Home</a>
@@ -33,30 +33,43 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-12">
-                    <p class="section-label anim-fade-up">Get In Touch</p>
+                    <p class="migration-label anim-fade-up"><span class="migration-label__file">2026_07_07_000008_create_contact_section.php</span></p>
                     <h1 class="section-heading anim-fade-up delay-1">Contact</h1>
                 </div>
             </div>
-            <div class="row g-5 mt-3">
+
+            <div class="row g-5 mt-2">
                 <div class="col-lg-6">
-                    <p class="lead anim-fade-up">I'm currently <strong>open to opportunities</strong> — full-time, contract, or collaboration. Direct communication, no fluff.</p>
-                    <div class="mt-4 anim-fade-up delay-2">
-                        <div class="d-flex gap-3 mb-3">
-                            <i class="fa-solid fa-envelope fa-fw" style="color: var(--accent);"></i>
-                            <span>f83u27uar@mozmail.com</span>
+                    <p class="lead anim-fade-up delay-1 text-muted-custom">I'm currently <strong class="text-white">open to opportunities</strong> — full-time, contract, or collaboration. Direct communication, no fluff.</p>
+
+                    <div class="mt-4" data-reveal>
+                        <a href="mailto:f83u27uar@mozmail.com" class="contact-link-card">
+                            <i class="fa-solid fa-envelope contact-link-card__icon" aria-hidden="true"></i>
+                            <div><div class="contact-link-card__title">Email</div><div class="contact-link-card__value">f83u27uar@mozmail.com</div></div>
+                        </a>
+                        <div class="contact-link-card">
+                            <i class="fa-brands fa-discord contact-link-card__icon" aria-hidden="true"></i>
+                            <div><div class="contact-link-card__title">Discord</div><div class="contact-link-card__value">kodakodra_99627</div></div>
                         </div>
-                        <div class="d-flex gap-3 mb-3">
-                            <i class="fa-brands fa-discord fa-fw" style="color: var(--accent);"></i>
-                            <span>kodakodra_99627</span>
-                        </div>
-                        <div class="d-flex gap-3">
-                            <i class="fa-brands fa-bluesky fa-fw" style="color: var(--accent);"></i>
-                            <span>@kodakodra.bsky.social</span>
-                        </div>
+                        <a href="https://bsky.app/profile/kodakodra.bsky.social" target="_blank" rel="noopener" class="contact-link-card">
+                            <i class="fa-brands fa-bluesky contact-link-card__icon" aria-hidden="true"></i>
+                            <div><div class="contact-link-card__title">Bluesky</div><div class="contact-link-card__value">@kodakodra.bsky.social</div></div>
+                        </a>
+                        <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener" class="contact-link-card">
+                            <i class="fa-solid fa-link contact-link-card__icon" aria-hidden="true"></i>
+                            <div><div class="contact-link-card__title">Linktree</div><div class="contact-link-card__value">linktr.ee/kodakodra</div></div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="availability-banner"><div class="availability-banner__dot"></div><div><div class="availability-banner__title">Currently available</div><div>Based in UK · Remote-friendly</div></div></div>
+
+                <div class="col-lg-6" data-reveal>
+                    <div class="availability-banner">
+                        <div class="availability-banner__dot" aria-hidden="true"></div>
+                        <div>
+                            <div class="availability-banner__title">Currently available</div>
+                            <div class="text-muted-custom small">Based in UK · Remote-friendly</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,7 +77,11 @@
 
     <footer class="footer">
         <span class="footer__copy">&copy; 2026 KodaKodra. All rights reserved.</span>
-        <div class="footer__links"><a href="https://github.com/kodakodra">GitHub</a><a href="https://linktr.ee/kodakodra">Linktree</a></div>
+        <div class="footer__links">
+            <a href="https://github.com/kodakodra" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://bsky.app/profile/kodakodra.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+            <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener">Linktree</a>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
