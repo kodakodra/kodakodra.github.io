@@ -1,39 +1,38 @@
-# KodaKodra
+# Hi, I'm KodaKodra 👋
 
 **Senior Full-Stack Laravel Developer**
 
-Building secure, scalable web applications with an obsessive focus on code quality and architecture. Standards-first. Security by default.
+I build secure, scalable web applications with an obsessive focus on code quality, clean architecture, and maintainability. Standards-first. Security by default. If it's not tested, documented, and readable, it's not done.
 
 ---
 
-### Stack
+### 🛠 Stack
 
-**Back-End** — Laravel · PHP 8.x · Eloquent ORM · REST APIs  
-**Front-End** — Bootstrap 5 · JavaScript ES6+ · Blade · HTML5  
-**Database** — MySQL · HeidiSQL · Query Optimisation  
-**Practices** — PSR-12 · DRY/KISS/SOLID · RBAC · MVC
+**Back-End**
+Laravel 13 · PHP 8.5 · Eloquent ORM · REST APIs · Inertia.js
 
----
+**Front-End**
+React 18+ · TypeScript · Bootstrap 5 · Blade · JavaScript (ES6+) · HTML5 · Tailwind CSS
 
-### Currently Building
+**Database & Infra**
+MySQL · PostgreSQL · HeidiSQL · Query Optimisation · Docker · Redis
 
-A community social network in Laravel — featuring posts, communities, comments, profiles, privacy controls, a points & perks economy, leaderboard, and shop. Designed around one idea: incentivise good behaviour rather than punish bad behaviour.
-
-`Private repo`
-
----
-
-### Projects
-
-| Project | Stack | Links |
-|---|---|---|
-| Community Social Network | Laravel · MySQL · Bootstrap | Private — demo on request |
-| eCommerce Platform | PHP · Stripe · PHPMailer · Bootstrap | [Repo](https://github.com/kodakodra/KodaKodra_eCommerce_Project) · [Screenshots](https://github.com/kodakodra/KodaKodra_eCommerce_Screenshots) |
-| Booking System | PHP · MySQL · Bootstrap | [Repo](https://github.com/kodakodra/KodaKodra_Booking_System_Project) · [Screenshots](https://github.com/kodakodra/KodaKodra_Booking_System_Screenshots) |
-| Brochure Series (6 steps) | HTML · CSS · PHP · Bootstrap | [Step 1](https://github.com/kodakodra/KodaKodra_Brochure_Project_Step_1) · [Step 2](https://github.com/kodakodra/KodaKodra_Brochure_Project_Step_2) · [Step 3](https://github.com/kodakodra/KodaKodra_Brochure_Project_Step_3) · [Step 4](https://github.com/kodakodra/KodaKodra_Brochure_Project_Step_4) · [Step 5](https://github.com/kodakodra/KodaKodra_Brochure_Project_Step_5) · [Step 6](https://github.com/kodakodra/KodaKodra_Brochure_Project_Step_6) |
+**Practices**
+PSR-12 · DRY / KISS / SOLID · RBAC · MVC · Policy-based Authorization · Test-Driven Development (Pest)
 
 ---
 
-### Contact
+### 💡 How I Work
 
-wtmzxdvoy@mozmail.com · https://bsky.app/profile/kodakodra.bsky.social · https://linktr.ee/kodakodra
+- **Security first** — server-side validation always, parameterized queries, CSRF protection, and least-privilege authorization on every project.
+- **Standards-driven** — consistent naming conventions, PSR-12 compliance, and self-documenting code across every layer of the stack.
+- **Built to last** — thin controllers, meaningful abstractions, and services that scale with the project instead of against it.
+- **Tested, not hoped-for** — every change ships with the commands to verify it, not just a promise that "it works."
+
+---
+
+### 📫 Contact
+
+📧 wtmzxdvoy@mozmail.com
+🦋 [Bluesky](https://bsky.app/profile/kodakodra.bsky.social)
+🔗 [Linktree](https://linktr.ee/kodakodra)
