@@ -3,70 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KodaKodra — Senior Full-Stack Laravel Developer. Clean, secure, data-driven web applications.">
-    <title>KodaKodra — Laravel Developer</title>
+    <meta name="description" content="KodaKodra — Senior Full-Stack Laravel Developer. Secure, data-driven web applications built with Laravel, Inertia/React, and disciplined engineering standards.">
+    <title>KodaKodra — Senior Full-Stack Laravel Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Extra homepage tweaks */
-        .hero-section {
-            position: relative;
-            min-height: calc(100vh - 68px);
-            display: flex;
-            align-items: center;
-            padding: 4rem 0;
-        }
-        .hero__scroll {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            opacity: 0;
-            animation: fadeIn 1s 1.2s both;
-        }
-        @media (max-width: 768px) {
-            .hero__scroll { display: none; }
-        }
-        .hero__scroll span {
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            letter-spacing: 0.15em;
-            color: var(--text-dim);
-            text-transform: uppercase;
-        }
-        .hero__scroll-line {
-            width: 1px;
-            height: 32px;
-            background: linear-gradient(to bottom, var(--accent), transparent);
-            animation: pulse 2s infinite;
-        }
-        .feature-icon {
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-        .stat {
-            padding: 0.75rem 0.5rem;
-        }
-        .stat__number {
-            font-size: 1.6rem;
-            word-break: keep-all;
-        }
-        .stat__label {
-            font-size: 0.6rem;
-            white-space: normal;
-            line-height: 1.3;
-        }
-        @media (min-width: 768px) {
-            .stat__number { font-size: 1.8rem; }
-            .stat__label { font-size: 0.7rem; }
-        }
-    </style>
 </head>
 <body>
 
@@ -79,9 +20,7 @@
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <button class="nav__burger" aria-label="Open mobile menu">
-            <span></span><span></span><span></span>
-        </button>
+        <button class="nav__burger" aria-label="Open mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
     <div class="nav__mobile">
         <a href="index.html">Home</a>
@@ -92,23 +31,24 @@
     </div>
 
     <main class="page">
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section class="hero-section">
             <div class="container">
                 <div class="row justify-content-center text-center text-lg-start">
                     <div class="col-lg-8">
-                        <p class="section-label anim-fade-up">Senior Full-Stack Developer</p>
-                        <h1 class="display-3 fw-bold anim-fade-up delay-1" style="font-family: var(--font-display);">Koda<span style="color: var(--accent);">Kodra</span></h1>
-                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start my-3 anim-fade-up delay-2">
-                            <span class="badge-custom">Laravel 13+</span>
-                            <span class="badge-custom">PHP 8.5+</span>
-                            <span class="badge-custom">MySQL · Analytics</span>
-                            <span class="badge-custom">Bootstrap · JS</span>
-                        </div>
-                        <p class="lead text-muted-custom anim-fade-up delay-3" style="max-width: 700px; margin: 0 auto;">
-                            I build secure, scalable web applications with obsessive attention to code quality, 
-                            database architecture, and user experience. Standards-first. Security by default.
+                        <p class="hero__eyebrow anim-fade-up"><span class="cursor" aria-hidden="true"></span>2026_07_07_000001_create_developer.php</p>
+                        <h1 class="hero__title anim-fade-up delay-1">Koda<span class="accent">Kodra</span></h1>
+                        <p class="lead text-muted-custom anim-fade-up delay-2 mt-3" style="max-width: 620px;">
+                            Senior Full-Stack Laravel Developer building secure, data-driven web applications.
+                            Standards-first. Security by default. Every schema designed to answer tomorrow's
+                            questions, not just today's.
                         </p>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start my-3 anim-fade-up delay-3">
+                            <span class="badge-custom">Laravel 13</span>
+                            <span class="badge-custom">PHP 8.5</span>
+                            <span class="badge-custom">Inertia · React · TypeScript</span>
+                            <span class="badge-custom">MySQL · PostgreSQL</span>
+                        </div>
                         <div class="btn-group gap-3 mt-4 anim-fade-up delay-4">
                             <a href="projects.html" class="btn btn--primary">View Projects</a>
                             <a href="contact.html" class="btn btn--outline">Get In Touch</a>
@@ -122,56 +62,68 @@
             </div>
         </section>
 
-        <!-- Stats Row (fixed overflow) -->
+        <!-- Stats -->
         <div class="stats">
             <div class="container">
                 <div class="row g-0 text-center">
-                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">7+</div><div class="stat__label">Years</div></div></div>
-                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">50+</div><div class="stat__label">Projects</div></div></div>
-                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">Laravel</div><div class="stat__label">Primary</div></div></div>
-                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">PSR-12</div><div class="stat__label">Strict</div></div></div>
-                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">Data</div><div class="stat__label">Analytics</div></div></div>
-                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">UK</div><div class="stat__label">Remote</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">7+</div><div class="stat__label">Years building</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">50+</div><div class="stat__label">Projects shipped</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">Laravel</div><div class="stat__label">Primary framework</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">PSR-12</div><div class="stat__label">Strict throughout</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">Data</div><div class="stat__label">Analytics-first</div></div></div>
+                    <div class="col-6 col-md-4 col-lg-2 stat-col"><div class="stat"><div class="stat__number">UK</div><div class="stat__label">Remote-friendly</div></div></div>
                 </div>
             </div>
         </div>
 
-        <!-- What I Do Section (adds appeal) -->
+        <!-- What I deliver -->
         <div class="container py-5">
             <div class="row text-center mb-5">
                 <div class="col-12">
-                    <p class="section-label justify-content-center">Approach</p>
+                    <p class="migration-label justify-content-center"><span class="migration-label__file">2026_07_07_000002_create_approach_section.php</span></p>
                     <h2 class="section-heading">What I Deliver</h2>
-                    <p class="text-muted-custom" style="max-width: 600px; margin: 0 auto;">Every project follows the same disciplined workflow. No shortcuts.</p>
+                    <p class="text-muted-custom" style="max-width: 600px; margin: 0 auto;">Every project follows the same disciplined workflow. No shortcuts, no guesswork.</p>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-md-4" data-reveal>
-                    <div class="text-center p-4 card h-100 bg-transparent border-0">
-                        <div class="feature-icon"><i class="fas fa-database"></i></div>
-                        <h3 class="h5 fw-bold">Data-First Architecture</h3>
-                        <p class="small text-muted-custom">Normalised schemas, query optimisation, and analytics-ready design — not afterthoughts.</p>
+                    <div class="feature-card text-center">
+                        <div class="feature-card__icon"><i class="fas fa-database" aria-hidden="true"></i></div>
+                        <h3 class="feature-card__title h5">Data-First Architecture</h3>
+                        <p class="small text-muted-custom mb-0">Normalised schemas, query optimisation, and analytics-ready design — not afterthoughts.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-reveal>
-                    <div class="text-center p-4 card h-100 bg-transparent border-0">
-                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3 class="h5 fw-bold">Security by Default</h3>
-                        <p class="small text-muted-custom">CSRF, XSS, mass-assignment protection, and policies baked into every feature.</p>
+                    <div class="feature-card text-center">
+                        <div class="feature-card__icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
+                        <h3 class="feature-card__title h5">Security by Default</h3>
+                        <p class="small text-muted-custom mb-0">CSRF, XSS, mass-assignment protection, and policies baked into every feature from the first migration.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-reveal>
-                    <div class="text-center p-4 card h-100 bg-transparent border-0">
-                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3 class="h5 fw-bold">Data Analytics Dashboards</h3>
-                        <p class="small text-muted-custom">Real-time KPIs, sales funnels, user behaviour — turn data into decisions.</p>
+                    <div class="feature-card text-center">
+                        <div class="feature-card__icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                        <h3 class="feature-card__title h5">Analytics Dashboards</h3>
+                        <p class="small text-muted-custom mb-0">Real-time KPIs, sales funnels, user behaviour — turned into decisions, not just charts.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Call to action strip -->
-        <div class="bg-card-glow py-4 text-center" style="background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <!-- Modern stack callout -->
+        <div class="container pb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="callout-strip" data-reveal>
+                        <i class="fas fa-layer-group" aria-hidden="true"></i>
+                        <span><strong class="text-white">Also building with:</strong> Inertia.js, React 18, and TypeScript on Laravel back ends, containerised with Docker and running on PostgreSQL/Redis — the same standards-first discipline, on a modern SPA stack.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA strip -->
+        <div class="cta-strip">
             <div class="container">
                 <p class="mb-2">Have a project in mind? Let's talk.</p>
                 <a href="contact.html" class="btn btn--primary">Start a conversation →</a>
@@ -182,8 +134,9 @@
     <footer class="footer">
         <span class="footer__copy">&copy; 2026 KodaKodra. All rights reserved.</span>
         <div class="footer__links">
-            <a href="https://github.com/kodakodra" target="_blank">GitHub</a>
-            <a href="https://linktr.ee/kodakodra" target="_blank">Linktree</a>
+            <a href="https://github.com/kodakodra" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://bsky.app/profile/kodakodra.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+            <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener">Linktree</a>
         </div>
     </footer>
 
