@@ -33,6 +33,6 @@ PSR-12 · DRY / KISS / SOLID · RBAC · MVC · Policy-based Authorization · Tes
 
 ### 📫 Contact
 
-📧 wtmzxdvoy@mozmail.com
+📧 f83u27uar@mozmail.com
 🦋 [Bluesky](https://bsky.app/profile/kodakodra.bsky.social)
 🔗 [Linktree](https://linktr.ee/kodakodra)
