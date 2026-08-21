@@ -1,25 +1,21 @@
-/* ============================================================
-   KodaKodra Portfolio — Shared JS (ES6+)
-   Mobile nav, active link highlight, scroll reveal.
-   ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile navigation toggle
     const burger = document.querySelector('.nav__burger');
     const mobileNav = document.querySelector('.nav__mobile');
+
     if (burger && mobileNav) {
-        burger.addEventListener('click', () => {
-            const isOpen = mobileNav.classList.toggle('open');
-            burger.setAttribute('aria-expanded', String(isOpen));
-        });
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('open');
-                burger.setAttribute('aria-expanded', 'false');
-            });
+        const setMenu = (open) => {
+            mobileNav.classList.toggle('open', open);
+            burger.setAttribute('aria-expanded', String(open));
+            burger.setAttribute('aria-label', open ? 'Close mobile menu' : 'Open mobile menu');
+        };
+
+        burger.addEventListener('click', () => setMenu(!mobileNav.classList.contains('open')));
+        mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('click', event => {
+            if (!mobileNav.contains(event.target) && !burger.contains(event.target)) setMenu(false);
         });
     }
 
-    // Active nav link based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(anchor => {
         const href = anchor.getAttribute('href');
@@ -29,21 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Intersection Observer for reveal animation (data-reveal)
     const revealElements = document.querySelectorAll('[data-reveal]');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (revealElements.length && !prefersReducedMotion) {
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('anim-fade-up');
-                    observer.unobserve(entry.target);
-                }
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('anim-fade-up');
+                observer.unobserve(entry.target);
             });
-        }, { threshold: 0.15 });
-        revealElements.forEach(el => observer.observe(el));
-    } else if (revealElements.length) {
-        revealElements.forEach(el => el.classList.add('anim-fade-up'));
+        }, { threshold: 0.12 });
+        revealElements.forEach(element => observer.observe(element));
+    } else {
+        revealElements.forEach(element => element.classList.add('anim-fade-up'));
     }
 });
