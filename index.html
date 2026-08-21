@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KodaKodra — Senior Full-Stack Laravel Developer. Building secure, data-driven web applications with 7+ years of experience and 50+ projects delivered.">
-    <meta name="keywords" content="Laravel, PHP, React, TypeScript, Full-Stack Developer, Web Development, Data Analytics, Project Management">
+    <meta name="description" content="KodaKodra — Senior Full-Stack Laravel Developer. Building secure, data-driven web applications.">
     <meta property="og:title" content="KodaKodra — Senior Full-Stack Laravel Developer">
-    <meta property="og:description" content="Building secure, data-driven web applications. Standards-first. Security by default.">
+    <meta property="og:description" content="Standards-first. Security by default. Data-driven web applications.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kodakodra.github.io/">
     <title>KodaKodra — Senior Full-Stack Laravel Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,202 +16,69 @@
         <a href="index.html" class="nav__logo">Koda<span>Kodra</span></a>
         <ul class="nav__links" role="list">
             <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li><li><a href="skills.html">Skills</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li>
         </ul>
-        <button class="nav__burger" aria-label="Open mobile menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
+        <button class="nav__burger" aria-label="Open mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
-
-    <div class="nav__mobile">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </div>
+    <div class="nav__mobile"><a href="index.html" class="active">Home</a><a href="about.html">About</a><a href="skills.html">Skills</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
 
     <main class="page">
-        <!-- Hero Section -->
         <section class="hero">
-            <div class="container">
+            <div class="shell hero__grid">
                 <div class="hero__content">
-                    <div class="hero__badge anim-fade-up">
-                        <span class="migration-label__file">2026_07_07_000001_create_developer.php</span>
-                    </div>
-                    <h1 class="hero__title anim-fade-up delay-1">
-                        Koda<span class="text-accent">Kodra</span>
-                    </h1>
-                    <p class="hero__subtitle anim-fade-up delay-2">
-                        Senior Full-Stack Laravel Developer building secure, data-driven web applications. Standards-first. Security by default. Every schema designed to answer tomorrow's questions, not just today's.
-                    </p>
-                    <div class="hero__tags anim-fade-up delay-3">
-                        <span class="tag">Laravel 13</span>
-                        <span class="tag">PHP 8.5</span>
-                        <span class="tag">Inertia · React · TypeScript</span>
-                        <span class="tag">MySQL · PostgreSQL</span>
-                    </div>
-                    <div class="hero__ctas anim-fade-up delay-4">
-                        <a href="projects.html" class="btn btn-primary">View Projects</a>
-                        <a href="contact.html" class="btn btn-outline">Get In Touch</a>
-                    </div>
+                    <div class="hero__badge anim-fade-up"><span class="migration-label__file">2026_07_07_000001_create_developer.php</span></div>
+                    <h1 class="hero__title anim-fade-up delay-1">Koda<span class="text-accent">Kodra</span></h1>
+                    <p class="hero__subtitle anim-fade-up delay-2">Senior Full-Stack Laravel Developer building secure, data-driven web applications. Standards-first. Security by default. Every schema designed to answer tomorrow's questions, not just today's.</p>
+                    <div class="hero__tags anim-fade-up delay-3"><span class="tag">Laravel 13</span><span class="tag">PHP 8.5</span><span class="tag">Inertia · React · TypeScript</span><span class="tag">MySQL · PostgreSQL</span></div>
+                    <div class="hero__ctas anim-fade-up delay-4"><a href="projects.html" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a><a href="contact.html" class="btn btn-outline">Get In Touch</a></div>
                 </div>
+                <aside class="hero__signal glass anim-fade-up delay-2">
+                    <div class="signal__top"><span>system.status</span><span class="signal__dot" aria-label="Available"></span></div>
+                    <div class="signal__metric">50+</div>
+                    <p class="signal__copy">projects shipped across dashboards, admin systems, eCommerce, booking, analytics and bespoke tools.</p>
+                    <div class="hero__tags" style="margin-top:18px"><span class="tag">Data-first</span><span class="tag">Security-first</span></div>
+                </aside>
             </div>
         </section>
 
-        <!-- Stats Section -->
         <section class="stats">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-3 col-6">
-                        <div class="stat-card anim-fade-up">
-                            <div class="stat-card__number">7+</div>
-                            <div class="stat-card__label">Years building</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="stat-card anim-fade-up delay-1">
-                            <div class="stat-card__number">50+</div>
-                            <div class="stat-card__label">Projects shipped</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="stat-card anim-fade-up delay-2">
-                            <div class="stat-card__label">Primary framework</div>
-                            <div class="stat-card__value">Laravel</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="stat-card anim-fade-up delay-3">
-                            <div class="stat-card__label">Code standard</div>
-                            <div class="stat-card__value">PSR-12</div>
-                        </div>
-                    </div>
+            <div class="shell stats__grid">
+                <div class="stat-card glass anim-fade-up"><div class="stat-card__number">7+</div><div class="stat-card__label">Years building</div></div>
+                <div class="stat-card glass anim-fade-up delay-1"><div class="stat-card__number">50+</div><div class="stat-card__label">Projects shipped</div></div>
+                <div class="stat-card glass anim-fade-up delay-2"><div class="stat-card__value">Laravel</div><div class="stat-card__label">Primary framework</div></div>
+                <div class="stat-card glass anim-fade-up delay-3"><div class="stat-card__value">PSR-12</div><div class="stat-card__label">Code standard</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="shell">
+                <div class="section-head"><div><p class="eyebrow">01 / approach</p><h2 class="section-title">How I build</h2></div><p class="section-subtitle">A disciplined workflow that keeps architecture, security and product decisions aligned.</p></div>
+                <div class="card-grid">
+                    <article class="approach-card glass"><div class="approach-card__icon"><i class="fas fa-database"></i></div><h3 class="approach-card__title">Data-First Architecture</h3><p class="approach-card__text">Normalised schemas, query optimisation and analytics-ready design are decisions made early, not afterthoughts.</p></article>
+                    <article class="approach-card glass"><div class="approach-card__icon"><i class="fas fa-shield-halved"></i></div><h3 class="approach-card__title">Security by Default</h3><p class="approach-card__text">CSRF, XSS, mass-assignment protection and policies are built into features from the first migration.</p></article>
+                    <article class="approach-card glass"><div class="approach-card__icon"><i class="fas fa-chart-line"></i></div><h3 class="approach-card__title">Analytics That Matter</h3><p class="approach-card__text">KPIs, funnels, user behaviour and exports are designed to turn application data into decisions.</p></article>
                 </div>
             </div>
         </section>
 
-        <!-- What I Deliver Section -->
-        <section class="approach">
-            <div class="container">
-                <div class="section-header anim-fade-up">
-                    <h2 class="section-title">What I Deliver</h2>
-                    <p class="section-subtitle">Every project follows the same disciplined workflow. No shortcuts, no guesswork.</p>
-                </div>
-                <div class="row g-4 mt-4">
-                    <div class="col-md-4">
-                        <div class="approach-card anim-fade-up">
-                            <div class="approach-card__icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h3 class="approach-card__title">Data-First Architecture</h3>
-                            <p class="approach-card__text">Normalised schemas, query optimisation, and analytics-ready design — not afterthoughts.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="approach-card anim-fade-up delay-1">
-                            <div class="approach-card__icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h3 class="approach-card__title">Security by Default</h3>
-                            <p class="approach-card__text">CSRF, XSS, mass-assignment protection, and policies baked into every feature from the first migration.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="approach-card anim-fade-up delay-2">
-                            <div class="approach-card__icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h3 class="approach-card__title">Analytics Dashboards</h3>
-                            <p class="approach-card__text">Real-time KPIs, sales funnels, user behaviour — turned into decisions, not just charts.</p>
-                        </div>
-                    </div>
+        <section class="section" style="padding-top:0">
+            <div class="shell">
+                <div class="section-head"><div><p class="eyebrow">02 / stack</p><h2 class="section-title">Focused, battle-tested</h2></div><a href="skills.html" class="btn btn-outline">Full skill set</a></div>
+                <div class="tech-grid">
+                    <article class="tech-group glass"><h3 class="tech-group__title">Back-End Core</h3><p class="tech-group__desc">Laravel, PHP, Eloquent, Artisan, middleware, policies, form requests, service containers and queues.</p><div class="tech-tags"><span class="tech-tag">Laravel</span><span class="tech-tag">PHP 8.5</span><span class="tech-tag">Eloquent</span></div></article>
+                    <article class="tech-group glass"><h3 class="tech-group__title">Modern Stack</h3><p class="tech-group__desc">Inertia bridging Laravel with React and TypeScript, containerised with Docker and backed by PostgreSQL and Redis.</p><div class="tech-tags"><span class="tech-tag">Inertia.js</span><span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Docker</span></div></article>
+                    <article class="tech-group glass"><h3 class="tech-group__title">Database & SQL</h3><p class="tech-group__desc">Normalised schemas, complex joins, subqueries, indexing strategies and query optimisation.</p><div class="tech-tags"><span class="tech-tag">MySQL</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Query Opt.</span></div></article>
+                    <article class="tech-group glass"><h3 class="tech-group__title">Delivery</h3><p class="tech-group__desc">Git, Composer, pnpm, PSR-12, migration-driven development, responsive UI and accessibility.</p><div class="tech-tags"><span class="tech-tag">Git</span><span class="tech-tag">PSR-12</span><span class="tech-tag">A11y</span></div></article>
                 </div>
             </div>
         </section>
 
-        <!-- Tech Stack Section -->
-        <section class="tech-stack">
-            <div class="container">
-                <div class="section-header anim-fade-up">
-                    <h2 class="section-title">Technology & Expertise</h2>
-                    <p class="section-subtitle">A focused, battle-tested stack I use daily — no fluff, only depth.</p>
-                </div>
-                <div class="row g-4 mt-4">
-                    <div class="col-lg-6">
-                        <div class="tech-group anim-fade-up">
-                            <h3 class="tech-group__title">Back-End Core</h3>
-                            <p class="tech-group__desc">Laravel 13+, PHP 8.5+, Eloquent ORM, Artisan, middleware, policies, form requests, service containers, and queue jobs.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Laravel</span>
-                                <span class="tech-tag">PHP 8.5</span>
-                                <span class="tech-tag">Eloquent</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="tech-group anim-fade-up delay-1">
-                            <h3 class="tech-group__title">Modern Stack</h3>
-                            <p class="tech-group__desc">Inertia.js bridging Laravel with React 18 and TypeScript, containerised with Docker, running on PostgreSQL and Redis.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Inertia.js</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">Docker</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="tech-group anim-fade-up delay-2">
-                            <h3 class="tech-group__title">Database & SQL</h3>
-                            <p class="tech-group__desc">Normalised schema design, complex JOINs, subqueries, indexing strategies, query optimisation, and HeidiSQL/DBeaver.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">Query Opt.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="tech-group anim-fade-up delay-3">
-                            <h3 class="tech-group__title">Data Analytics</h3>
-                            <p class="tech-group__desc">Build dashboards, KPI reports, sales funnels, user engagement metrics, and exportable analytics using SQL + Laravel.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Reporting</span>
-                                <span class="tech-tag">Charts</span>
-                                <span class="tech-tag">Metrics</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-card anim-fade-up">
-                    <h2 class="cta-card__title">Have a project in mind?</h2>
-                    <p class="cta-card__text">Let's talk about your requirements, timeline, and goals.</p>
-                    <a href="contact.html" class="btn btn-primary btn-lg">Start a conversation</a>
-                </div>
-            </div>
+        <section class="section" style="padding-top:0">
+            <div class="shell"><div class="cta-card glass"><p class="eyebrow">03 / next</p><h2 class="cta-card__title">Have a project in mind?</h2><p class="cta-card__text">Let's talk requirements, timeline and goals.</p><a href="contact.html" class="btn btn-primary">Start a conversation <i class="fa-solid fa-arrow-right"></i></a></div></div>
         </section>
     </main>
 
-    <footer class="footer">
-        <span class="footer__copy">© 2026 KodaKodra. All rights reserved.</span>
-        <div class="footer__links">
-            <a href="https://github.com/kodakodra" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://bsky.app/profile/kodakodra.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
-            <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener noreferrer">Linktree</a>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="footer"><span class="footer__copy">© 2026 KodaKodra. All rights reserved.</span><div class="footer__links"><a href="https://github.com/kodakodra" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://bsky.app/profile/kodakodra.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a><a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener noreferrer">Linktree</a></div></footer>
     <script src="main.js"></script>
 </body>
 </html>

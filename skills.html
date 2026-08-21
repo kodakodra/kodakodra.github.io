@@ -1,140 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Technical skills — KodaKodra. Laravel, PHP, Inertia/React/TypeScript, database design, security, and analytics.">
-    <title>Skills — KodaKodra</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Technical skills — KodaKodra. Laravel, PHP, React, TypeScript, databases, security and analytics."><title>Skills — KodaKodra</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="style.css"></head>
 <body>
-
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="index.html" class="nav__logo">Koda<span>Kodra</span></a>
-        <ul class="nav__links" role="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button class="nav__burger" aria-label="Open mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </nav>
-    <div class="nav__mobile">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </div>
-
-    <main class="page">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12">
-                    <p class="migration-label anim-fade-up"><span class="migration-label__file">2026_07_07_000006_create_skills_table.php</span></p>
-                    <h1 class="section-heading anim-fade-up delay-1">Technical Skills & Abilities</h1>
-                    <p class="lead text-muted-custom anim-fade-up delay-2" style="max-width: 700px;">A focused, battle-tested stack I use daily — no fluff, only depth.</p>
-                </div>
-            </div>
-
-            <div class="row g-4 mt-4">
-                <div class="col-md-6 col-lg-4" data-reveal>
-                    <div class="skill-card">
-                        <div class="skill-card__icon"><i class="fas fa-server" aria-hidden="true"></i></div>
-                        <div class="skill-card__title">Back-End Core</div>
-                        <p class="skill-card__desc">Laravel 13+, PHP 8.5+, Eloquent ORM, Artisan, middleware, policies, form requests, service containers, and queue jobs.</p>
-                        <div class="skill-card__tags"><span class="tag">Laravel</span><span class="tag">PHP 8.5</span><span class="tag">Eloquent</span></div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4" data-reveal>
-                    <div class="skill-card skill-card--highlight">
-                        <div class="skill-card__icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
-                        <div class="skill-card__title">Modern Stack <span class="pill-new">Also using</span></div>
-                        <p class="skill-card__desc">Inertia.js bridging Laravel with React 18 and TypeScript, containerised with Docker, running on PostgreSQL and Redis.</p>
-                        <div class="skill-card__tags"><span class="tag">Inertia.js</span><span class="tag">React · TS</span><span class="tag">Docker</span></div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4" data-reveal>
-                    <div class="skill-card">
-                        <div class="skill-card__icon"><i class="fas fa-database" aria-hidden="true"></i></div>
-                        <div class="skill-card__title">Database & SQL</div>
-                        <p class="skill-card__desc">Normalised schema design, complex JOINs, subqueries, indexing strategies, query optimisation, and HeidiSQL/DBeaver.</p>
-                        <div class="skill-card__tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Query Opt.</span></div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4" data-reveal>
-                    <div class="skill-card">
-                        <div class="skill-card__icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
-                        <div class="skill-card__title">Data Analytics</div>
-                        <p class="skill-card__desc">Build dashboards, KPI reports, sales funnels, user engagement metrics, and exportable analytics using SQL + Laravel collections.</p>
-                        <div class="skill-card__tags"><span class="tag">Reporting</span><span class="tag">Charts</span><span class="tag">Metrics</span></div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4" data-reveal>
-                    <div class="skill-card">
-                        <div class="skill-card__icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
-                        <div class="skill-card__title">Front-End</div>
-                        <p class="skill-card__desc">Bootstrap 5, responsive layouts, semantic HTML5, CSS3 custom properties, JavaScript ES6+, and Blade templating.</p>
-                        <div class="skill-card__tags"><span class="tag">Bootstrap</span><span class="tag">Blade</span><span class="tag">JS ES6+</span></div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4" data-reveal>
-                    <div class="skill-card">
-                        <div class="skill-card__icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
-                        <div class="skill-card__title">Security & Auth</div>
-                        <p class="skill-card__desc">CSRF, XSS prevention, mass-assignment protection, parameterised queries, RBAC, policies, and middleware (admin/staff).</p>
-                        <div class="skill-card__tags"><span class="tag">RBAC</span><span class="tag">Policies</span><span class="tag">Middleware</span></div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4" data-reveal>
-                    <div class="skill-card">
-                        <div class="skill-card__icon"><i class="fas fa-code-branch" aria-hidden="true"></i></div>
-                        <div class="skill-card__title">Tooling & Workflow</div>
-                        <p class="skill-card__desc">Git, Composer, pnpm, PSR-12 compliance, migration-driven development, environment config, and deployment basics.</p>
-                        <div class="skill-card__tags"><span class="tag">Git</span><span class="tag">Composer</span><span class="tag">PSR-12</span></div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4" data-reveal>
-                    <div class="skill-card">
-                        <div class="skill-card__icon"><i class="fas fa-paint-brush" aria-hidden="true"></i></div>
-                        <div class="skill-card__title">UI/UX Principles</div>
-                        <p class="skill-card__desc">Mobile-first design, accessibility (a11y), keyboard navigation, and user-friendly interfaces that don't sacrifice performance.</p>
-                        <div class="skill-card__tags"><span class="tag">Mobile-first</span><span class="tag">A11y</span></div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4" data-reveal>
-                    <div class="skill-card">
-                        <div class="skill-card__icon"><i class="fas fa-people-arrows" aria-hidden="true"></i></div>
-                        <div class="skill-card__title">Team & Management</div>
-                        <p class="skill-card__desc">Level 3 Team Leading, project scoping, breaking work into measurable stages, and clear stakeholder communication.</p>
-                        <div class="skill-card__tags"><span class="tag">Leadership</span><span class="tag">Planning</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <span class="footer__copy">&copy; 2026 KodaKodra. All rights reserved.</span>
-        <div class="footer__links">
-            <a href="https://github.com/kodakodra" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://bsky.app/profile/kodakodra.bsky.social" target="_blank" rel="noopener">Bluesky</a>
-            <a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener">Linktree</a>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="main.js"></script>
-</body>
-</html>
+<nav class="nav" role="navigation" aria-label="Main navigation"><a href="index.html" class="nav__logo">Koda<span>Kodra</span></a><ul class="nav__links" role="list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="skills.html" class="active" aria-current="page">Skills</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul><button class="nav__burger" aria-label="Open mobile menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>
+<div class="nav__mobile"><a href="index.html">Home</a><a href="about.html">About</a><a href="skills.html" class="active">Skills</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+<main class="page"><div class="shell inner"><header class="page-intro"><p class="migration-label anim-fade-up"><span class="migration-label__file">2026_07_07_000006_create_skills_table.php</span></p><h1 class="section-heading anim-fade-up delay-1">Technical skills</h1><p class="lead anim-fade-up delay-2">A focused, battle-tested stack I use daily — depth over noise.</p></header>
+<div class="skills-grid">
+<article class="skill-card glass" data-reveal><div class="skill-card__icon"><i class="fas fa-server"></i></div><h2 class="skill-card__title">Back-End Core</h2><p class="skill-card__desc">Laravel 13+, PHP 8.5+, Eloquent ORM, Artisan, middleware, policies, form requests, service containers and queue jobs.</p><div class="skill-card__tags"><span class="tag">Laravel</span><span class="tag">PHP 8.5</span><span class="tag">Eloquent</span></div></article>
+<article class="skill-card glass skill-card--highlight" data-reveal><div class="skill-card__icon"><i class="fas fa-layer-group"></i></div><h2 class="skill-card__title">Modern Stack <span class="pill-new">Also using</span></h2><p class="skill-card__desc">Inertia.js bridging Laravel with React 18 and TypeScript, containerised with Docker, running on PostgreSQL and Redis.</p><div class="skill-card__tags"><span class="tag">Inertia.js</span><span class="tag">React · TS</span><span class="tag">Docker</span></div></article>
+<article class="skill-card glass" data-reveal><div class="skill-card__icon"><i class="fas fa-database"></i></div><h2 class="skill-card__title">Database & SQL</h2><p class="skill-card__desc">Normalised schema design, complex JOINs, subqueries, indexing strategies, query optimisation, and HeidiSQL/DBeaver.</p><div class="skill-card__tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Query Opt.</span></div></article>
+<article class="skill-card glass" data-reveal><div class="skill-card__icon"><i class="fas fa-chart-line"></i></div><h2 class="skill-card__title">Data Analytics</h2><p class="skill-card__desc">Dashboards, KPI reports, sales funnels, user engagement metrics and exportable analytics using SQL and Laravel.</p><div class="skill-card__tags"><span class="tag">Reporting</span><span class="tag">Charts</span><span class="tag">Metrics</span></div></article>
+<article class="skill-card glass" data-reveal><div class="skill-card__icon"><i class="fas fa-laptop-code"></i></div><h2 class="skill-card__title">Front-End</h2><p class="skill-card__desc">Responsive layouts, semantic HTML5, CSS3 custom properties, JavaScript ES6+, Bootstrap and Blade templating.</p><div class="skill-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JS ES6+</span></div></article>
+<article class="skill-card glass" data-reveal><div class="skill-card__icon"><i class="fas fa-shield-halved"></i></div><h2 class="skill-card__title">Security & Auth</h2><p class="skill-card__desc">CSRF, XSS prevention, mass-assignment protection, parameterised queries, RBAC, policies and middleware.</p><div class="skill-card__tags"><span class="tag">RBAC</span><span class="tag">Policies</span><span class="tag">Middleware</span></div></article>
+<article class="skill-card glass" data-reveal><div class="skill-card__icon"><i class="fas fa-code-branch"></i></div><h2 class="skill-card__title">Tooling & Workflow</h2><p class="skill-card__desc">Git, Composer, pnpm, PSR-12 compliance, migration-driven development, environment configuration and deployment basics.</p><div class="skill-card__tags"><span class="tag">Git</span><span class="tag">Composer</span><span class="tag">PSR-12</span></div></article>
+<article class="skill-card glass" data-reveal><div class="skill-card__icon"><i class="fas fa-universal-access"></i></div><h2 class="skill-card__title">UI/UX Principles</h2><p class="skill-card__desc">Mobile-first design, accessibility, keyboard navigation and user-friendly interfaces that don't sacrifice performance.</p><div class="skill-card__tags"><span class="tag">Mobile-first</span><span class="tag">A11y</span></div></article>
+<article class="skill-card glass" data-reveal><div class="skill-card__icon"><i class="fas fa-people-arrows"></i></div><h2 class="skill-card__title">Team & Management</h2><p class="skill-card__desc">Level 3 Team Leading, project scoping, measurable stages and clear stakeholder communication.</p><div class="skill-card__tags"><span class="tag">Leadership</span><span class="tag">Planning</span></div></article>
+</div></div></main>
+<footer class="footer"><span class="footer__copy">© 2026 KodaKodra. All rights reserved.</span><div class="footer__links"><a href="https://github.com/kodakodra" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://bsky.app/profile/kodakodra.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a><a href="https://linktr.ee/kodakodra" target="_blank" rel="noopener noreferrer">Linktree</a></div></footer><script src="main.js"></script></body></html>
