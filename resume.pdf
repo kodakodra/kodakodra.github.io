@@ -1,150 +1,93 @@
 %PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 5 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Name /F1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Name /F2 >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Name /F3 >>
+<<
+/Contents 9 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 8 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Pages /Kids [6 0 R 7 0 R] /Count 2 >>
+<<
+/Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 8 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 6 0 obj
-<< /Type /Page /Parent 5 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 2 0 R /F2 3 0 R /F3 4 0 R >> >> /Contents 8 0 R >>
+<<
+/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+>>
 endobj
 7 0 obj
-<< /Type /Page /Parent 5 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 2 0 R /F2 3 0 R /F3 4 0 R >> >> /Contents 9 0 R >>
+<<
+/Author (\(anonymous\)) /CreationDate (D:20260929232416+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260929232416+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+>>
 endobj
 8 0 obj
-<< /Length 4599 >>
-stream
-BT
-/F2 22 Tf 1 0 0 1 42 790 Tm (KodaKodra) Tj
-/F2 11 Tf 1 0 0 1 42 768 Tm (FULL-STACK WEB DEVELOPER) Tj
-/F3 8 Tf 1 0 0 1 42 750 Tm (Laravel / PHP / React / TypeScript / SQL) Tj
-/F1 8 Tf 1 0 0 1 395 750 Tm (Available immediately) Tj
-/F2 11 Tf 1 0 0 1 42 715 Tm (PROFILE) Tj
-/F1 9 Tf 1 0 0 1 42 698 Tm (Solo full-stack web developer with 8 years of professional experience, specialising in) Tj
-/F1 9 Tf 1 0 0 1 42 686 Tm (Laravel, PHP and React. Delivers projects end-to-end - scoping, database design,) Tj
-/F1 9 Tf 1 0 0 1 42 674 Tm (development, testing and deployment - across roughly 100 web builds spanning social) Tj
-/F1 9 Tf 1 0 0 1 42 662 Tm (platforms, e-commerce, booking systems, dashboards and bespoke small-business sites.) Tj
-/F1 9 Tf 1 0 0 1 42 647 Tm (Two decades of prior customer service and team leadership experience across supermarket,) Tj
-/F1 9 Tf 1 0 0 1 42 635 Tm (food service and retail environments underpin clear communication, reliability under) Tj
-/F1 9 Tf 1 0 0 1 42 623 Tm (pressure and practical problem-solving. Earlier roles included food preparation, kitchen) Tj
-/F1 9 Tf 1 0 0 1 42 611 Tm (assistant duties, hygiene practices, order taking, cash handling and shift cover.) Tj
-/F1 9 Tf 1 0 0 1 42 596 Tm (A fast, self-directed learner who independently reached a professional standard in) Tj
-/F1 9 Tf 1 0 0 1 42 584 Tm (software development alongside other work. Comfortable working solo end-to-end and) Tj
-/F1 9 Tf 1 0 0 1 42 572 Tm (collaborating through GitHub, pull requests, shared repositories and code review.) Tj
-/F2 11 Tf 1 0 0 1 42 557 Tm (TECHNICAL SKILLS) Tj
-/F2 8 Tf 1 0 0 1 42 540 Tm (Core) Tj
-/F1 8 Tf 1 0 0 1 42 529 Tm (PHP / Laravel / JavaScript / TypeScript / React / SQL \(MariaDB / MySQL / PostgreSQL\)) Tj
-/F2 8 Tf 1 0 0 1 42 516 Tm (Web) Tj
-/F1 8 Tf 1 0 0 1 42 505 Tm (Blade / Node.js / RESTful APIs / jQuery / Bootstrap 5 / HTML5 / CSS3) Tj
-/F2 8 Tf 1 0 0 1 42 492 Tm (Testing & Quality) Tj
-/F1 8 Tf 1 0 0 1 42 481 Tm (Pest / PHPUnit / PHPStan / Nightwatch / QA Testing / Regression Testing) Tj
-/F2 8 Tf 1 0 0 1 42 468 Tm (Development & Infrastructure) Tj
-/F1 8 Tf 1 0 0 1 42 457 Tm (Git / GitHub / Docker / Redis / Composer / npm / Bash / Apache) Tj
-/F2 8 Tf 1 0 0 1 42 444 Tm (Additional) Tj
-/F1 8 Tf 1 0 0 1 42 433 Tm (Java / LWJGL / OpenGL / GLSL / VBA / phpMyAdmin / HeidiSQL / DBeaver / Gradle / JSON / YAML /) Tj
-/F1 8 Tf 1 0 0 1 42 422 Tm (Markdown) Tj
-/F2 8 Tf 1 0 0 1 42 409 Tm (Professional) Tj
-/F1 8 Tf 1 0 0 1 42 398 Tm (Customer Service / Complaint & Query Resolution / Team Leadership / Problem-Solving / Working) Tj
-/F1 8 Tf 1 0 0 1 42 387 Tm (Under Pressure) Tj
-/F2 11 Tf 1 0 0 1 42 374 Tm (EXPERIENCE) Tj
-/F2 9 Tf 1 0 0 1 42 357 Tm (Web Developer - Independent / Solo Projects) Tj
-/F3 8 Tf 1 0 0 1 450 357 Tm (2019 - Present) Tj
-/F1 8 Tf 1 0 0 1 42 343 Tm (- Design and build full-stack web applications independently using Laravel, PHP, React and) Tj
-/F1 8 Tf 1 0 0 1 42 332 Tm (TypeScript across social, e-commerce, booking, dashboard/analytics and small-business platforms.) Tj
-/F1 8 Tf 1 0 0 1 42 319 Tm (- Handle scoping, database design, development, authentication, search, messaging,) Tj
-/F1 8 Tf 1 0 0 1 42 308 Tm (notifications, payments, content management, booking workflows, testing and deployment.) Tj
-/F1 8 Tf 1 0 0 1 42 295 Tm (- Maintain and improve existing systems through refactoring, bug fixing, QA and regression) Tj
-/F1 8 Tf 1 0 0 1 42 284 Tm (testing; plan work around efficiency, product tracking and technical requirements.) Tj
-/F1 8 Tf 1 0 0 1 42 271 Tm (- Collaborate through GitHub pull requests, shared repositories and code review when projects) Tj
-/F1 8 Tf 1 0 0 1 42 260 Tm (involve other developers.) Tj
-/F2 9 Tf 1 0 0 1 42 247 Tm (Customer Service & Team Support - Retail & Hospitality) Tj
-/F3 8 Tf 1 0 0 1 450 247 Tm (1998 - 2018) Tj
-/F1 8 Tf 1 0 0 1 42 233 Tm (- Two decades of frontline service across supermarket, food service and retail environments,) Tj
-/F1 8 Tf 1 0 0 1 42 222 Tm (handling queries, complaints, transactions and busy-period customer demands.) Tj
-/F1 8 Tf 1 0 0 1 42 209 Tm (- Food preparation, kitchen assistant duties, hygiene practices, order taking, cash handling,) Tj
-/F1 8 Tf 1 0 0 1 42 198 Tm (stock replenishment and shift cover.) Tj
-/F1 8 Tf 1 0 0 1 42 185 Tm (- Built a practical foundation in clear communication, reliability under pressure,) Tj
-/F1 8 Tf 1 0 0 1 42 174 Tm (problem-solving and working effectively with customers and colleagues.) Tj
-/F1 8 Tf 1 0 0 1 42 161 Tm (2018 - 2019: career break for full-time family caring responsibilities.) Tj
-ET
-endstream
+<<
+/Count 2 /Kids [ 4 0 R 5 0 R ] /Type /Pages
+>>
 endobj
 9 0 obj
-<< /Length 3288 >>
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 3164
+>>
 stream
-BT
-/F2 18 Tf 1 0 0 1 42 790 Tm (KEY PROJECTS) Tj
-/F2 9 Tf 1 0 0 1 42 758 Tm (KodaKodraSocial) Tj
-/F1 8 Tf 1 0 0 1 42 745 Tm (- Laravel-based social media platform built from scratch, including authentication, profiles,) Tj
-/F1 8 Tf 1 0 0 1 42 734 Tm (social interactions and content management.) Tj
-/F2 9 Tf 1 0 0 1 42 716 Tm (Torin) Tj
-/F1 8 Tf 1 0 0 1 42 703 Tm (- Voxel game engine using Java, LWJGL and OpenGL, including procedural world generation, chunk) Tj
-/F1 8 Tf 1 0 0 1 42 692 Tm (rendering, physics, block interaction, dynamic lighting and a day/night celestial system.) Tj
-/F2 9 Tf 1 0 0 1 42 674 Tm (E-commerce & Booking Platforms) Tj
-/F1 8 Tf 1 0 0 1 42 661 Tm (- Bespoke customer and admin interfaces, product/service management, booking workflows and) Tj
-/F1 8 Tf 1 0 0 1 42 650 Tm (backend systems.) Tj
-/F2 9 Tf 1 0 0 1 42 632 Tm (Business Dashboards & Analytics) Tj
-/F1 8 Tf 1 0 0 1 42 619 Tm (- Data-driven dashboards focused on usability, efficiency, clear presentation and practical) Tj
-/F1 8 Tf 1 0 0 1 42 608 Tm (business workflows.) Tj
-/F2 9 Tf 1 0 0 1 42 590 Tm (Websites & Digital Platforms) Tj
-/F1 8 Tf 1 0 0 1 42 577 Tm (- Portfolio, brochure, small-business and bespoke platforms, including adapting and improving) Tj
-/F1 8 Tf 1 0 0 1 42 566 Tm (existing systems.) Tj
-/F2 9 Tf 1 0 0 1 42 548 Tm (Legacy Systems & QA) Tj
-/F1 8 Tf 1 0 0 1 42 535 Tm (- Bug fixing, refactoring, QA testing, regression testing, planning, workflow optimisation and) Tj
-/F1 8 Tf 1 0 0 1 42 524 Tm (product tracking.) Tj
-/F2 11 Tf 1 0 0 1 42 506 Tm (EDUCATION & QUALIFICATIONS) Tj
-/F2 8 Tf 1 0 0 1 42 489 Tm (Team Leading & Management) Tj
-/F1 8 Tf 1 0 0 1 235 489 Tm (NCFE Level 2 & 3, 2022) Tj
-/F2 8 Tf 1 0 0 1 42 472 Tm (Information & Communication Technology) Tj
-/F1 8 Tf 1 0 0 1 235 472 Tm (AVCE Level 3, 2004) Tj
-/F2 8 Tf 1 0 0 1 42 455 Tm (GCSEs) Tj
-/F1 8 Tf 1 0 0 1 235 455 Tm (English, Mathematics, IT, 3 x Sciences \(A-C\), 2003) Tj
-/F2 11 Tf 1 0 0 1 42 436 Tm (CUSTOMER SERVICE & OPERATIONS) Tj
-/F1 8 Tf 1 0 0 1 42 419 Tm (- Query and complaint resolution; face-to-face and phone support; order taking and transaction) Tj
-/F1 8 Tf 1 0 0 1 42 408 Tm (handling.) Tj
-/F1 8 Tf 1 0 0 1 42 394 Tm (- Food preparation and hygiene; kitchen assistant duties; cash handling; till/POS systems; stock) Tj
-/F1 8 Tf 1 0 0 1 42 383 Tm (control and merchandising.) Tj
-/F1 8 Tf 1 0 0 1 42 369 Tm (- Shift cover and team support, backed by NCFE Level 2 & 3 Team Leading & Management.) Tj
-/F2 11 Tf 1 0 0 1 42 355 Tm (PROFESSIONAL APPROACH) Tj
-/F1 8 Tf 1 0 0 1 42 338 Tm (Combines technical delivery with two decades of frontline customer experience. Works) Tj
-/F1 8 Tf 1 0 0 1 42 327 Tm (independently, communicates clearly with technical and non-technical people, learns unfamiliar) Tj
-/F1 8 Tf 1 0 0 1 42 316 Tm (systems quickly and stays methodical when priorities change or work is under pressure.) Tj
-/F2 11 Tf 1 0 0 1 42 297 Tm (CONTACT) Tj
-/F1 8 Tf 1 0 0 1 42 280 Tm (kodakodra@proton.me) Tj
-/F1 8 Tf 1 0 0 1 42 267 Tm (github.com/kodakodra) Tj
-/F1 8 Tf 1 0 0 1 42 254 Tm (kodakodra.github.io) Tj
-/F1 8 Tf 1 0 0 1 42 241 Tm (UK / Remote-friendly) Tj
-/F1 8 Tf 1 0 0 1 42 228 Tm (Available immediately - open to trial, freelance, contract or contract-to-permanent arrangements.) Tj
-ET
-endstream
+GaufUCNJ3%')h6*d@Y<%Dh5"aj6i9,K/cUG^VDdtWr4]/!>J0F>tLD[Fas=\)*JN@&@-;]jhcNbc#fTB5(.`fOH)Omr=9R9ZOrb@0uu%_1aU&jC`6U.@!)%mOerAp&\+VSVIKk,R?Z$X;V^E&3]VbdR@`Hu7RQeG^o*^Oo_0TTn86@Q8[C"h%.G=r^Thc/(,7qpZsMUh/2>9=Ua;>[=p!aRLC#ZMW3(8Kc,Im2H%E-oY%uB4U#YlV_XP_$5A9\W7_d-Y)uk$);')0p>L/6)9[@liU3+l"].:)O>fecYh6^Fpd[S;Cli(jFHN'L"%aO9InE8a+p29Bhotl0kXq(BpFkcR=>Q\(%I!b%^NihQ#j/HUn=jEUa9IFrVp(%*E3"&BlO&d,?L3]$*0>m\QD.]^U%Q(qO[Bl7fg9AFO2pja9Al6dl0rHEkp`s;pO&qf,Y:&fs"2Wo@Q.bI%a7m`n7$P>Kbp/fT?J[:DoAk?k_i4'$a79\a[7tu]T-jcWP72tkA[s3XW[42!Dk^B6c50tB'Zip.UgqP1U:i9O)WS<3VcaL]_BR6&<ZnIah`&=(/6g^;(oF&gL>c4t))(,ja*K4m9QGQkmNPZJ"@)5;kA&^#?E7aVZa%%_b>`\%:!\hs3ghbq&sZF5pfhdUj1C*$2cnU`%216:hr46RB,3^:iod/\A=X@=YmI;l>PJi[:sH9$<SKoD26JhA)ff\'S)K[6=dA+7r%Y5L3?F&[cu]l?rM!i]'.s$I-6,T#17lr-)biMu36M[B;aM<pGu6sRAMN^.(kO^UH&miALCoH>,"cJ^V,V).:F-cL-WOnqFM[#$R:A"roU1JGd9q-VGj^omO#Q?&&W-uQok;372J*,J9gpm3H];kK:WjfE]I;lnEe+PC@^2*JEBahP;&#7Q`G?U!Y[+h\CqPS`8HE=(R`bL7+cUA6aC81F7@k2VidCrR_K4tr=GS=^H<$27r]"?*Hn8B[WT;33?=`&P;ircL3*lRe?pmEdo/&KE0sY-H8G@_Y\MB!oU[me]9Gqef=3p\L$i#AM6S[OBn`P]]eH3^[ja;Y1RD>U"Ql!-"o<\Z5Ld-gmR?K&^fX5o&$>iF,^'l@3BnL-c!!`[>SQK&lLKWQhSrRn!I,,.`Jg>,n8N(h:1j+TMeb?'d*Lr=<l'UDU]JS2bfiA=mgZQ$VgN'U10/*o2+B:OfRU?#2rAh"fa1@AFA'_5.*?0-s.5%+_jJ>]r`?04A'm.b'Y,1rti:gBu&>U[qK36Yf(Xg(7E!.AYe%7.+p%/-6k::p>';@&#S7UdJ1!:%FZaMksH.HtX)a&4)JdGL;Qh26Q5Fu1gNBZ`4&ColM!j,GINW;>i<W_88NTs<WP,/e\BJqN1X:4:eEdt)u@$Xmlfr"_Hiinu>RMN8\Tpsl.p]61cC%YnR1BL6O2fBa4LSKXFo?lTi>\S%?JN>c8p47CdOK)IQKJ#[f"Q#=:9Hk?:k99rYWCprka<1QGdRai#Bu\"Ms0fVDVu:j(SR,Q+NNR/;:3Yl<]:a#S:/je'OhC8Th'FtEDDRla&!o;G`%pf<%<$1Sp?D4%]_m?B:D:!,3tU@K`%K?rO"4%e$qsN_#etfce,!JWXWRR)E)IG\L;O+eF'\sXo0lL`e86,pr&G+0*D8,FTF2fc+lYqIm$$5K=[L^[/=%+D.-i""QOBbaU^q23/F39AI2'4i!08Que"'1k7D:AOC:WLh3nc:4pS@/>%2"Jn/_(p#=a'(@ZEBGB"Y'=P2;%i&Dd:jPL3<dgR&n8.N`_K:4(>,1F9&>Q:DhaJ=oVidHgkrqLKB+to3WiUD1=nWI61&4A6-,D<O6?U<I'<1]kA.(T<8`)8FMC7Y##@$O5IV^a1Klkm9(B/m5utFJZJTH!\)ktC^<^t&Irjl=Pc@'[EEL5dO$h5MerQWNrNU6Sm(ZO2Vp'Nnun:deF242Kk4C,KhS@c5mu4jF?>Oi/\:#V*A(<9#F5/CWqAFl?f'R9_[D=YkjJUa[V^>]T'b\`Fc-<O#!`3B-9u]W.gf?dbl?>E;FTM6/fQ0l@uo7DPGDcL.sa:!J)S%1$!_'u2+K.=B\EIDUPu1lX6?rVKd&*[5US*o1VU%s3s7Vc>4!\IpH_gc]TdP(,St-lpm7p7\ShB"r[m;3`"b<f$-%3EUM9?hI>5n.'BH:@CV9WoTa7L%6mX"28MGrr!MSkP=$7EmP==,9gbJGApsagono10%m?hFF)!)+N6\<SjXBk'n9D]gNXjc-ElY^FmeSa\^V0Ca5pXQiYbP,5e[h%u@S]k(gG=C+(rn\./=,Q%I8m2W>=XJ07)"GBR=>?tn'h&n'/<7m'!?Saga1rd/FsDM]kn=?Z5@El<"/_]SE208FQA3anl==UtK/$i^.YS>)71Eotf*gqn!hmfR,uYs6lN&Kq'Z`CbN\FDN7Pr.=Z-4E1TStgTZr2gu%Tah*dK8[7MF^`ZMH+#TD$`d5TWlO(+_U&1;Z'IVm>^a!6O'7(<S[KdTt<_<0TZ`9+rGM*JL`mSY@c].NoAEo:cU1uW!3q)E>6G@GIPK__%qPk;8rGf:SVC%%b%E[W+]?944KH]JC+7e/dfms"CPHo*N3s-3E;ascQ?$T=>"eZ=eomXb>Ao*30O)-$ROo@>08>s<hd@-7DEqk=j)7*2>@I-1gX00U.pFZ)r_tC'll27h&QKY)7Z.7*HH2H;2i``.^amnYfAbZA)j)c-X`*=C8m.)a9%Yqn,O]/;n5#u9T)I#&KPJi(NaKm[=\GWi"MfVHoF#,%=aZ(2dQ'^h^/*3FX,].O].\*4A$Q1*'*K()P=+_M2tgPpSI)Ce>ekb'.@Tj]TocT,mbq1MRbjTJhBa7GVN(;n3R`0`rJsf.A`UFKZ`m=Kmp0(%Z)jZC44r&i&`$.m+IJ_'Q45DKKe)gSe_!i:&HHSn<derWQ<PV/9Ot5,0tR]ohgdgXubq6iX`[h5$?r3)OuHrBEi'e8jG@CUlr)2Tda<ok,T[5YrUiHdWoJDehqBO9#1]T`U\hjiB)eN@!.XT9,-r!$<O<2<JNrMcgY,>[L^_j/_Ho1]Xf^TlXS.%F^`YjCsZ0po`LYpk5!92D)DAbo3NfXcK`G7X_q!4:6Gl/[*5"sKKVTD+B,/'qBq8Kl*a.-UF',hVQj7SH3Cp3HnJIOkl\B2#`R?Jq]e/u06KTa8H~>endstream
 endobj
 10 0 obj
-<< /Title (KodaKodra - Resume) /Author (KodaKodra) /Creator (ReportLab-compatible ASCII PDF) >>
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2045
+>>
+stream
+Gau`T?#SFh&:Mm.R&>a@i->2pT.VFc2[sWPi3^'n?P]u`2R\t+-7MiBr&q[3KI!pk.T*>[@%7*S1NV^&/<"DXR/'E2U:2itSM4L_`D^6;j\\.96%&2#^p:R1lNUlSa7m/U3E434E_Hi]S,BF-3M@O&,."#B)c7blqYJ!:OlnK\/C4![0#"smAG;s1',J0>qf&Q$ifFgg,d+I>!cWBm!=W@OoR:0O=IE%=[B1h_(r[B#cI@O-?1:o0J"ueHT&&%3>J@AhZ%DY[R-0-o%uAq5L@7Alq;k?pZY[YkbYBNe_dR0lp\JOpAal"G#G27=o8CHHj,Ki,^,GnuhKQ;5mFQ5`LQV>SD10a9R3.l7LV2P(,,HNqq"k,bQ\$S"^>ma1N06L[oZcUKE#/ori3!ePDVa$j$Tt'fSGV10h/JeQE@OLkR@$NOM0*lijgt[?Mh):F=Mm&gYKdQn9N@fC/YpH8&#X2NToOm4`r=%DDT&WlF1hDL\HW);2$*\['WP'APmO1W6o.ujQX_OCg!OEQ(6hU&HNQcjM)O.q>T]b\a`7gtd+XO)k>AHGgB')LhsqYCC@=.nf&)Dq%>u25,+'Do<K[bTgZI[Ffp]*%>;t6fbf;X7N1K4D"j//^;_Kpu[@t@9(MoWOrh57noCmld4JE>YcTfFI+0PmhpFt3thrF\&QYCmD%R8j>e@$eN%oI>:aMgkG,I>C-gV_BI)r'h4AsNa7%<uR%7olFj2hj)IJCOj&lg;!B\L:*3k2gulGVLZ3OEro_=-ZJ%*>UfV')8,%K4WX]&&%8]ArnOd79cR3sfoTfeZC"ug9X,?4WWbtIF+3W<VZJ>V1ApM]9L+d"@b"?@)+%rCK0OLWgR]7Rd-O**akBUNUTaL.T9%BeYTp#5W&8`mQSu/'<'=Dc!U0OX46&PqYRq/+dbDFGU`$]q0R1"t<)8tT*hh`G\1log[=c$su(q@E%ZJ>VU)WC;+?moVL=ja/PLIcgXm/[d[fRFso^Ko,u.Y#6"D3XZA\>osXo;P6Q7^`5(#+CmIigXS:6(XRHL>J`as%Ja5\Y(9B'Y=]4EK.7#pg/=8GJ;['N;j"ehPIZg_JX/W/to/ni:s>0MbhY`l8W)BL8QDsp&4*N7+dQJ<3;_8>6h]qXL9JR*V3aV1E$U<P37ojn=7fm"t_X>CiQ;*C@e][1;I;Ra#Fq&[`PcpkJ+q!L[M@'`h26Rc#q1\j>s*Nb-GRgSMg/H8ERHTeSMW$I.)-k!H3MChB'H7H`P"G$2D.3BMe-6299F0/E^mF^7#FH=oq,SNSEOB%iUj&"*OUsl?2r1?Q%qm*lpKg$i.sm8H3E=T77\_dV*Uqq%R.",i)nDE/qHrQ9%6%*W+$c;OJqH,`3P/Lc=sS.>jB&2`.DY5ab]8a&8a,9uJqU5t.\L*W98Zi*>Aqb2m)`,1e/A9X%d@pQS#ea/ruPqX]Ch9X^1(d+p+Pc=4VJ411Z`AmcT.n$T6[3SGVdaY,.S$R`/RJ=?i`,ar4^C6ZJrBmOl@5&+g_MKYhZCUb^p$C.&[iOqY*OQE&LgYKOXNpWNZLIU;l;9n:_%H2A3!T+?<T[?bc86Ur0;7;V&FqZQOJE,0)o`GSH.]7(Tfr(\9]$?UA07.ZRU#BN9)Bf926g@t8[b(QVV32F'Y<PZLhdR%IRq"EnZ;G1Ch$bKBOF,Gd:IL)c*>s-\diqf$$;V:f]-K81A=^Cp)=(<7.:>QoU+^1`8p$+-Z+qM!+]!5R^F:X7_"@A8]lN/8f%nW?4h8]sG>Au@/Q/C*SsPeNbbmS@\H.J=FaAQr1:bsTl,h#J<Jg@Hk%\Afhs-_9'G:kBc8O*b1D<Rndp\Boo]3,cY!k`#4\E*(qp5keHMB_P:ENP_rV4>;kLs-tq4tm@j.D1KAc1`:5:Z/IF)A#a8@:s\=L=n<:X]-2Ig)P3:`ql#$;J(l.10*!"BtUhZtn@GInkQ8c*a]ca;RSoEeJ[7BMN<!I&)(1n1SS5+^+~>endstream
 endobj
 xref
 0 11
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000138 00000 n 
-0000000223 00000 n 
-0000000301 00000 n 
-0000000364 00000 n 
-0000000510 00000 n 
-0000000656 00000 n 
-0000005306 00000 n 
-0000008645 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000728 0000 n 
+00000000796 00000 n 
+0000001076 00000 n 
+0000001141 00000 n 
+0000004396 00000 n 
 trailer
-<< /Size 11 /Root 1 0 R /Info 10 0 R >>
+<<
+/ID 
+[<3b983beb4d93e7d73624a52d6333d14c><3b983beb4d93e7d73624a52d6333d14c>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 7 0 R
+/Root 6 0 R
+/Size 11
+>>
 startxref
-8757
+6533
 %%EOF
