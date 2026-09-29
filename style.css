@@ -242,3 +242,52 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+
+/* Portfolio restructure */
+.hero--compact { padding-bottom: 4rem; }
+.section--tight { padding: 3.5rem 0; }
+.section--sub { padding: 2.5rem 0 0; }
+.featured-grid { display:grid; grid-template-columns:1.25fr .75fr; gap:14px; }
+.featured-card { display:flex; flex-direction:column; min-height:300px; padding:28px; border-radius:var(--radius); transition:transform .25s ease,border-color .25s ease,background .25s ease; }
+.featured-card:hover,.project-card--link:hover { transform:translateY(-4px); border-color:var(--line-strong); background:var(--surface-hover); }
+.featured-card--large { min-height:340px; }
+.featured-card__title { margin:22px 0 10px; font:800 clamp(1.7rem,4vw,2.8rem) var(--display); letter-spacing:-.045em; }
+.featured-card p { margin:0 0 20px; color:var(--muted); max-width:700px; }
+.featured-card__link { margin-top:auto; color:var(--accent); font:500 .7rem var(--mono); }
+.capability-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.capability { padding:26px; border-radius:var(--radius); }
+.capability__number { color:var(--accent); font:500 .7rem var(--mono); }
+.capability h3 { margin:28px 0 8px; font:700 1.1rem var(--display); }
+.capability p { margin:0; color:var(--muted); font-size:.88rem; }
+.compact-strip { display:flex; align-items:center; justify-content:space-between; gap:30px; padding:26px; border-radius:var(--radius); }
+.compact-strip .section-title { margin-bottom:8px; }
+.type-list { display:flex; flex-wrap:wrap; gap:9px; }
+.type-list span { padding:9px 12px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.035); color:var(--muted); font:500 .68rem var(--mono); }
+.project-card--link { min-height:270px; }
+.project-card--link .featured-card__link { margin-top:auto; }
+.contact-cta { margin-top:14px; }
+.case-hero { padding:5.5rem 0 3rem; max-width:900px; }
+.back-link { display:inline-flex; gap:8px; align-items:center; margin-bottom:32px; color:var(--muted); font:500 .7rem var(--mono); }
+.back-link:hover { color:var(--text); }
+.case-hero .lead { margin:18px 0 22px; font-size:1.05rem; }
+.case-grid { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr); gap:34px; padding-bottom:5rem; }
+.case-section { padding:2.2rem 0; border-top:1px solid var(--line); }
+.case-section h2 { margin:0 0 12px; font:700 clamp(1.5rem,3vw,2rem) var(--display); letter-spacing:-.04em; }
+.case-section>p:last-child { margin:0; color:var(--muted); max-width:760px; }
+.case-points { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+.case-points article { padding:20px; border-radius:18px; }
+.case-points h3 { margin:0 0 7px; font:700 1rem var(--display); }
+.case-points p { margin:0; color:var(--muted); font-size:.84rem; }
+.case-grid aside { padding-top:2.2rem; }
+.case-github { margin-top:14px; width:100%; }
+.cv-header { display:flex; justify-content:space-between; align-items:end; gap:30px; }
+.cv-layout { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(280px,.7fr); gap:34px; }
+.cv-section { padding:0 0 2.5rem; margin-bottom:2.5rem; border-bottom:1px solid var(--line); }
+.cv-section>p:last-child { margin:0; color:var(--muted); }
+.cv-entry { display:grid; grid-template-columns:minmax(180px,.6fr) minmax(0,1.4fr); gap:28px; padding:20px 0; border-top:1px solid var(--line); }
+.cv-entry h2 { margin:0 0 6px; font:700 1.05rem var(--display); }
+.cv-entry>p { margin:0; color:var(--muted); font-size:.88rem; }
+.cv-layout aside .qualifications-card { margin-top:14px; }
+@media (max-width:900px){.featured-grid,.case-grid,.cv-layout{grid-template-columns:1fr}.capability-grid{grid-template-columns:1fr}.case-grid aside{padding-top:0}.cv-header{display:block}.cv-header .btn{margin-top:20px}.cv-entry{grid-template-columns:1fr;gap:8px}}
+@media (max-width:700px){.section--tight{padding:2.5rem 0}.compact-strip{display:block}.compact-strip .btn{margin-top:18px}.case-hero{padding-top:4rem}.case-points{grid-template-columns:1fr}.featured-card,.featured-card--large{min-height:280px}}
