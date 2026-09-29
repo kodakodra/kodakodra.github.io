@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.classList.add('anim-fade-up');
                 observer.unobserve(entry.target);
             });
-        }, { threshold: 0.12 });
+        }, {threshold: 0.12});
         revealElements.forEach(element => observer.observe(element));
     } else {
         revealElements.forEach(element => element.classList.add('anim-fade-up'));
