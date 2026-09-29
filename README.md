@@ -2,7 +2,8 @@
 
 **Senior Full-Stack Laravel Developer**
 
-I build secure, scalable web applications with an obsessive focus on code quality, clean architecture, and maintainability. Standards-first. Security by default. If it's not tested, documented, and readable, it's not done.
+I build secure, scalable web applications with an obsessive focus on code quality, clean architecture, and
+maintainability. Standards-first. Security by default. If it's not tested, documented, and readable, it's not done.
 
 ---
 
@@ -24,9 +25,12 @@ PSR-12 · DRY / KISS / SOLID · RBAC · MVC · Policy-based Authorization · Tes
 
 ### 💡 How I Work
 
-- **Security first** — server-side validation always, parameterized queries, CSRF protection, and least-privilege authorization on every project.
-- **Standards-driven** — consistent naming conventions, PSR-12 compliance, and self-documenting code across every layer of the stack.
-- **Built to last** — thin controllers, meaningful abstractions, and services that scale with the project instead of against it.
+- **Security first** — server-side validation always, parameterized queries, CSRF protection, and least-privilege
+  authorization on every project.
+- **Standards-driven** — consistent naming conventions, PSR-12 compliance, and self-documenting code across every layer
+  of the stack.
+- **Built to last** — thin controllers, meaningful abstractions, and services that scale with the project instead of
+  against it.
 - **Tested, not hoped-for** — every change ships with the commands to verify it, not just a promise that "it works."
 
 ---

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="KodaKodraSocial case study — a full-stack social platform project by KodaKodra." name="description">
+    <title>KodaKodraSocial — KodaKodra</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<nav aria-label="Main navigation" class="nav" role="navigation"><a class="nav__logo"
+                                                                   href="index.html">Koda<span>Kodra</span></a>
+    <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a aria-current="page" class="active" href="projects.html">Work</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button aria-expanded="false" aria-label="Open mobile menu" class="nav__burger">
+        <span></span><span></span><span></span></button>
+</nav>
+<div class="nav__mobile"><a href="index.html">Home</a><a href="about.html">About</a><a class="active"
+                                                                                       href="projects.html">Work</a><a
+        href="skills.html">Skills</a><a href="cv.html">CV</a><a href="contact.html">Contact</a></div>
+<main class="page">
+    <div class="shell inner">
+        <header class="case-hero"><a class="back-link" href="projects.html"><i class="fa-solid fa-arrow-left"></i> Back
+            to Work</a>
+            <p class="eyebrow">case study / web application</p>
+            <h1 class="section-heading">KodaKodraSocial</h1>
+            <p class="lead">A full-stack social platform used as a substantial application-development project, with
+                relational data, authentication, member-facing features and an iterative Laravel/React architecture.</p>
+            <div class="project-card__tags"><span class="tag">Laravel</span><span class="tag">PHP</span><span
+                    class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Inertia</span><span
+                    class="tag">SQL</span></div>
+        </header>
+        <div class="case-grid">
+            <main>
+                <section class="case-section"><p class="eyebrow">01 / overview</p>
+                    <h2>Building a real application surface</h2>
+                    <p>The project goes beyond a brochure site: users, content, relationships, permissions and
+                        application state all have to work together. That makes the architecture and database model part
+                        of the product rather than implementation details.</p></section>
+                <section class="case-section"><p class="eyebrow">02 / engineering focus</p>
+                    <div class="case-points">
+                        <article class="glass"><h3>Application architecture</h3>
+                            <p>Laravel provides the server-side application structure while React and Inertia support a
+                                responsive member-facing experience.</p></article>
+                        <article class="glass"><h3>Relational data</h3>
+                            <p>Features are modelled around persistent relationships and queryable data, keeping the
+                                application suitable for reporting and future feature work.</p></article>
+                        <article class="glass"><h3>Security & permissions</h3>
+                            <p>Authentication, authorization, validation and protected application flows are treated as
+                                core feature requirements.</p></article>
+                        <article class="glass"><h3>Iterative delivery</h3>
+                            <p>Development is managed through Git with incremental changes, testing and review rather
+                                than treating the application as a single release.</p></article>
+                    </div>
+                </section>
+                <section class="case-section"><p class="eyebrow">03 / what it demonstrates</p>
+                    <p>Most importantly, this project demonstrates the ability to work across the boundaries between
+                        database design, back-end application logic and front-end behaviour rather than specialising in
+                        only one layer.</p></section>
+            </main>
+            <aside>
+                <div class="info-card glass"><p class="eyebrow">stack</p>
+                    <div class="info-card__item">
+                        <div class="info-card__label">Backend</div>
+                        <div class="info-card__value">Laravel · PHP · Eloquent</div>
+                    </div>
+                    <div class="info-card__item">
+                        <div class="info-card__label">Frontend</div>
+                        <div class="info-card__value">React · TypeScript · Inertia</div>
+                    </div>
+                    <div class="info-card__item">
+                        <div class="info-card__label">Data</div>
+                        <div class="info-card__value">SQL · relational modelling</div>
+                    </div>
+                    <div class="info-card__item">
+                        <div class="info-card__label">Workflow</div>
+                        <div class="info-card__value">Git · testing · iterative delivery</div>
+                    </div>
+                </div>
+                <a class="btn btn-primary case-github" href="https://github.com/kodakodra/KodaKodraSocial" rel="noopener noreferrer"
+                   target="_blank">View repository <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a></aside>
+        </div>
+    </div>
+</main>
+<footer class="footer"><span class="footer__copy">© 2026 KodaKodra. All rights reserved.</span>
+    <div class="footer__links"><a href="https://github.com/kodakodra" rel="noopener noreferrer"
+                                  target="_blank">GitHub</a><a
+            href="https://bsky.app/profile/kodakodra.bsky.social" rel="noopener noreferrer"
+            target="_blank">Bluesky</a><a href="https://linktr.ee/kodakodra" rel="noopener noreferrer"
+                                                    target="_blank">Linktree</a></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
