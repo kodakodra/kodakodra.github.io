@@ -1,106 +1,150 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<<
-/F1 2 0 R /F2 3 0 R /F3 4 0 R
->>
+<< /Type /Catalog /Pages 5 0 R >>
 endobj
 2 0 obj
-<<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Name /F1 >>
 endobj
 3 0 obj
-<<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Name /F2 >>
 endobj
 4 0 obj
-<<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Name /F3 >>
 endobj
 5 0 obj
-<<
-/Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Pages /Kids [6 0 R 7 0 R] /Count 2 >>
 endobj
 6 0 obj
-<<
-/Contents 11 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 5 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 2 0 R /F2 3 0 R /F3 4 0 R >> >> /Contents 8 0 R >>
 endobj
 7 0 obj
-<<
-/PageMode /UseNone /Pages 9 0 R /Type /Catalog
->>
+<< /Type /Page /Parent 5 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 2 0 R /F2 3 0 R /F3 4 0 R >> >> /Contents 9 0 R >>
 endobj
 8 0 obj
-<<
-/Author (anonymous) /CreationDate (D:20260929231612+00'00') /Creator (anonymous) /Keywords () /ModDate (D:20260929231612+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (unspecified) /Title (KodaKodra - Resume) /Trapped /False
->>
+<< /Length 4599 >>
+stream
+BT
+/F2 22 Tf 1 0 0 1 42 790 Tm (KodaKodra) Tj
+/F2 11 Tf 1 0 0 1 42 768 Tm (FULL-STACK WEB DEVELOPER) Tj
+/F3 8 Tf 1 0 0 1 42 750 Tm (Laravel / PHP / React / TypeScript / SQL) Tj
+/F1 8 Tf 1 0 0 1 395 750 Tm (Available immediately) Tj
+/F2 11 Tf 1 0 0 1 42 715 Tm (PROFILE) Tj
+/F1 9 Tf 1 0 0 1 42 698 Tm (Solo full-stack web developer with 8 years of professional experience, specialising in) Tj
+/F1 9 Tf 1 0 0 1 42 686 Tm (Laravel, PHP and React. Delivers projects end-to-end - scoping, database design,) Tj
+/F1 9 Tf 1 0 0 1 42 674 Tm (development, testing and deployment - across roughly 100 web builds spanning social) Tj
+/F1 9 Tf 1 0 0 1 42 662 Tm (platforms, e-commerce, booking systems, dashboards and bespoke small-business sites.) Tj
+/F1 9 Tf 1 0 0 1 42 647 Tm (Two decades of prior customer service and team leadership experience across supermarket,) Tj
+/F1 9 Tf 1 0 0 1 42 635 Tm (food service and retail environments underpin clear communication, reliability under) Tj
+/F1 9 Tf 1 0 0 1 42 623 Tm (pressure and practical problem-solving. Earlier roles included food preparation, kitchen) Tj
+/F1 9 Tf 1 0 0 1 42 611 Tm (assistant duties, hygiene practices, order taking, cash handling and shift cover.) Tj
+/F1 9 Tf 1 0 0 1 42 596 Tm (A fast, self-directed learner who independently reached a professional standard in) Tj
+/F1 9 Tf 1 0 0 1 42 584 Tm (software development alongside other work. Comfortable working solo end-to-end and) Tj
+/F1 9 Tf 1 0 0 1 42 572 Tm (collaborating through GitHub, pull requests, shared repositories and code review.) Tj
+/F2 11 Tf 1 0 0 1 42 557 Tm (TECHNICAL SKILLS) Tj
+/F2 8 Tf 1 0 0 1 42 540 Tm (Core) Tj
+/F1 8 Tf 1 0 0 1 42 529 Tm (PHP / Laravel / JavaScript / TypeScript / React / SQL \(MariaDB / MySQL / PostgreSQL\)) Tj
+/F2 8 Tf 1 0 0 1 42 516 Tm (Web) Tj
+/F1 8 Tf 1 0 0 1 42 505 Tm (Blade / Node.js / RESTful APIs / jQuery / Bootstrap 5 / HTML5 / CSS3) Tj
+/F2 8 Tf 1 0 0 1 42 492 Tm (Testing & Quality) Tj
+/F1 8 Tf 1 0 0 1 42 481 Tm (Pest / PHPUnit / PHPStan / Nightwatch / QA Testing / Regression Testing) Tj
+/F2 8 Tf 1 0 0 1 42 468 Tm (Development & Infrastructure) Tj
+/F1 8 Tf 1 0 0 1 42 457 Tm (Git / GitHub / Docker / Redis / Composer / npm / Bash / Apache) Tj
+/F2 8 Tf 1 0 0 1 42 444 Tm (Additional) Tj
+/F1 8 Tf 1 0 0 1 42 433 Tm (Java / LWJGL / OpenGL / GLSL / VBA / phpMyAdmin / HeidiSQL / DBeaver / Gradle / JSON / YAML /) Tj
+/F1 8 Tf 1 0 0 1 42 422 Tm (Markdown) Tj
+/F2 8 Tf 1 0 0 1 42 409 Tm (Professional) Tj
+/F1 8 Tf 1 0 0 1 42 398 Tm (Customer Service / Complaint & Query Resolution / Team Leadership / Problem-Solving / Working) Tj
+/F1 8 Tf 1 0 0 1 42 387 Tm (Under Pressure) Tj
+/F2 11 Tf 1 0 0 1 42 374 Tm (EXPERIENCE) Tj
+/F2 9 Tf 1 0 0 1 42 357 Tm (Web Developer - Independent / Solo Projects) Tj
+/F3 8 Tf 1 0 0 1 450 357 Tm (2019 - Present) Tj
+/F1 8 Tf 1 0 0 1 42 343 Tm (- Design and build full-stack web applications independently using Laravel, PHP, React and) Tj
+/F1 8 Tf 1 0 0 1 42 332 Tm (TypeScript across social, e-commerce, booking, dashboard/analytics and small-business platforms.) Tj
+/F1 8 Tf 1 0 0 1 42 319 Tm (- Handle scoping, database design, development, authentication, search, messaging,) Tj
+/F1 8 Tf 1 0 0 1 42 308 Tm (notifications, payments, content management, booking workflows, testing and deployment.) Tj
+/F1 8 Tf 1 0 0 1 42 295 Tm (- Maintain and improve existing systems through refactoring, bug fixing, QA and regression) Tj
+/F1 8 Tf 1 0 0 1 42 284 Tm (testing; plan work around efficiency, product tracking and technical requirements.) Tj
+/F1 8 Tf 1 0 0 1 42 271 Tm (- Collaborate through GitHub pull requests, shared repositories and code review when projects) Tj
+/F1 8 Tf 1 0 0 1 42 260 Tm (involve other developers.) Tj
+/F2 9 Tf 1 0 0 1 42 247 Tm (Customer Service & Team Support - Retail & Hospitality) Tj
+/F3 8 Tf 1 0 0 1 450 247 Tm (1998 - 2018) Tj
+/F1 8 Tf 1 0 0 1 42 233 Tm (- Two decades of frontline service across supermarket, food service and retail environments,) Tj
+/F1 8 Tf 1 0 0 1 42 222 Tm (handling queries, complaints, transactions and busy-period customer demands.) Tj
+/F1 8 Tf 1 0 0 1 42 209 Tm (- Food preparation, kitchen assistant duties, hygiene practices, order taking, cash handling,) Tj
+/F1 8 Tf 1 0 0 1 42 198 Tm (stock replenishment and shift cover.) Tj
+/F1 8 Tf 1 0 0 1 42 185 Tm (- Built a practical foundation in clear communication, reliability under pressure,) Tj
+/F1 8 Tf 1 0 0 1 42 174 Tm (problem-solving and working effectively with customers and colleagues.) Tj
+/F1 8 Tf 1 0 0 1 42 161 Tm (2018 - 2019: career break for full-time family caring responsibilities.) Tj
+ET
+endstream
 endobj
 9 0 obj
-<<
-/Count 2 /Kids [ 5 0 R 6 0 R ] /Type /Pages
->>
+<< /Length 3288 >>
+stream
+BT
+/F2 18 Tf 1 0 0 1 42 790 Tm (KEY PROJECTS) Tj
+/F2 9 Tf 1 0 0 1 42 758 Tm (KodaKodraSocial) Tj
+/F1 8 Tf 1 0 0 1 42 745 Tm (- Laravel-based social media platform built from scratch, including authentication, profiles,) Tj
+/F1 8 Tf 1 0 0 1 42 734 Tm (social interactions and content management.) Tj
+/F2 9 Tf 1 0 0 1 42 716 Tm (Torin) Tj
+/F1 8 Tf 1 0 0 1 42 703 Tm (- Voxel game engine using Java, LWJGL and OpenGL, including procedural world generation, chunk) Tj
+/F1 8 Tf 1 0 0 1 42 692 Tm (rendering, physics, block interaction, dynamic lighting and a day/night celestial system.) Tj
+/F2 9 Tf 1 0 0 1 42 674 Tm (E-commerce & Booking Platforms) Tj
+/F1 8 Tf 1 0 0 1 42 661 Tm (- Bespoke customer and admin interfaces, product/service management, booking workflows and) Tj
+/F1 8 Tf 1 0 0 1 42 650 Tm (backend systems.) Tj
+/F2 9 Tf 1 0 0 1 42 632 Tm (Business Dashboards & Analytics) Tj
+/F1 8 Tf 1 0 0 1 42 619 Tm (- Data-driven dashboards focused on usability, efficiency, clear presentation and practical) Tj
+/F1 8 Tf 1 0 0 1 42 608 Tm (business workflows.) Tj
+/F2 9 Tf 1 0 0 1 42 590 Tm (Websites & Digital Platforms) Tj
+/F1 8 Tf 1 0 0 1 42 577 Tm (- Portfolio, brochure, small-business and bespoke platforms, including adapting and improving) Tj
+/F1 8 Tf 1 0 0 1 42 566 Tm (existing systems.) Tj
+/F2 9 Tf 1 0 0 1 42 548 Tm (Legacy Systems & QA) Tj
+/F1 8 Tf 1 0 0 1 42 535 Tm (- Bug fixing, refactoring, QA testing, regression testing, planning, workflow optimisation and) Tj
+/F1 8 Tf 1 0 0 1 42 524 Tm (product tracking.) Tj
+/F2 11 Tf 1 0 0 1 42 506 Tm (EDUCATION & QUALIFICATIONS) Tj
+/F2 8 Tf 1 0 0 1 42 489 Tm (Team Leading & Management) Tj
+/F1 8 Tf 1 0 0 1 235 489 Tm (NCFE Level 2 & 3, 2022) Tj
+/F2 8 Tf 1 0 0 1 42 472 Tm (Information & Communication Technology) Tj
+/F1 8 Tf 1 0 0 1 235 472 Tm (AVCE Level 3, 2004) Tj
+/F2 8 Tf 1 0 0 1 42 455 Tm (GCSEs) Tj
+/F1 8 Tf 1 0 0 1 235 455 Tm (English, Mathematics, IT, 3 x Sciences \(A-C\), 2003) Tj
+/F2 11 Tf 1 0 0 1 42 436 Tm (CUSTOMER SERVICE & OPERATIONS) Tj
+/F1 8 Tf 1 0 0 1 42 419 Tm (- Query and complaint resolution; face-to-face and phone support; order taking and transaction) Tj
+/F1 8 Tf 1 0 0 1 42 408 Tm (handling.) Tj
+/F1 8 Tf 1 0 0 1 42 394 Tm (- Food preparation and hygiene; kitchen assistant duties; cash handling; till/POS systems; stock) Tj
+/F1 8 Tf 1 0 0 1 42 383 Tm (control and merchandising.) Tj
+/F1 8 Tf 1 0 0 1 42 369 Tm (- Shift cover and team support, backed by NCFE Level 2 & 3 Team Leading & Management.) Tj
+/F2 11 Tf 1 0 0 1 42 355 Tm (PROFESSIONAL APPROACH) Tj
+/F1 8 Tf 1 0 0 1 42 338 Tm (Combines technical delivery with two decades of frontline customer experience. Works) Tj
+/F1 8 Tf 1 0 0 1 42 327 Tm (independently, communicates clearly with technical and non-technical people, learns unfamiliar) Tj
+/F1 8 Tf 1 0 0 1 42 316 Tm (systems quickly and stays methodical when priorities change or work is under pressure.) Tj
+/F2 11 Tf 1 0 0 1 42 297 Tm (CONTACT) Tj
+/F1 8 Tf 1 0 0 1 42 280 Tm (kodakodra@proton.me) Tj
+/F1 8 Tf 1 0 0 1 42 267 Tm (github.com/kodakodra) Tj
+/F1 8 Tf 1 0 0 1 42 254 Tm (kodakodra.github.io) Tj
+/F1 8 Tf 1 0 0 1 42 241 Tm (UK / Remote-friendly) Tj
+/F1 8 Tf 1 0 0 1 42 228 Tm (Available immediately - open to trial, freelance, contract or contract-to-permanent arrangements.) Tj
+ET
+endstream
 endobj
 10 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 3942
->>
-stream
-Gau0E?!#f>'>EX2kUMA]Yf7d]YhLZN1eG;N89Wb#mlA'9[[)(*g0<;>h1+<"8bPc"+J]J*"Bcd=H8P5,1c#9QLS$j1c8L?G0?NH3!=;)u>`jP_PUu"YEd?aA;%SS?GWs(OBSFdlQo$`lPo@jZk(SD,'%=XSirhc5XF>hR*<+oI`"*JU]HG(@jQ!9c0-^-ERc3NNCkeW0=b)#m8c[+,+IEd,1D7Vm$(r.BP!fVL)$tm[YE&!P'^G@r*K),$!8Fc7C(/aT780JlFt=71L7#i6%?,N=,;Cm8$&m6_0X)RU!Y#7dYpe$SYT8Y#L4S_o`&%m=a!,D/n0ncS@#-7j`5"nj0HslA^ih791^n3@U/8bCFtAM-$uEs._ouddc,ai[RZ]H^m#7h6N!qqG.7#2rctH$KC+)]P'W$PYF@oDF-q^BOV1t^d8l9=O8uEB"L8&c^;/.LOV\Gt^U3'")Agkg!'P3#nCe@Q:.*AD$AVQpq8l6\7Tqlm1oH<)+/V%.\&>:\+?8%,6/V%.\!;C(3T[sPQhcUu3K.(ima6k(-*!Fn77+B&'h*Jt!'\FEogkEQr(pOGn[U:@5N8ss`oGne$*CPG\"1s16FC8L#&5`Z:FpAV#?sn0iE>Jhg?jIR'Y[GC%N;*Atnf8S"*CPG\"1s16FC8L#&4I';ljb5+R?9q_aQ7#EOY_%2)-QTj>^f-X5pM_iO[W.4;Nt?!V(P3978`>JPZect/k)a.;<h&D=qmec74G]AYRA@C.!6t2/W)<MU<K>[F",6_MDCNmbb?M,.EX3!17+`ZU*t(3at/E*Q_M]u.!$i[@bYaZr71lQG:CZdMK5&XgnH3@.EX6"EgNNUp7<N'Bi1,,']g*!\P#e;;3\[,jVC:=92T+p<4EVW(.EpM;.3=$\.bYn7>4B3@8U"6'GVBPKhG9O.-^s[A2M-T=(%-N7I!/BcUS:H.#dK8C4j2F&0Am8T),$dkk,U,jKm2tFL%ZE4T-I[X;OuUQlQB=?R-VAJBAD?"go*_3nY+9I#qIj'5)2EedkK\!$N]`Fcp\H2UP]r"e_YYQ\)N[(d\feQj:Yf^j12YL$.fYE<^]D:_GZ(a6\ZAj.XYO0Db4F+L(!/^$KE7=7sOS\8W8"N@$2M@"akc.XXd%Or2UkMAoP%<!_(h-;^@PSNamE^gpV"nGG!"T[Pmo@a5(]glURRl9'e#:&4rpIO<5[<R,/X_r8'H_U*aX#]F\U`8f>2Bpa-/3$+1bLY71QI6O8TQ=h#KO\_>,jQ5JFQh0rQQQPV6\0!#*33;6Kc..8;LpjrmY8Ym1FsZ?\h0I_MGHrLTP`Vrt=/u3Ie#ZJDbPbHoZDQ:>mc).>`^?.)]^fN_WeD2iR@"pQ_e(n4'9$!U]1\&;]e1T[2B/&#Bd_*;4`t/pL&d$b@\>0GUm8>"*pP1/TVNXK)oF1KW#rI.d$fjN&3cs?4B"E*do1;[nbk+Zk*Hk1^Q'XnGTudQC]i\;NReW[-jUL^NA2YZ\UB:\NYch@PLZfeB5NuI\)^k%P?`^alE+mDIF50JCO;I-/ZDf^gXIb,[RFJu-'<\p-\\WWGs^5eb_ibYg7l/%77E0o:R'DY.b@_qa@fYOG7l6TR6JfqC\up/b:9-,oaD`o,AgJ"@AX^$Vd4V>[Lt:%`D(L'A)#))4!C/24'W=5aQ9k3p\5fLVccs-/SXM+c+;[t]^;bZ?13Y+DZOZX<B..`&bH'3>Gg5VDDpkgOgD+nmPMG_lajf1?gl`EU+fBtolZf`0GUa</_b,j.nR?E6&jJXciN?dZj"8:/8K]bT.a?3naC2>RIBs#^q_r^n&b+j^';hm.B$%sYG`D'mFn^tc&l$bG=<k//ioD<81EN@VHk!BbIYAFgE!r[Us6"EeZ\7!GK)SIK2Y9NF]UDBKm";LlROBq$Dn$.Opk@l&>7od<FfeKCc[.+AW^:8A^Tn%q@^#a(3bb0IG4aMi8YH,""/FOC[:O$XQ#AcZmcCX^8XcXA5Qq"/sj*Q#]jg5M/%m`bdU$-X^sq!+>T$"#a=_g6@rXtq]"1mlrV)+Fb<f-oN'?o"3Zlc!%N?LJZ`#oC^*H/'O(h/]:Rk8Z:\?*7Ou[4/2%o$;6Y2mDhY*5?%Y?!@)/H;Hb_p\i"W?QMpso3W.c5dN$l*:=5A;Y8Gf3F[&g<t[`Bbo]/@l=2n-\JO"]c-*1K]K>a4HI"b+EOe#9=K0#9-kBFjm4>H?dU?5;;^h=V*-JeJ39J*l/jKAtWCJ3[:TCH+mC:pDmA!/a8&(%V?Si/8ZVB*(8u,$dpS#*(]_[ZRjhQ+tK,W^A!E4:^KkTdkduC<K>8<]<ngH#216m/"7G*7qs<]QjDCc,JA+/:Mq%T.fQSlDpV5d$.'`9o91AA;PFr?IXs^r17>9Tgmqb<)<-SKafN+qArR7`J`Z]^DGhmfCU[QQiF$*$(RFai=t;Qo&oPt'TDeWr:K@tqPRD;gYF\!*rl.HCm=Cb.%]XnUS9rol`]N/`rG0h5HLdS&mR-WrZ1L`qqRo0/f.0jTul!<)si%QY`m<Q*mX)_COs$#_P$XLq0%ec`F9EBQY'oQT[;-B]e@H^?&EOs.s_Ptn'!.]+1;QaqRnB&dfTFaWiij7K+A&;&"O5DUkaiW\nSP'lX)iBWe1"2U6h/nI6l^hWs5);Zcfr9f1mLfGL>9b>'m)FV-P]9]WAGDE9F0e]KgLg.gLR)?<,_hOpl9A;f]=cMrU4i7?c(*hXeDDe@"o`eVN_l&dfWlHDjWS^7%Fd*psO2n7o\Qk)]*ipq9sOhsSh]9n>ER/W78,0*R4qQf-IlD6KBb0C]&B\p45bRfB"n`=KbDh<+BYois!-ikW#RlYc`[&ucmuIS!JOH7Y%=XD>=JqTs7k6:4JH1+a47[HmZ;+Ze8LOjWi3gc7U;ST'ZbKX];?*k_;ZJr8Gc@!H5a_s`"&djT2gjidZiLA^3)h8SJ7?,qMG#gaVr.C:ip\73P&+lf#BIi'@f]EBsL\f)kfO4OSd$$s)?9BC^aoTBJ'=:n*f#77JjMM5%PV[SsLUYg=a!rR\)LF&'HL^d=/,R?N'ZeupWQ8pu)1CsVPJZ559XY=0&Vl/d&>FN3u*Q>KLQ%.N0kD9KmE&K5hkYiCb!'9@N^\](8ao8BCmkf`>[>4ZF#Ge-%Db)(EO:FZ@`ff"2lLOn%753lmo5-!'s%*CKO>EgHpZ*97mM!*40l%`re)A!*LkC#nl@_9o7N63k,KL4enY[cB+qO[sUf2sRZB?YCbC(S6d_$U]4B4>9W\(#Jg%pA<@-?b`HuW???*WZD$(4Ju2`eq-!Yk_r7B1D89l![)^gq.Zf(\RX@l:5*;^.W/V#hLFJd!hKhj]#'c?GY]5iSN8JgA*EeVUek"ASTuc(C`c+S!<]<UO'J2Z+rnmm;e=VNrt_J_.LQZ7>iS>A`F.:+Tq'RUrA-0I<0W;G(5rdeW-(_&?>k/(fM?f9#&Z@+5+Qo^g1Kq%Koc-j[48<15_Z9jd,MEj=A:+lNWlrD?X%?BEc]].LU6+TAQ_M1g5i5W$jh9p"9T#RFZNn`*\=.)%iZrAI!%b$(hMc<1JQpC!h"Dl?sLZ9r54+fI'a!$)tX)Tqn)VOcKRE!E?Y$V'FNgBF?lKo"eOA2UU)h%M?CebN.HM3(0PI,thq1b<3=D4q;V`M;NOno,HU$[bshrCK`NB*(#fW?E;E#IA!NA'Ml2V6#PtXfid"iYF0BOYasdSp$umV%:REFGbPpGp](k#r[_EY0*>.^ZQ0KFPr%P>Ba<%].-n7iN[APDQ'+u8=#P\[E18KG07qgqOSTA8P^D1O?0dLV^1#t=o#I>;-#d.'H2(==:A+SA6FO^-GC#?(GJ-;M@\YBPUd.oJ&?F"!':"/^TkuqC9s;3e2WuZ-ZT7e(cHctaRiMI91=P?Z&rR^D@5;jQE%h[k-,<f.57#Y<N7i@),a6a4HCNkK%P<:#gu(U$$,YKD)>s#~>endstream
-endobj
-11 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 3904
->>
-stream
-Gau0E>BAQ-&q9SY^f)TI82Mt"06:H[Cs.YSV04C9S^-;M+sDe#74Pt&EIWC\!K[@N-a'@J1'n(8!IVNVm:)E&L^ehSnUIhjjD7+W0-0&^A?d<g[4#2%aE2E2fq.4-*jKO=+(,Ln(5AVgT+k`hMjWT1bU4QVX>#Su`6%:G=QmXE>S,R`j:f`,n.3'XG@GjY!EM!=I>^J-1ad>Upmr&4E$,FR&AW6-#Ql6#iBRrC63+oS^iAH"3$*r^Gs77D,#9DunPDV""rn.B9VT>m:_Y;p_%9)7@"^laOb+/S@(<XuJ`EHFOYC`:'R:;qNe\f.@GlAY@M/m*LE^*An:r\!"X=l$L_Pe]!5l,h$lfdHNeDuDTu`KQE'+h[&dFAO,/m5o852m"di4J!;sa.2o^ih^]cf[)`DCJD;5u$:LD6SBU3&q'W[LJp'W$\]F@]9/-q]7/V2D!h85ZB88r"+WMP>2`;5PbaL(n3VU23@tVC9TA'P3/rCe.DBYb@jc;KOS]D-[.J:(XqH!+qcEUq-P<SH.*--@f5HE,=QVSG"/Y3$5'3a>4CcZklRA"&=1T1Jm#:(\oBd?\8rZ0L?4<AAX/r0O3@_J^[rd(bfp_Md->g:4!R1@,SC.0`qVTH]`6`n22&6#p[f)KI2Xs&&Y^_(c^nONWB6[]uW'=i3X;G"q7$q,*SFd7SV4iVPfR*1YM#,o^kh+H5](4PG+R;;/0!nC)!Kk7B&aRC/U:2'W!-FWCBa";Nto1V'\X1Y=Gf'6_c%e.7uIT16\G+UF7oIau"u2PG1aG-o3<p1l=&PU.h=11F^I'MDCBi9VX!l.EXt?D&q]>4Ug5DW39(J2_"$-'_P1XqAMeNPG5d_4V,u=7T&'=W39(J2_"$-'_P1XqAMd)PG3UtdD2PkTM[O".2lk6%8;W`)FXalU4Ge]^nbY:;)BsU)CUJH:>dlG@I5"AO^rasK.*<e,.LI:0/'@Xc6=X?I(\gFD$:?SIcN$TfX:I;jCB5?T5Zo0#;POgLBTXJ+s2>canNs\WZBG^OqTm$+O\h2`nl$Dn#Bt#8ke-.9u7536s=0gJ<BP($H@*R-q4&a=V./7md#'ppmdj.T0_?H#RMHOA,=47E'O$m-bAt\a3jSrZfIoH=3Q<Uo"[?f'oeS"_$V^`Bja;,'8=dK;,gLO:bH!KfKb"qAbuVf3i^Y<Nb,ho%lOka/+e7F/@OX,LGFkJ?PWT-(4VIcYG12XXRY8!gP)K[p/'W(mZHTA\#4+SfoUH1aP$$2q0=k;cPMf:&*/f9)7c,`REhsRVRQD1^?n@lgRi']P,mE,:i0@<4>ip!djh$fF(]J-ht*A";aPBYhh^fga%7L>/KT+`SlFB<:?S6]3ZcF[i0>#]BNc7HO9p==VcVHIi.AjF-hhVHa31!:CqJeC(,n@*e@0VNhG=4JDU?iH>1,`9`-:=/=AVm'l](lo&_'&=:*;,'64j.?;A`=Qk0m9"@JV@^\\7uZHG5d4BV4Bi"H>6]lOG?8Zh$<J$,4[-,`?_!-H]EMAR+hkeFIB`5-iAlAlVl9%FqqO_>\ltao.DTLk!^JDD;p;<eQ8S_]5W]C@QIRk2gj@ApMk!l#;`K"4D2p3*0+j-$<,)9sPY!UqGkj<iemJ2B,sZ=V<Yr=c>mUo8;n7Eg>b!*d.?k7DgW`,<Sla@[Io?fu?Ink$.a#(MTf=gCe\2i1Z%sENIk\XH)nRH*fF"I"K,:ju?]Yj[BI_K"Ja]h]]5TnWjhpXL!MBYA\oKn)G"JrUJXSfn`o%Gk#\Fop9<]`e%97g't6#Zj4-3Ht*<h/H6NAW,HHnc4_nZdc=[KV`D6-<KZ?Zb%k7Jn?f<*]8*]7;mPNh3)$n?fsJ_h@V`r@<&f?V]5+m$XKr&b]$/@Y:3ZAeUlRsWbn?1PlV/Vf!iO'aN?:q(r/)a>B[S"llGpKpgZ,i17XN`^a%6RDX%G?s6dEjF%\_],Y1;J%b;R\eFVBBkJ++bpOAUO%IE'A=HW;G#o\kR[gW!W+p]o7oYBT(K0QO?'5-\(ue7IL:@*=4an]R`1RhD;5YMo]J_GfqAj"sN?=cq6ooXPiWR]EJED3O)r@f/EB,PM4$lAl/Kgo^/<Tb`1DG./tPiVFj&PN,`]dIm#lD$PD`T4&l3\gA55]igY@Q.Fma#q5KQ3=B,@&NB5>Xg3:[#[^AN]3JpRqWH.9JbQ1i4qeenh#eD.dR2j&MZ?HpA9j/k(G#psOa_p:&hN72:-l?$H,uE`"Pp'\!YB<g>K=o\30s'a.SDO',`cDCP4Q3K]q#lT%[%Cg1bh"ZkHK:!4U8^"Z\G6e0!]WNJ8T[dSuD_bf:g;KkESCj#L69[M[ph+1a,O`XAOdQ0kTRU]K\+d<b7kfo&1mjh+\:OS6Xs9Uu'+QH$T^=pRd8gGUL/K^I+O.LYbfVTZ$CA:GQl<jQUT"<f,2)aTL=rS.qKk4?];->cm4XnT>81RO_oeaJT@>lm(XG?Go:L7o5`XQ^^ke&T>aB)`g.L65mRUh/e^tl_:I\Fp3Veq*!lkFq+/J'L)9nI%fO&0!$gnWA`Kt2S9i-@\0QL,0ct7g[td#`=:D&AW>*d8F8n1c_BXk_(J[S$Qj?W2QLE-`CX&2"$1?>U`)5_^K/E4Ll;[dHL^fYZFILF*F8Db1:t-1P4SLal^Ih7WP2E"]=.%>TGW0U97kIbM),o0hNAb;;b=Q]qtbA-IQtT;Jde+s(M)C'.]O:,Y&2Wt.&rnZV5<T=j;^dF[SZ%9:eN\M<;c&Pd!G9E][Q_"2>19BA+(6QlY!jlT24u`Qko!MX._oV(df6n-G\(%C,$phG;9tY*G!m-D^XRdULO8l)EXN&6Kb!(MsHGQ>;Di-I^oM1^EN@r?k>b&j>dbASH$GgkLd_ZCo/L>VR!XgTZ?g8clscS^H+YG5./%$2h&;kS-3P/VS?/tm9!qYRh?)tRI#*d&t02.b`,.r5ncMPpo[8$:cB/t/GdHm^;rUe-Rj2Fb#M7%)u(13VS8C.R:6K/McG1`QoC(A?j#1PG8[cp;#S@pXJ+b]>GPX3XGX8(.R`8kTIT7b)j)Jjo@'2pGur54>.;?I#FjJJb[7$VmoaP3rR36>l?)=U.f\.-9)JE2>;`]r#NV6RPp9:-d3la;CT=,S`+9,Wptm2CP&DqZ"KO/?A=-)?OA]Fn!+t9gbi?86<kG&0lsE1A>=7?q?&UEUZj`pKXhI>\9:6m7X+1Y@m0UKVWQJet[pps1Ia%ZgS6e>C9-^G.EcZSU3M"J>R7q4'EWae4q>4gQMYlrOpdK@t(+Ei)D">`(JlhUlgW@%Y-qB!i\jE?rR%TtlKj;/RPt^2rPje26nV*dE_rKn+3D\?9p]1hK;(#KQ]iDZ47FV\^Cm:XPXtqIEmic^LV&^nW/Ved-q\q$+DifuJ^,_hC?6Z']T(H`SJ&f,RCW)]#.$srlHa%,liC<1Dan6X;jJ[Pg+^PD3.N'-FW,>&I!ble6f.t)/KFF@DmB(\A2=;D"Yi\*W[<e,8]T/\dV9gINGghF01bu@>3%XJhS<q2uG^@?h#.lpe&,lAEg&J]M2a9?@G'oW6n(X[b^R'Jsiao*l8P.nf>jcPs!^CmGSr6\TQ1<u(-E]`=Zn%i$/WmrNVuS&Ar''-Oa%D+>rm7HB>M$VC-KbcMTE@89/0G_I%o?hpU=7XfK#U'Io[CP*Aa]Pnl,Uorm"M:;,>6_**?O3*c%r9bLYS//I##HRr#\i<`;5cA6SC+F+8P>>nc&.50bi)4=_H!V?!;4#T(Y2d6She"k0<SdipqD=FaX\[go%es.5eI&(qSCh4_NBP.6iQ%qDk1+XFWA2!6H@;b?Y%T\:n.%]RlN+ReZCYRQ?RCgrU@g]?/aVltZ(R&[XF@3cD&+13O-:;YTeF$e5p42F&i!g:>]?(a]uU3DQO,@kak\l@YW)"7omGl2~>endstream
-endobj
-11 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 3904
->>
-stream
-Gau0E>BAQ-&q9SY^f)TI82Mt"06:H[Cs.YSV04C9S^-;M+sDe#74Pt&EIWC\!K[@N-Z'@J1'n(8!IVNVm:)E&L^ehSnUIhjjD7+W0-0&^A?d<g[4#2%aE2E2fq.4-*jKO=+(,Ln(5AVgT+k`hMjWT1bU4QVX>#Su`6%:G=QmXE>S,R`j:f`,n.3'XG@GjY!EM!=I>^J-1ad>Upmr&4E$,FR&AW6-#Ql6#iBRrC63+oS^iAH"3$*r^Gs77D,#9DunPDV""rn.B9VT>m:_Y;p_%9)7@"^laOb+/S@(<XuJ`EHFOYC`:'R:;qNe\f.@GlAY@M/m*LE^*An:r\!"X=l$L_Pe]!5l,h$lfdHNeDuDTu`KQE'+h[&dFAO,/m5o852m"di4J!;sa.2o^ih^]cf[)`DCJD;5u$:LD6SBU3&q'W[LJp'W$\]F@]9/-q]7/V2D!h85ZB88r"+WMP>2`;5PbaL(n3VU23@tVC9TA'P3/rCe.DBYb@jc;KOS]D-[.J:(XqH!+qcEUq-P<SH.*--@f5HE,=QVSG"/Y3$5'3a>4CcZklRA"&=1T1Jm#:(\oBd?\8rZ0L?4<AAX/r0O3@_J^[rd(bfp_Md->g:4!R1@,SC.0`qVTH]`6`n22&6#p[f)KI2Xs&&Y^_(c^nONWB6[]uW'=i3X;G"q7$q,*SFd7SV4iVPfR*1YM#,o^kh+H5](4PG+R;;/0!nC)!Kk7B&aRC/U:2'W!-FWCBa";Nto1V'\X1Y=Gf'6_c%e.7uIT16\G+UF7oIau"u2PG1aG-o3<p1l=&PU.h=11F^I'MDCBi9VX!l.EXt?D&q]>4Ug5DW39(J2_"$-'_P1XqAMeNPG5d_4V,u=7T&'=W39(J2_"$-'_P1XqAMd)PG3UtdD2PkTM[O".2lk6%8;W`)FXalU4Ge]^nbY:;)BsU)CUJH:>dlG@I5"AO^rasK.*<e,.LI:0/'@Xc6=X?I(\gFD$:?SIcN$TfX:I;jCB5?T5Zo0#;POgLBTXJ+s2>canNs\WZBG^OqTm$+O\h2`nl$Dn#Bt#8ke-.9u7536s=0gJ<BP($H@*R-q4&a=V./7md#'ppmdj.T0_?H#RMHOA,=47E'O$m-bAt\a3jSrZfIoH=3Q<Uo"[?f'oeS"_$V^`Bja;,'8=dK;,gLO:bH!KfKb"qAbuVf3i^Y<Nb,ho%lOka/+e7F/@OX,LGFkJ?PWT-(4VIcYG12XXRY8!gP)K[p/'W(mZHTA\#4+SfoUH1aP$$2q0=k;cPMf:&*/f9)7c,`REhsRVRQD1^?n@lgRi']P,mE,:i0@<4>ip!djh$fF(]J-ht*A";aPBYhh^fga%7L>/KT+`SlFB<:?S6]3ZcF[i0>#]BNc7HO9p==VcVHIi.AjF-hhVHa31!:CqJeC(,n@*e@0VNhG=4JDU?iH>1,`9`-:=/=AVm'l](lo&_'&=:*;,'64j.?;A`=Qk0m9"@JV@^\\7uZHG5d4BV4Bi"H>6]lOG?8Zh$<J$,4[-,`?_!-H]EMAR+hkeFIB`5-iAlAlVl9%FqqO_>\ltao.DTLk!^JDD;p;<eQ8S_]5W]C@QIRk2gj@ApMk!l#;`K"4D2p3*0+j-$<,)9sPY!UqGkj<iemJ2B,sZ=V<Yr=c>mUo8;n7Eg>b!*d.?k7DgW`,<Sla@[Io?fu?Ink$.a#(MTf=gCe\2i1Z%sENIk\XH)nRH*fF"I"K,:ju?]Yj[BI_K"Ja]h]]5TnWjhpXL!MBYA\oKn)G"JrUJXSfn`o%Gk#\Fop9<]`e%97g't6#Zj4-3Ht*<h/H6NAW,HHnc4_nZdc=[KV`D6-<KZ?Zb%k7Jn?f<*]8*]7;mPNh3)$n?fsJ_h@V`r@<&f?V]5+m$XKr&b]$/@Y:3ZAeUlRsWbn?1PlV/Vf!iO'aN?:q(r/)a>B[S"llGpKpgZ,i17XN`^a%6RDX%G?s6dEjF%\_],Y1;J%b;R\eFVBBkJ++bpOAUO%IE'A=HW;G#o\kR[gW!W+p]o7oYBT(K0QO?'5-\(ue7IL:@*=4an]R`1RhD;5YMo]J_GfqAj"sN?=cq6ooXPiWR]EJED3O)r@f/EB,PM4$lAl/Kgo^/<Tb`1DG./tPiVFj&PN,`]dIm#lD$PD`T4&l3\gA55]igY@Q.Fma#q5KQ3=B,@&NB5>Xg3:[#[^AN]3JpRqWH.9JbQ1i4qeenh#eD.dR2j&MZ?HpA9j/k(G#psOa_p:&hN72:-l?$H,uE`"Pp'\!YB<g>K=o\30s'a.SDO',`cDCP4Q3K]q#lT%[%Cg1bh"ZkHK:!4U8^"Z\G6e0!]WNJ8T[dSuD_bf:g;KkESCj#L69[M[ph+1a,O`XAOdQ0kTRU]K\+d<b7kfo&1mjh+\:OS6Xs9Uu'+QH$T^=pRd8gGUL/K^I+O.LYbfVTZ$CA:GQl<jQUT"<f,2)aTL=rS.qKk4?];->cm4XnT>81RO_oeaJT@>lm(XG?Go:L7o5`XQ^^ke&T>aB)`g.L65mRUh/e^tl_:I\Fp3Veq*!lkFq+/J'L)9nI%fO&0!$gnWA`Kt2S9i-@\0QL,0ct7g[td#`=:D&AW>*d8F8n1c_BXk_(J[S$Qj?W2QLE-`CX&2"$1?>U`)5_^K/E4Ll;[dHL^fYZFILF*F8Db1:t-1P4SLal^Ih7WP2E"]=.%>TGW0U97kIbM),o0hNAb;;b=Q]qtbA-IQtT;Jde+s(M)C'.]O:,Y&2Wt.&rnZV5<T=j;^dF[SZ%9:eN\M<;c&Pd!G9E][Q_"2>19BA+(6QlY!jlT24u`Qko!MX._oV(df6n-G\(%C,$phG;9tY*G!m-D^XRdULO8l)EXN&6Kb!(MsHGQ>;Di-I^oM1^EN@r?k>b&j>dbASH$GgkLd_ZCo/L>VR!XgTZ?g8clscS^H+YG5./%$2h&;kS-3P/VS?/tm9!qYRh?)tRI#*d&t02.b`,.r5ncMPpo[8$:cB/t/GdHm^;rUe-Rj2Fb#M7%)u(13VS8C.R:6K/McG1`QoC(A?j#1PG8[cp;#S@pXJ+b]>GPX3XGX8(.R`8kTIT7b)j)Jjo@'2pGur54>.;?I#FjJJb[7$VmoaP3rR36>l?)=U.f\.-9)JE2>;`]r#NV6RPp9:-d3la;CT=,S`+9,Wptm2CP&DqZ"KO/?A=-)?OA]Fn!+t9gbi?86<kG&0lsE1A>=7?q?&UEUZj`pKXhI>\9:6m7X+1Y@m0UKVWQJet[pps1Ia%ZgS6e>C9-^G.EcZSU3M"J>R7q4'EWae4q>4gQMYlrOpdK@t(+Ei)D">`(JlhUlgW@%Y-qB!i\jE?rR%TtlKj;/RPt^2rPje26nV*dE_rKn+3D\?9p]1hK;(#KQ]iDZ47FV\^Cm:XPXtqIEmic^LV&^nW/Ved-q\q$+DifuJ^,_hC?6Z']T(H`SJ&f,RCW)]#.$srlHa%,liC<1Dan6X;jJ[Pg+^PD3.N'-FW,>&I!ble6f.t)/KFF@DmB(\A2=;D"Yi\*W[<e,8]T/\dV9gINGghF01bu@>3%XJhS<q2uG^@?h#.lpe&,lAEg&J]M2a9?@G'oW6n(X[b^R'Jsiao*l8P.nf>jcPs!^CmGSr6\TQ1<u(-E]`=Zn%i$/WmrNVuS&Ar''-Oa%D+>rm7HB>M$VC-KbcMTE@89/0G_I%o?hpU=7XfK#U'Io[CP*Aa]Pnl,Uorm"M:;,>6_**?O3*c%r9bLYS//I##HRr#\i<`;5cA6SC+F+8P>>nc&.50bi)4=_H!V?!;4#T(Y2d6She"k0<SdipqD=FaX\[go%es.5eI&(qSCh4_NBP.6iQ%qDk1+XFWA2!6H@;b?Y%T\:n.%]RlN+ReZCYRQ?RCgrU@g]?/aVltZ(R&[XF@3cD&+13O-:;YTeF$e5p42F&i!g:>]?(a]uU3DQO,@kak\l@YW)"7omGl2~>endstream
+<< /Title (KodaKodra - Resume) /Author (KodaKodra) /Creator (ReportLab-compatible ASCII PDF) >>
 endobj
 xref
-0 12
+0 11
 0000000000 65535 f 
-0000000061 00000 n 
-0000000112 00000 n 
-0000000219 00000 n 
-0000000331 00000 n 
-0000000436 00000 n 
-0000000640 00000 n 
-0000000844 00000 n 
-0000000912 00000 n 
-0000001183 00000 n 
-0000001248 00000 n 
-0000005282 00000 n 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000138 00000 n 
+0000000223 00000 n 
+0000000301 00000 n 
+0000000364 00000 n 
+0000000510 00000 n 
+0000000656 00000 n 
+0000005306 00000 n 
+0000008645 00000 n 
 trailer
-<<
-/ID 
-[<e137f3c8a483a77078cd6938cf2de7df><e137f3c8a483a77078cd6938cf2de7df>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 8 0 R
-/Root 7 0 R
-/Size 12
->>
+<< /Size 11 /Root 1 0 R /Info 10 0 R >>
 startxref
-9278
+8757
 %%EOF
