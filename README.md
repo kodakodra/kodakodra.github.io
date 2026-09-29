@@ -1,42 +1,62 @@
-# Hi, I'm KodaKodra 👋
+# KodaKodra
 
-**Senior Full-Stack Laravel Developer**
+**Full-stack web developer specialising in Laravel, PHP, React and TypeScript.**
 
-I build secure, scalable web applications with an obsessive focus on code quality, clean architecture, and
-maintainability. Standards-first. Security by default. If it's not tested, documented, and readable, it's not done.
+I build bespoke web applications and business systems end-to-end, from requirements and database design through development, testing and deployment. My work spans roughly 100 web projects across social platforms, e-commerce, booking systems, dashboards, analytics and bespoke small-business applications.
 
----
+## Key Projects
 
-### 🛠 Stack
+### KodaKodraSocial
+Laravel-based social platform built from scratch, covering authentication, user profiles, social interactions, content management and core platform functionality.
 
-**Back-End**
-Laravel 13 · PHP 8.5 · Eloquent ORM · REST APIs · Inertia.js
+### Torin
+Personal voxel game-engine project built with Java, LWJGL, OpenGL and Gradle. Includes procedural world generation, chunk-based rendering, physics, block interaction, dynamic lighting and a day/night celestial system.
 
-**Front-End**
-React 18+ · TypeScript · Bootstrap 5 · Blade · JavaScript (ES6+) · HTML5 · Tailwind CSS
+### Web Applications & Business Systems
+Experience across bespoke e-commerce and booking platforms, dashboards, analytics tools, portfolios, brochure sites, small-business applications and other custom web systems.
 
-**Database & Infra**
-MySQL · PostgreSQL · HeidiSQL · Query Optimisation · Docker · Redis
+### Maintenance & QA
+Existing-system work including bug fixing, refactoring, regression testing, QA, workflow optimisation and ongoing feature development.
 
-**Practices**
-PSR-12 · DRY / KISS / SOLID · RBAC · MVC · Policy-based Authorization · Test-Driven Development (Pest)
+## Technical Skills
 
----
+**Core:** PHP · Laravel · JavaScript · TypeScript · React · SQL (MariaDB/MySQL/PostgreSQL)
 
-### 💡 How I Work
+**Web:** Blade · REST APIs · Node.js · jQuery · Bootstrap 5 · HTML5 · CSS3
 
-- **Security first** — server-side validation always, parameterized queries, CSRF protection, and least-privilege
-  authorization on every project.
-- **Standards-driven** — consistent naming conventions, PSR-12 compliance, and self-documenting code across every layer
-  of the stack.
-- **Built to last** — thin controllers, meaningful abstractions, and services that scale with the project instead of
-  against it.
-- **Tested, not hoped-for** — every change ships with the commands to verify it, not just a promise that "it works."
+**Testing & Quality:** Pest · PHPUnit · PHPStan · Nightwatch · QA Testing · Regression Testing
 
----
+**Development & Infrastructure:** Git · GitHub · Docker · Redis · Composer · npm · Bash
 
-### 📫 Contact
+**Additional:** Java · LWJGL · OpenGL · GLSL · VBA · Gradle · JSON · YAML · Markdown · Apache
 
-📧 kodakodra@proton.me
-🦋 [Bluesky](https://bsky.app/profile/kodakodra.bsky.social)
-🔗 [Linktree](https://linktr.ee/kodakodra)
+## How I Work
+
+- End-to-end ownership from requirements and planning through implementation, testing and deployment.
+- Security-conscious development with server-side validation, parameterized database queries, CSRF protection and explicit authorization.
+- Clean, maintainable code following established standards and project-specific conventions.
+- Practical QA and regression testing alongside feature development and maintenance.
+- GitHub-based collaboration using branches, pull requests, shared repositories and code review.
+
+## Experience
+
+**Independent / Solo Web Developer — 2019–Present**
+
+Full-stack development across social, e-commerce, booking, dashboard, analytics and small-business projects, including new builds, maintenance, refactoring, QA and deployment.
+
+**Customer Service & Team Support — 1998–2018**
+
+Two decades of frontline customer service across supermarket, food service and retail environments, including customer queries, complaints, transactions, operational support and team-leading responsibilities.
+
+## Education & Qualifications
+
+- NCFE Level 2 & 3 — Team Leading & Management, 2022
+- AVCE Level 3 — Information & Communication Technology, 2004
+- GCSEs — English, Mathematics, IT and 3× Sciences, 2003
+
+## Contact
+
+- Email: kodakodra@proton.me
+- [GitHub](https://github.com/kodakodra)
+- [Bluesky](https://bsky.app/profile/kodakodra.bsky.social)
+- [Linktree](https://linktr.ee/kodakodra)
