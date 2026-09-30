@@ -67,6 +67,15 @@ queries, complaints, transactions, operational support and team-leading responsi
 - AVCE Level 3 — Information & Communication Technology, 2004
 - GCSEs — English, Mathematics, IT and 3× Sciences, 2003
 
+## Profile Activity & Traffic
+
+<p align="left">
+  <img src="https://komarev.com" alt="KodaKodra Profile Views" />
+  <img src="https://shields.io" alt="Portfolio Stars" />
+</p>
+
+### Current Sprints & Contributions
+
 ## Contact
 
 - Email: kodakodra@proton.me
