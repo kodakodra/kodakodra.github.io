@@ -69,10 +69,7 @@ queries, complaints, transactions, operational support and team-leading responsi
 
 ## Profile Activity & Traffic
 
-<p align="left">
-  <img src="https://komarev.com" alt="KodaKodra Profile Views" />
-  <img src="https://shields.io" alt="Portfolio Stars" />
-</p>
+![Profile Views](https://laobi.icu)
 
 ### Current Sprints & Contributions
 
